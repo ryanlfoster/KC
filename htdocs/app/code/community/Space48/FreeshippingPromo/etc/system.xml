@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+* Space48_FeeshippingPromo
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Open Software License (OSL 3.0), a
+* copy of which is available through the world-wide-web at this URL:
+* http://opensource.org/licenses/osl-3.0.php
+*
+* @category   Space48
+* @package    Space48_FeeshippingPromo
+* @author     Space48 <hello@space48.com>
+* @copyright  Copyright (c) 2012 Space 48 LTD.
+* @license    http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+*/
+-->
+<config>
+	<tabs>
+		<space48adminconf translate="label" module="freeshippingpromo">
+			<label>Space 48</label>
+			<sort_order>48</sort_order>
+		</space48adminconf>
+	</tabs>
+	
+	<sections>
+		<freeshippingpromo_settings translate="label" module="freeshippingpromo">
+			<label>FreeShipping Promo</label>
+			<tab>space48adminconf</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>0</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<freeshippingpromo_group translate="label" module="freeshippingpromo">
+					<label>Settings</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>1000</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<freeshippingpromo_upperlimit translate="label">
+							<label>Upper limit</label>
+							<comment>The amount the "free shipping" kicks in.</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</freeshippingpromo_upperlimit>
+					</fields>
+					<fields>
+						<freeshippingpromo_lowerlimit translate="label">
+							<label>Lower limit</label>
+							<comment>The lowest amount needed to show the message (ex: £20 means "upper limit - £20").</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</freeshippingpromo_lowerlimit>
+					</fields>
+				</freeshippingpromo_group>
+			</groups>
+		</freeshippingpromo_settings>
+	</sections>   
+</config>

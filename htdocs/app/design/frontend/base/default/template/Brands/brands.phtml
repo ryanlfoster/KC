@@ -1,0 +1,19 @@
+<h2>All Brands</h2>
+<?php
+$letters = $this->getSortedBrands();
+$brands  = $this->getBrands();
+?>
+
+<?php foreach($letters as $letter): ?>
+    <div class="brands-container">
+           <h2><?php echo $letter; ?></h2>
+           <ul>
+                <?php foreach($brands as $brand) : ?>
+                    <?php if(substr(strtoupper($brand['title']),0,1) == $letter): ?>
+                        <li><a href="/<?php echo $brand['url_key'];?>"><?php echo $brand['title']; ?></a></li>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </ul>
+    </div>
+<?php endforeach; ?>
+

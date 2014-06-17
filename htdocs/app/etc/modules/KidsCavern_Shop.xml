@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <KidsCavern_Shop>
+            <active>true</active>
+            <codePool>local</codePool>
+        </KidsCavern_Shop>
+    </modules>
+</config>

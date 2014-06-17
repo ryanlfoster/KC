@@ -1,0 +1,14 @@
+<h2>All Brands</h2>
+<?php
+$brands = $this->getBrands();
+$label = null;
+foreach($brands as $brand): ?>
+<?php $currLabel = strtoupper(substr($brand['title'], 0, 1)); ?>
+    <?php if($currLabel !== $label) : ?>
+        <h2><?php echo $currLabel; ?></h2>
+        <?php $label = $currLabel; ?>
+    <?php endif; ?>
+<li>
+    <a href="/<?php echo $brand['url_key'];?>"><?php echo $brand['title']; ?></a>
+</li>
+<?php endforeach; ?>

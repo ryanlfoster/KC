@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<layout version="0.1.0">
+    <brands_index_index>
+        <reference name="content">
+            <block type="brands/brands" name="brands" as="brands" template="Brands/brands.phtml"/>
+        </reference>
+    </brands_index_index>
+
+    <brands_index_brand>
+        <reference name="left">
+            <block type="catalog/layer_view" name="catalog.leftnav" before="-" template="catalog/layer/view.phtml"/>
+        </reference>
+        <reference name="content">
+
+            <block type="brands/brands" name="brands.brands" as="brands.brands" template="Brands/brand.phtml" >
+                <block type="brands/catalog_product_list_toolbar" name="product_list_toolbar" template="catalog/product/list/toolbar.phtml">
+                    <block type="brands/page_html_pager" name="product_list_toolbar_pager"/>
+                </block>
+
+                <block type="catalog/product_list" name="product_list_brand" template="catalog/product/list.phtml">
+                    <action method="addColumnCountLayoutDepend"><layout>empty</layout><count>6</count></action>
+                    <action method="addColumnCountLayoutDepend"><layout>one_column</layout><count>5</count></action>
+                    <action method="addColumnCountLayoutDepend"><layout>two_columns_left</layout><count>4</count></action>
+                    <action method="addColumnCountLayoutDepend"><layout>two_columns_right</layout><count>4</count></action>
+                    <action method="addColumnCountLayoutDepend"><layout>three_columns</layout><count>3</count></action>
+                    <action method="setToolbarBlockName"><name>product_list_toolbar</name></action>
+                </block>
+
+            </block>
+        </reference>
+    </brands_index_brand>
+
+</layout>

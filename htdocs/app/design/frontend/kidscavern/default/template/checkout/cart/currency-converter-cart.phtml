@@ -1,0 +1,54 @@
+<?php
+$gbpLocale     = 'en_GB';
+$gbpCurrency   = new Zend_Currency($gbpLocale);
+$baseCurr      = Mage::app()->getBaseCurrencyCode();
+$totals        = Mage::getSingleton('checkout/session')->getQuote()->getTotals();
+$subTotal      = round($totals["subtotal"]->getValue());
+$gbpPrice      = number_format( Mage::helper('directory')->currencyConvert($totals["grand_total"]->getValue(), $baseCurr, $baseCurr ), 2 );
+$gbpSymbol     = $gbpCurrency->getSymbol();
+$finalGbpPrice = $gbpSymbol . $gbpPrice;
+
+$usdLocale     = 'en_US';
+$toUsd         = 'USD';
+$usdCurrency   = new Zend_Currency($usdLocale);
+$usdPrice      = number_format( Mage::helper('directory')->currencyConvert($gbpPrice, $baseCurr, $toUsd ), 2 );
+$usdSymbol     = $usdCurrency->getSymbol();
+$finalUsdPrice = $usdSymbol . $usdPrice;
+
+$toEur         = 'EUR';
+$eurCurrency   = new Zend_Currency($toEur);
+$eurPrice      = number_format( Mage::helper('directory')->currencyConvert($gbpPrice, $baseCurr, $toEur ), 2 );
+$eurSymbol     = $eurCurrency->getSymbol();
+$finalEurPrice = $eurSymbol . $eurPrice;
+
+?>
+
+<div class="gbpPrice" style="display:none;"><?php echo $finalGbpPrice;?></div>
+<div class="usdPrice" style="display:none;"><?php echo $finalUsdPrice;?></div>
+<div class="eurPrice" style="display:none;"><?php echo $finalEurPrice;?></div>
+
+
+<a class="gbpShow change-currency currency-selected">£</a>
+<a class="eurShow change-currency">€</a>
+<a class="usdShow change-currency">$</a>
+
+<script type="text/javascript">
+    jQuery(function($){
+        $('.change-currency').click(function(){
+            $(this).addClass('currency-selected');
+            $(this).siblings().removeClass('currency-selected');
+            var name = $(this).attr('class');
+            var html = null;
+            if (name.indexOf('eurShow') == 0) {
+                html = $('.eurPrice').text();
+                $('#shopping-cart-totals-table > tfoot').find('.price:last').html(html);
+            } else if (name.indexOf('usdShow') == 0) {
+                html = $('.usdPrice').text();
+                $('#shopping-cart-totals-table > tfoot').find('.price:last').html(html);
+            } else if (name.indexOf('gbpShow') == 0) {
+                html = $('.gbpPrice').text();
+                $('#shopping-cart-totals-table > tfoot').find('.price:last').html(html);
+            }
+        });
+    })
+</script>

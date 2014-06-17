@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Configuration XML for the KidsCavern_Core module
+ *
+ * XML Version 1.0
+ *
+ * @category Config_XML
+ * @package  KidsCavern_Core
+ * @author   George Schiopu <george@space48.com>
+ * @license  MIT http://www.google.com
+ * @version  GIT: 0.1.0
+ * @link     http://www.space48.com
+ */
+-->
+<config>
+	<modules>
+        <KidsCavern_Core>
+			<version>0.1.0</version>
+        </KidsCavern_Core>
+	</modules>
+	<global>
+        <models>
+            <kidscaver>
+                <class>KidsCavern_Core_Model</class>
+            </kidscaver>
+        </models>
+		<resources>
+            <categoryattribute20130612001_setup>
+				<setup>
+                    <module>KidsCavern_Core</module>
+					<class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+            </categoryattribute20130612001_setup>
+            <categoryattribute20130612001_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+            </categoryattribute20130612001_write>
+            <categoryattribute20130612001_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+            </categoryattribute20130612001_read>
+		</resources>
+	</global>
+</config>

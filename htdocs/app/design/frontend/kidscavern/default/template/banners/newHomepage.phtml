@@ -1,0 +1,5 @@
+<div id="home-blocks">
+    <?php if (Mage::getModel('cms/block')->load('homepage_blocks')->getIsActive()): ?>
+    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('homepage_blocks')->toHtml(); ?>
+    <?php endif; ?>
+</div>

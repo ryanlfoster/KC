@@ -1,0 +1,144 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Space48_CustomLandingPage>
+            <version>0.1.0</version>
+        </Space48_CustomLandingPage>
+    </modules>
+    <frontend>
+        <routers>
+            <customlandingpage>
+                <use>standard</use>
+                <args>
+                    <module>Space48_CustomLandingPage</module>
+                    <frontName>brands</frontName>
+                </args>
+            </customlandingpage>
+        </routers>
+
+        <layout>
+            <updates>
+                <customlandingpage>
+                    <file>Space48_LandingPage.xml</file>
+                </customlandingpage>
+            </updates>
+        </layout>
+    </frontend>
+
+    <admin>
+        <routers>
+            <customlandingpage>
+                <use>admin</use>
+                <args>
+                    <module>Space48_CustomLandingPage</module>
+                    <frontName>brands_admin</frontName>
+                </args>
+            </customlandingpage>
+        </routers>
+    </admin>
+    <adminhtml>
+        <menu>
+            <catalog>
+                <children>
+                    <customlandingpage module="customlandingpage">
+                        <title>Manage Landing Pages</title>
+                        <sort_order>0</sort_order>
+                        <action>brands_admin/adminhtml_brands</action>
+                    </customlandingpage>
+                </children>
+            </catalog>
+        </menu>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <items>
+                            <title>Custom Landing Pages</title>
+                            <sort_order>10</sort_order>
+                        </items>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <customlandingpage>
+                    <file>Space48_LandingPage.xml</file>
+                </customlandingpage>
+            </updates>
+        </layout>
+    </adminhtml>
+
+
+    <global>
+        <models>
+            <customlandingpage>
+                <class>Space48_CustomLandingPage_Model</class>
+                <resourceModel>customlandingpage_mysql4</resourceModel>
+            </customlandingpage>
+
+            <customlandingpage_mysql4>
+                <class>Space48_CustomLandingPage_Model_Mysql4</class>
+                <entities>
+                    <customlandingpage>
+                        <table>space48_attribute_landing_page</table>
+                    </customlandingpage>
+                </entities>
+            </customlandingpage_mysql4>
+            
+            <catalog>
+                <rewrite>
+                    <layer_filter_item>Space48_CustomLandingPage_Model_Layer_Filter_Item</layer_filter_item>
+                </rewrite>
+            </catalog>
+        </models>
+
+        <events>
+            <controller_front_init_routers>
+                <observers>
+                    <customlandingpage>
+                        <class>Space48_CustomLandingPage_Controller_Router</class>
+                        <method>initControllerRoutes</method>
+                    </customlandingpage>
+                </observers>
+            </controller_front_init_routers>
+        </events>
+
+        <resources>
+			<customlandingpage_setup>
+				<setup>
+					<module>Space48_CustomLandingPage</module>
+					<class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</customlandingpage_setup>
+            <customlandingpage_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </customlandingpage_write>
+            <customlandingpage_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </customlandingpage_read>
+        </resources>
+
+        <blocks>
+            <customlandingpage>
+                <class>Space48_CustomLandingPage_Block</class>
+            </customlandingpage>
+        </blocks>
+
+        <helpers>
+            <customlandingpage>
+                <class>Space48_CustomLandingPage_Helper</class>
+            </customlandingpage>
+        </helpers>
+    </global>
+</config>

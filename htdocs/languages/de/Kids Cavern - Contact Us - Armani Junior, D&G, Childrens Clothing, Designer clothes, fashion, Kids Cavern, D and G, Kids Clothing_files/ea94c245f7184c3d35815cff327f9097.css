@@ -1,0 +1,6284 @@
+﻿/******** Reset ********/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+button, input[type="reset"], input[type="button"], input[type="submit"] {
+	line-height:normal !important;
+}
+html {
+	font-size: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	overflow-x: hidden;
+}
+body {
+	color:#515155;
+	font-size:12px;
+	line-height: 1em;
+	background: #fff;
+	border-top:3px solid #cc2666;
+	font-family: Arial, Helvetica, sans-serif;
+}
+input, select, textarea {
+	color: #515155;
+}
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+b, strong {
+	font-weight: bold;
+}
+blockquote {
+	margin: 1em 40px;
+}
+dfn {
+	font-style: italic;
+}
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+ins {
+	background: #ff9;
+	color: #000;
+	text-decoration: none;
+}
+mark {
+	background: #ff0;
+	color: #000;
+	font-style: italic;
+	font-weight: bold;
+}
+pre, code, kbd, samp {
+	font-family: 'courier new', monospace;
+	font-size: 1em;
+}
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+q {
+	quotes: none;
+}
+q:before, q:after {
+	content: "";
+	content: none;
+}
+small {
+	font-size: 85%;
+}
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+ svg:not(:root) {
+ overflow: hidden;
+}
+form {
+	margin: 0;
+}
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+legend {
+	border: 0;
+	*margin-left: -7px;
+	padding: 0;
+}
+button, input, select, textarea {
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
+	*vertical-align: middle;
+}
+button, input {
+	line-height: normal;
+	*overflow: visible;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+}
+input[type="search"] {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+border: 0;
+padding: 0;
+}
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}
+/* Headings
+-------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 { text-transform:uppercase; font-weight:400; line-height:1; font-family: Arial, Freesans, sans-serif; margin:0 0 16px 0; }
+h1 {font-size:20px;}
+h2 {font-size:18px;}
+h3 {font-size:16px;}
+h4 {font-size:14px;}
+
+/* Text elements
+-------------------------------------------------------------- */
+
+p {
+	margin: 0 0 1.5em;
+	line-height:1.4em;
+}
+/* 
+	These can be used to pull an image at the start of a paragraph, so 
+	that the text flows around it (usage: <p><img class="left">Text</p>) 
+ */
+.left {
+	float: left !important;
+}
+p .left {
+	margin: 1.5em 1.5em 1.5em 0;
+	padding: 0;
+}
+.right {
+	float: right !important;
+}
+p .right {
+	margin: 1.5em 0 1.5em 1.5em;
+	padding: 0;
+}
+a {
+	color: #666;
+	text-decoration: none;
+}
+a:hover {
+	color: #666;
+	text-decoration: underline;
+}
+blockquote {
+	position:relative;
+	margin: 8px 0 0 0;
+	color: #f2f2f2;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	text-shadow: 1px 1px 1px #000;
+}
+cite a {
+	font-style: normal;
+	margin: 10px 0 0 0;
+	color: #76aaa8;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	text-shadow: 1px 1px 1px #000;
+	text-decoration:none;
+}
+cite a:hover {
+	color:#f2f2f2;
+}
+strong, dfn {
+	font-weight: bold;
+}
+em, dfn {
+	font-style: italic;
+}
+sup, sub {
+	line-height: 0;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+}
+address {
+	margin: 0 0 10px;
+	font-style: italic;
+	line-height: 1.3em;
+}
+del {
+	color:#666;
+}
+pre {
+	margin: 1.5em 0;
+	white-space: pre;
+}
+pre, code, tt {
+	font: 1em 'andale mono', 'lucida console', monospace;
+	line-height: 1.5;
+}
+/* Lists
+-------------------------------------------------------------- */
+
+li ul, li ol {
+	margin: 0;
+}
+ul, ol {
+	margin: 0 1.5em 1.5em 0;
+	padding-left: 1.5em;
+}
+ul {
+	list-style-type: disc;
+}
+ol {
+	list-style-type: decimal;
+}
+li {
+	padding:0 0 8px;
+}
+dl {
+	margin: 0 0 1.5em 0;
+}
+dl dt {
+	font-weight: bold;
+}
+dd {
+	margin-left: 1.5em;
+}
+/* Tables
+-------------------------------------------------------------- */
+/* 
+	Because of the need for padding on TH and TD, the vertical rhythm 
+	on table cells has to be 27px, instead of the standard 18px or 36px 
+	of other elements. 
+ */ 
+table {
+	width:100%;
+}
+th {
+	font-weight: bold;
+}
+thead th {
+	background: #fff;
+	color:#111;
+}
+th, td, caption {
+	padding: 4px 10px 4px 5px;
+}
+tfoot {
+	font-style: italic;
+}
+caption {
+	background: #EEEDED;
+}
+
+/**
+
+KEEP ME CLEAN! USE STANDARDS.
+
+http://wiki.ripple/doku.php?id=magento:guidelines:css
+
+
+**/
+
+.pink {
+    color: #CC2666;
+}
+.nobr {
+    white-space: nowrap;
+}
+html,body {
+    height:100%;
+}
+body.background {
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+body.spring {
+    background-image: url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/backgrounds/spring.png');
+}
+body.summer {
+    background-image: url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/backgrounds/summer.png');
+}
+body.autumn {
+    background-image: url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/backgrounds/autumn.png');
+}
+body.winter {
+    background-image: url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/backgrounds/winter.png');
+}
+body.sale {
+    background-image: url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/backgrounds/sale.png');
+}
+body.halloween {
+    background-image: url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/backgrounds/halloween.png');
+}
+
+a {
+    color: #CC2666;
+}
+dl {
+    margin: 0 0 0.4em;
+}
+dd {
+    margin: 0.6em 0 0 1.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+}
+
+/******* Header ********/
+.header {
+    position:relative;
+    float:left;
+    width:940px;
+    /*height:160px;*/
+    z-index:999;
+}
+
+.cms-index-index .header {
+    margin-bottom:-3px
+}
+
+.header .logo {
+    top:25px;
+    left:0;
+    width:522px;
+}
+.header .logo a {
+    float:left;
+    display:block;
+    height:91px;
+    width:522px;
+}
+.header .links {
+    float:left;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.header .links li {
+    float:left;
+    padding:0 8px;
+}
+.header .links a {
+    color:#999;
+    font-size:12px;
+}
+.top-links {
+    padding-top: 5px;
+}
+.top-basket {
+    position: absolute; right:0; top:60px;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.top-basket li {
+    float:left;
+    display:block;
+    height:29px;
+    line-height:29px;
+}
+.top-basket li .view-cart {
+    color:#515155;
+    font-size:16px;
+    margin:0 10px 0 0;
+    padding: 0 0 0 22px;
+    background:url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/view-cart.gif') 0 1px no-repeat;
+    display:block;
+}
+.top-basket li .items {
+    padding:0 0 0 10px;
+    border-left:1px solid #ccc;
+    color:#626262;
+}
+
+.top-basket li .pink_arrow_btn {
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/pink_arrow_btn.png) no-repeat center;
+    width:14px;
+    height:28px;
+    text-indent:-9999px;
+    display:block;
+    margin:0 0 0 15px;
+}
+
+.top-basket li .language, .top-basket li .language:hover {
+    display:block;
+    width:39px;
+    height:29px;
+    font-size:0;
+    line-height:0;
+    text-indent:-999em;
+    line-height:29px;
+    margin:0 0 0 5px;
+    background:url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/language-select.jpg') no-repeat;
+}
+
+.cms-home .std{ position:relative;  }
+.plane{ background:url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/plane.png') no-repeat; display:block; width:432px; height:184px; position:absolute; top:-186px; left:4px;     }
+
+.top-nav {
+    /*position: absolute; bottom:0;left:0;*/
+    clear: both;
+    width:940px;
+    z-index:10;
+    padding:0;
+    z-index:9999;
+    height:49px;
+    margin-bottom: 10px;
+}
+.top-nav ul {
+    position:relative;
+    float:left;
+    padding:0;
+    margin:0;
+    height:39px;
+    width:940px;
+    z-index:5000;
+    list-style:none;
+}
+.top-nav li {
+    position:relative;
+    float:left;
+    padding:0;
+    margin:0 4px;
+}
+.top-nav li a {
+    color:#727272;
+    font-size:16px;
+    line-height:39px; line-height:39px;
+    text-transform:uppercase;
+    padding:0px 10px 0px 10px;
+}
+.top-nav li {
+    margin:0;
+}
+.top-nav li.search{
+    position: absolute;
+    right:0px;
+    top:0px;
+}
+.top-nav li a.active, .top-nav li.active a {
+    color:#fff;
+    background:#cc2666;
+}
+.top-nav li.search {
+    width:217px;
+    height:22px;
+    margin:0 0 0 8px;
+}
+.form-search {
+    position:absolute;
+    top:126px;
+    right:0px;
+    float: right;
+    z-index:99;
+}
+.form-search input.input-text, .form-search input.input-text:focus {
+    float:left;
+    width:160px;
+    border:none;
+    background:none;
+    color:#666;
+    outline:none;
+    display:block;
+    height:22px; line-height:22px;
+    padding:0 5px;
+    background:url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png') 0 -99px no-repeat;
+}
+.form-search button.button {
+    float:left;
+    border:none;
+    display:block;
+    width:29px;
+    height:22px;
+}
+.form-search button.button span {
+    display:block;
+    width:29px;
+    height:22px;
+    font-size:0;
+    line-height:0;
+    border:none;
+    outline:0;
+    text-indent:-9999em;
+    background:url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png') -190px -99px no-repeat;
+}
+
+/******* Header Promotions ********/
+
+.global-promos {
+    clear: both;
+    overflow: hidden;
+}
+
+.global-promos ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.global-promos li {
+    float: left;
+    width: 308px;
+    font-size: 15px;
+    line-height: 2.5em;
+    list-style: none;
+    text-align: center;
+}
+
+.global-promos .second {
+    margin: 0 8px;
+}
+
+.global-promos a {
+    display: block;
+    background: #efefef;
+    font-family:'Open Sans Condensed';
+    text-transform: uppercase;
+    color: #838383;
+    text-decoration: none;
+}
+
+.global-promos a:hover,
+.global-promos a:focus {
+    color: #555;
+    background: #e2e2e2;
+}
+
+.global-banner .highlight {
+    color: #c02124;
+}
+
+
+/******* Footer ********/
+
+.footer-links{
+    width:940px;
+    margin: 20px auto 40px auto; position:relative; z-index:1;
+}
+
+.footer-social{
+    width:940px;
+    position:relative;
+    height:58px;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/footer-social_bg.png) center no-repeat;
+    margin: 0 0 30px;
+}
+
+.footer-social a{
+    position:absolute;
+    display:block;
+    text-indent:none;
+    width:58px;
+    height:58px;
+}
+
+.footer-twitter{
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/footer-twitter.png) center no-repeat;
+    top:0px;
+    left:373px;
+}
+
+.footer-facebook{
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/footer-facebook.png) center no-repeat;
+    top:0px;
+    left:443px;
+}
+
+.footer-email{
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/footer-email.png) center no-repeat;
+    top:0px;
+    left:514px;
+}
+
+.footer-col{
+    float:left;
+    width: 410px;
+    padding: 0 30px;
+}
+
+.footer-col h2{
+    font-weight: normal;
+    color:#515155;
+    font-size:16px;
+    margin:0 0 30px 0;
+}
+
+.footer-col ul{
+    float:left;
+    margin: 0px;
+    width: 205px;
+    padding: 0px;
+    list-style: none;
+}
+
+.footer-col ul li{
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/bullet.png) left 2px no-repeat;
+    margin: 0 0 20px 10px;
+    padding: 0 0 0 20px;
+}
+
+.footer {
+    width:100%;
+    height: 139px;
+    background:#cc2666 url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/footer.png') 0 0 repeat-x;
+}
+
+.footerInner {
+    position:relative;
+    margin:0 auto;
+    width:940px;
+}
+.footerInner p{
+    padding:28px 0 0 0;
+    margin:0;
+    color:#fff;
+}
+.footerInner .tel {
+    float:left;
+    width:130px;
+    padding:8px 0 0 20px;
+    background:url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png') 0 -328px no-repeat;
+}
+.footerInner .fax {
+    float:left;
+    width:130px;
+    padding:8px 0 0 20px;
+    background:url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png') 0 -358px no-repeat;
+}
+.footerInner .payment-logos {
+    position:absolute;
+    right:0;
+    top:29px;
+    display:block;
+    height:82px;
+    width:307px;
+    text-indent:-9999em;
+    background:url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/footer-logo.png') no-repeat;
+}
+/******* homepage slider ********/
+
+#home-slides {
+    position: relative;
+    width:940px;
+}
+
+#home-slides ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+#home-slides li{
+    position:relative;
+    padding:0;
+    margin:0;
+    height: 380px;
+}
+
+#home-slides li img{
+    position:relative;
+    top:80px;
+    left:64px;
+}
+#home-slides h2{
+    position:absolute;
+    top:66px;
+    left:547px;
+    color:#000;
+    margin:0;
+    font-size:4.333em;
+}
+#home-slides h3{
+    position:absolute;
+    top:123px;
+    left:550px;
+    color:#0eb2bc;
+    margin:0;
+    font-size:2.5em;
+}
+
+#home-slides p{
+    position:absolute;
+    top:168px;
+    left:550px;
+    color:#000;
+    font-size:1.167em;
+    width:300px;
+}
+.bx-window ul li a, .bx-window ul li a:hover{
+    position:absolute;
+    top:277px;
+    left:550px;
+    color:#fff;
+    font-size:1.417em;
+    margin:0;
+    text-shadow: 0 -1px 1px #148d94;
+    display:block;
+    height:41px;
+    width:182px;
+    line-height:41px;
+    padding: 0 0 0 14px;
+    text-decoration: none;
+    background:url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/buy-btn.png') no-repeat;
+}
+.bx-window ul li a span{
+    color:#fff;
+    font-size:.8em;
+    margin:0;
+    padding: 0 0 0 22px;
+    text-shadow: 0 -1px 1px #2c2c2c;
+}
+.bx-pager {
+    margin:0 0 30px;
+    text-align:center;
+}
+.bx-pager a{
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    padding:0 2px;
+    text-align:center;
+    height: 14px;
+    width: 14px;
+    text-indent: -999999px;
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/dots.png") 0 0 no-repeat;
+}
+.bx-pager a.pager-active{
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/dots.png") 0 -14px no-repeat;
+}
+.bx-prev {
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/slider-left.png") 0 0 no-repeat;
+    cursor: pointer;
+    display: block;
+    height: 93px;
+    width: 51px;
+    left:0;
+    position: absolute;
+    text-indent: -999999px;
+    top: 170px;
+    z-index: 1;
+}
+
+.bx-prev:hover {
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/slider-left.png") 0 bottom no-repeat;
+}
+
+.bx-next {
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/slider-right.png") 0 0 no-repeat;
+    cursor: pointer;
+    display: block;
+    height: 93px;
+    width: 51px;
+    right: 0;
+    position: absolute;
+    text-indent: -999999px;
+    top: 170px;
+    z-index: 1;
+}
+
+.bx-next:hover {
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/slider-right.png") 0 bottom no-repeat;
+}
+
+.brand-logos {
+    width: 940px;
+    height: 31px;
+    background-color: #F3E0E6;
+    margin: 15px 0;
+    padding: 3px 0;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #D8C3CA;
+    border-bottom: 1px solid #D8C3CA;
+}
+.brand-logos .scroll-left, .brand-logos .scroll-right {
+    position: absolute;
+    top: 0px;
+    background-color: #F3E0E6;
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+}
+.brand-logos .scroll-left span, .brand-logos .scroll-right span {
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png") no-repeat top left;
+    width: 10px;
+    height: 17px;
+    display: block;
+}
+.brand-logos .scroll-left {
+    left: 0px;
+    padding-right: 3px;
+}
+.brand-logos .scroll-left span {
+    background-position: -289px -97px;
+}
+.brand-logos .scroll-right {
+    right: 0px;
+    padding-left: 3px;
+}
+.brand-logos .scroll-right span {
+    background-position: -301px -97px;
+}
+
+.brand-logos ul {
+    list-style: none;
+    margin-right: -999em;
+}
+.brand-logos ul li {
+    float: left;
+    padding: 0 7px;
+}
+
+.promo-banners {
+    width: 940px;
+
+}
+.promo-banners ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.promo-banners ul li {
+    float: left;
+    padding: 0 10px 0 11px;
+}
+.promo-banners ul li:first-child {
+    padding-left: 0;
+}
+.promo-banners ul li:last-child {
+    padding-right: 0;
+}
+
+.promo-banners ul .last{
+    padding-right: 0;
+}
+
+/******* homepage blocks ********/
+.homepage-blocks {
+    margin:30px 0 0 0;
+}
+.homepage-blocks h2 {
+    position:absolute;
+    top:10px;
+    left:89px;
+    color:#fff;
+    font-size:1.833em;
+    margin:0;
+    text-shadow: 1px 1px 1px #cea42c;
+    font-family: 'ColaborateMediumRegular', arial, helvetica, sans-serif;
+}
+.homepage-blocks h3 {
+    position:absolute;
+    top:36px;
+    left:89px;
+    color:#fff;
+    font-size:1.5em;
+    margin:0;
+    text-shadow: 1px 1px 1px #cea42c;
+}
+.homepage-blocks span {
+    position:absolute;
+    top:63px;
+    left:89px;
+    color:#fff;
+    font-size:1.167em;
+    text-shadow: 1px 1px 1px #cea42c;
+    padding:0 0 0 12px;
+    background:url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/homepage-blocks-arrow.png') 0 50% no-repeat;
+    font-family: 'ColaborateLightRegular', arial, helvetica, sans-serif;
+}
+.virus-block, .memory-block, .delivery-block,
+.virus-block:hover, .memory-block:hover, .delivery-block:hover{
+    position:relative;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    height: 94px;
+    width: 300px;
+    text-decoration:none;
+}
+.virus-block {
+    margin:0 16px 0 0;
+    background:url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/virus-block.jpg') no-repeat;
+}
+.memory-block {
+    margin:0 16px 0 0;
+    background:url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/memory-block.jpg') no-repeat;
+}
+.delivery-block {
+    background:url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/delivery-block.jpg') no-repeat;
+}
+.delivery-block h2,
+.delivery-block h3,
+.delivery-block span{
+    text-shadow: 1px 1px 1px #149fa7;
+}
+/******* sidebar blocks ********/
+.block {
+    /*    border: 1px solid #000000;*/
+    margin-bottom: 20px;
+}
+.block-title {
+    /*    border: 1px solid #ff0000;*/
+    font-size: 1.2em;
+    padding: 5px 0;
+}
+.block-title span {
+    display: block;
+    position: relative;
+    margin-left: 20px;
+}
+.block-title span:before {
+    content: " ";
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png") no-repeat scroll 0 -241px transparent;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: -1px;
+    left: -20px;
+}
+.block .block-content {
+
+}
+.block .block-content p {
+    padding: 5px;
+    margin: 0;
+}
+.block .block-content li.item {
+    padding: 0;
+}
+.block .block-content .actions {
+    padding: 6px 6px 0;
+    text-align: right;
+}
+.block .block-content .actions > * {
+    float: right;
+    line-height: 31px;
+}
+.block .block-content .actions button {
+    float: left;
+}
+.block-content ol {
+    margin: 0 0 0 5px;
+}
+.block-content ol p {
+    margin: 0;
+}
+
+.block ol#cart-sidebar-reorder {
+    list-style-type: none;
+    padding-left: 2px;
+}
+.block ol#cart-sidebar-reorder li p {
+    margin-left: 10px;
+    padding-left: 8px;
+    padding-top: 1px;
+}
+
+
+.customer-account-index .block_free_delivery,
+.customer-account-index .block_virus,
+.customer-account-index .block_memory,
+.customer-account-edit .block_free_delivery,
+.customer-account-edit .block_virus,
+.customer-account-edit .block_memory,
+.customer-address-form .block_free_delivery,
+.customer-address-form .block_virus,
+.customer-address-form .block_memory,
+.sales-order-history .block_free_delivery,
+.sales-order-history .block_virus,
+.sales-order-history .block_memory,
+.sales-billing-agreement-index .block_free_delivery,
+.sales-billing-agreement-index .block_virus,
+.sales-billing-agreement-index .block_memory,
+.sales-recurring-profile-index .block_free_delivery,
+.sales-recurring-profile-index .block_virus,
+.sales-recurring-profile-index .block_memory,
+.review-customer-index .block_free_delivery,
+.review-customer-index .block_virus,
+.review-customer-index .block_memory,
+.tag-customer-index .block_free_delivery,
+.tag-customer-index .block_virus,
+.tag-customer-index .block_memory,
+.newsletter-manage-index .block_free_delivery,
+.newsletter-manage-index .block_virus,
+.newsletter-manage-index .block_memory {
+    display:none;
+}
+/******* magento styles ********/
+.checkout-onepage-index .page-title,
+.checkout-onepage-index .sidebar,
+.checkout-cart-index .page-title,
+.page-sitemap .page-title,
+.checkout-onepage-success .page-title {
+    margin:21px 0;
+}
+.header .form-search .search-autocomplete {
+    z-index:999;
+    left:40px !important;
+    top:22px !important;
+}
+.header .form-search .search-autocomplete ul {
+    border:1px solid #5c7989;
+    background-color:#f9f5f0;
+}
+.header .form-search .search-autocomplete li {
+    text-align:left;
+    border-bottom:1px solid #f4eee7;
+    padding:2px 8px 1px 8px;
+    cursor:pointer;
+}
+.header .form-search .search-autocomplete li .amount {
+    float:right;
+    font-weight:bold;
+}
+.header .form-search .search-autocomplete li.odd {
+    background-color:#fffefb;
+}
+.header .form-search .search-autocomplete li.selected {
+    background-color:#f7e8dd;
+}
+.header .form-language {
+    clear:both;
+    padding:5px 0 0;
+    text-align:right;
+}
+.header .form-language label {
+    font-weight:bold;
+    padding-right:5px;
+    color:#a7c6dd;
+    vertical-align:middle;
+}
+.header .form-language select {
+    padding:0;
+}
+.header .form-language select.flags option {
+    background-position:4px 50%;
+    background-repeat:no-repeat;
+    padding-left:25px;
+}
+.header-container .top-container {
+    clear:both;
+    padding:5px 10px 0 12px;
+    text-align:right;
+}
+.header-container .top-container a {
+    font-size:11px;
+    color:#ebbc58;
+}
+.wrapper {
+    position:relative;
+    width:940px;
+    margin:0 auto; z-index:9;
+}
+.page-print {
+    background:#fff;
+    padding:25px 30px;
+    text-align:left;
+}
+.page-empty {
+    background:#fff;
+    padding:20px;
+    text-align:left;
+}
+.page-popup {
+    background:#fff;
+    padding:25px 30px;
+    text-align:left;
+}
+.main-container {
+    width: 940px; min-height:300px;
+    clear: both;
+}
+/******* page heading ********/
+
+.page-title h1{
+    line-height: 33px;
+    margin: 0;
+    text-transform: capitalize;
+    color: #666666;
+}
+/******* base columns ********/
+.col-left {
+    float:left;
+    width:207px;
+    padding:0 12px 0 0;
+}
+.col-main {
+    float:left;
+    width: 940px;
+}
+.col-right {
+    float:right;
+    width:219px;
+}
+.col2-left2-layout .col-main {;
+    padding: 0;
+    float: left;
+}
+.col2-left-layout .col-main {
+    width: 700px;
+    padding: 0;
+    float: right;
+}
+.col2-right-layout .col-main {
+    width: 700px;
+}
+.col3-layout .col-main {
+    width:475px;
+    margin-left:17px;
+}
+.col3-layout .col-wrapper {
+    float:left;
+    width:687px;
+}
+.col3-layout .col-wrapper .col-main {
+    float:right;
+}
+.col2-set .col-1 {
+    float:left;
+    width:48.5%;
+}
+.col2-set .col-2 {
+    float:right;
+    width:48.5%;
+}
+.col2-set .col-narrow {
+    width:32%;
+}
+.col2-set .col-wide {
+    width:65%;
+}
+.col3-set .col-1 {
+    float:left;
+    width:32%;
+}
+.col3-set .col-2 {
+    float:left;
+    width:32%;
+    margin-left:2%;
+}
+.col3-set .col-3 {
+    float:right;
+    width:32%;
+}
+.col4-set .col-1 {
+    float:left;
+    width:23.5%;
+}
+.col4-set .col-2 {
+    float:left;
+    width:23.5%;
+    margin:0 2%;
+}
+.col4-set .col-3 {
+    float:left;
+    width:23.5%;
+}
+.col4-set .col-4 {
+    float:right;
+    width:23.5%;
+}
+.col2-left-layout .main > div {
+    padding-top: 20px;
+}
+/******* account login/register ********/
+.account-login .content,
+.account-create .content{
+    min-height:240px;
+}
+.account-login .content h2,
+.account-create .content h2 {
+    font-size: 1.8em;
+    margin: 16px 0 0.5em;
+}
+.account-login{ margin:10px 0 0; }
+
+.account-login .buttons-set,
+.account-create .button-set {
+    border-top:1px solid #dedede;
+    padding:11px 0;
+    margin:0;
+}
+.form-list {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.f-left {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    margin: 2px 10px 0 0;
+}
+/******* button styles ********/
+button.button::-moz-focus-inner {
+    padding:0;
+    border:0;
+}
+button.button {
+    -webkit-border-fit: lines;
+    outline: medium none;
+    overflow: visible;
+    width: auto;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: block;
+    height: 15px;
+    background: none;
+}
+button.button span,
+button.small-default-btn span{
+    border:0;
+    padding:0;
+}
+button.button span span{
+    padding: 1px 20px 1px 24px;
+    position: relative;
+    display: block;
+    height: 31px;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    color: #727272;
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png") no-repeat scroll -90px -180px transparent;
+    height: 19px;
+}
+
+.cart button.btn-continue span span {
+    background-position: -90px -209px;
+}
+.cart button.btn-update span span:after,
+.cart button.btn-proceed-checkout span span:after{
+    left: auto;
+    right: 0px;
+}
+.cart button.btn-proceed-checkout span span {
+    background-position: -90px -310px;
+}
+button.btn-proceed-checkout {
+    background-color: #CC2666;
+    height: 30px;
+    padding: 5px 12px 0 13px;
+}
+
+.cart{ position:relative; }
+.checkout-img{ position:absolute; top:7px; right:0; width:632px; height:64px; background: url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/checkout-img.png') no-repeat   }
+.cart .page-title h1{ margin: 3px 0 13px; }
+.cart .page-title{ margin:25px 0 !important; }
+.cart{ margin:25px 0 0; }
+
+.checkout-onepage-index .page-title{ background: url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/checkout-img.png') no-repeat; padding:77px 0 0;    }
+
+
+button.btn-proceed-checkout span span {
+    color: #ffffff;
+}
+button.disabled span {
+    border-color:#bbb !important;
+    background:#bbb !important;
+}
+
+/******* form elements ********/
+input, select, textarea, button {
+    font:12px/15px Arial, Helvetica, sans-serif;
+    vertical-align:middle;
+    color:#2f2f2f;
+}
+input.input-text, select, textarea {
+    background:#fff;
+    border:1px solid #b6b6b6;
+}
+input.input-text, textarea {
+    padding:2px;
+}
+select {
+    padding:1px;
+}
+select option {
+    padding-right:10px;
+}
+select.multiselect option {
+    border-bottom:1px solid #b6b6b6;
+    padding:2px 5px;
+}
+select.multiselect option:last-child {
+    border-bottom:0;
+}
+textarea {
+    overflow:auto;
+}
+input.radio {
+    margin-right:3px;
+}
+input.checkbox {
+    margin-right:3px;
+}
+input.qty {
+    width:2.5em !important;
+}
+p.control input.checkbox, p.control input.radio {
+    margin-right:6px;
+}
+input.input-text:focus, select:focus, textarea:focus {
+    background-color:#fafafa;
+}
+.form-list li {
+    margin:0 0 8px;
+}
+.form-list label {
+    float:left;
+    color:#666;
+    font-weight:bold;
+    position:relative;
+    z-index:0;
+    margin:0 0 4px;
+}
+.form-list label.required {
+}
+.form-list label.required em {
+    float:right;
+    font-style:normal;
+    color:#eb340a;
+    position:absolute;
+    top:0;
+    right:-8px;
+}
+.form-list li.control label {
+    float:none;
+}
+.form-list li.control input.radio, .form-list li.control input.checkbox {
+    margin-right:6px;
+}
+.form-list li.control .input-box {
+    clear:none;
+    display:inline;
+    width:auto;
+}
+.form-list .input-box {
+    display:block;
+    clear:both;
+    width:260px;
+}
+.form-list .field {
+    float:left;
+    width:275px;
+}
+.form-list input.input-text {
+    width:254px;
+    margin:0 0 8px;
+}
+.form-list textarea {
+    width:254px;
+    height:10em;
+}
+.form-list select {
+    width:260px;
+}
+.form-list li.wide .input-box {
+    width:535px;
+}
+.form-list li.wide input.input-text {
+    width:529px;
+}
+.form-list li.wide textarea {
+    width:529px;
+}
+.form-list li.wide select {
+    width:535px;
+}
+.form-list li.additional-row {
+    border-top:1px solid #ccc;
+    margin-top:10px;
+    padding-top:7px;
+}
+.form-list li.additional-row .btn-remove {
+    float:right;
+    margin:5px 0 0;
+}
+.form-list .input-range input.input-text {
+    width:74px;
+}
+/******* breadcrumbs ********/
+.breadcrumbs {
+    font-size:1.1em;
+    margin:0 0 21px 0;
+    padding:0 0 13px 0;
+    border-bottom: 1px solid #DEDEDE;
+}
+.col-main .breadcrumbs {
+    border-bottom: none;
+}
+.breadcrumbs ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.breadcrumbs li {
+    display:inline;
+    padding:0;
+    margin:0;
+    color:#000;
+    font-weight: normal;
+}
+.breadcrumbs li a {
+    color: #CC2666;
+}
+.breadcrumbs li strong {
+    font-weight:bold;
+}
+/******* recycled elements ********/
+.subtitle, .sub-title {
+    font-size:2.333em;
+    padding:0 0 9px;
+    border-bottom: 1px solid #DEDEDE;
+}
+/******* toolbar elements ********/
+.toolbar {
+    background-color: #ddd;
+    color: #222;
+    margin: 15px 0;
+    padding: 4px 0;
+    border-top: 3px double #FFFFFF;
+    border-bottom: 3px double #FFFFFF; height:25px; line-height:22px;
+}
+.pager,
+.pager .amount,
+.pager .limiter,
+.pager .limiter label,
+.pager .limiter select,
+.pager .pages,
+.pager .pages ol,
+.pager .pages li,
+.sorter .view-mode,
+.sorter,
+.sort-by,
+.pages,
+.pages ol,
+.pages li,
+.pages .current {
+    list-style:none;
+    padding:0;
+    margin:0;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    vertical-align:middle;
+}
+
+
+.sorter, .pager, .sort-by {
+    float:left;
+}
+.sort-by {
+    padding-left:20px;
+}
+
+.pages {
+    float:right;
+}
+
+.list,
+.grid {
+    display: inline-block;
+    zoom: 1;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    height: 26px;
+    width: 25px;
+    margin-left: 5px;
+    *display: inline;
+}
+.list.on {
+    background-image: url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/list-on.jpg');
+}
+.grid.on {
+    background-image: url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/grid-on.jpg');
+}
+.list {
+    background-image: url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/list-off.jpg');
+}
+.grid {
+    background-image: url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/grid-off.jpg');
+}
+.pager .amount {
+    padding:0 33px;
+}
+.pager .limiter{
+    padding: 0 26px 0 0;
+}
+.view-mode {
+    margin-left: 10px !important;
+}
+.pages li{
+    display: inline-block;
+    zoom: 1;
+    width: 21px;
+    height: 26px;
+    *display:inline;
+}
+.pages li a {
+    display: block;
+    height: 26px;
+    color: #909090;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: center;
+}
+.pages li.current{
+    color: #fff;
+    line-height: 26px;
+    text-align: center;
+    font-weight: bold;
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/paging-bg.jpg") no-repeat scroll 0 3px transparent;
+}
+.pages a.previous, .pages a.next {
+    width: 6px;
+    height: 7px;
+    margin: 9px 6px;
+    text-indent: -999em;
+}
+.pages a.previous {
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png") no-repeat scroll -44px -245px transparent;
+}
+.pages a.next {
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png") no-repeat scroll -44px -217px transparent;
+}
+/******* category/featured elements ********/
+.category-title {
+    margin:0;
+}
+.category-image {
+    width:100%;
+    overflow:hidden;
+    margin:0 0 10px;
+    text-align:center;
+}
+.category-description {
+    margin:0 0 10px;
+}
+/* grid */
+.products-grid {
+    position: relative;
+    list-style: none;
+    padding: 0 0 30px;
+    margin: 20px 0 30px;
+    border-bottom: 1px solid #cccccc;
+}
+.products-grid.last {
+    border-bottom: none;
+}
+
+.products-grid li {
+    float: left;
+    width: 217px;
+    padding: 0 8px 0 14px;
+    border-right: 1px solid #cccccc;
+}
+.products-grid li.first {
+    padding-left: 0;
+}
+.products-grid li.last,
+.products-grid li.empty {
+    padding-right: 0;
+    border-right: none;
+}
+.products-grid.last {
+    border-bottom:0;
+}
+
+
+.cms-index-index .products-grid li.item {
+    position:relative;
+    float:left;
+    width:210px;
+    padding:15px 15px 0 15px;
+    border-left:1px solid #d9d9d9;
+}
+.cms-index-index .products-grid li.last {
+    padding-right: 0px;
+}
+.cms-index-index .products-grid li.first {
+    border-left: none;
+    padding-left: 0px;
+}
+
+.cms-index-index .products-grid .product-image {
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+/* list */
+.products-list {
+    position:relative;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.products-list li.item {
+    position:relative;
+    border-bottom:1px solid #dedede;
+    padding:0 10px 15px 10px;
+    margin:0 0 15px;
+}
+.products-list li.item.last {
+    border-bottom:0;
+}
+.products-list .product-image {
+    float:left;
+    margin:0 0 10px;
+}
+.products-list .product-shop {
+    margin-left: 220px;
+    padding-top: 30px;
+}
+.products-list .product-name {
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    vertical-align:middle;
+    margin:10px 0;
+    min-height: 0;
+}
+.products-list .product-name a {
+    font-weight:normal;
+}
+.products-list .price-box {
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    margin:0;
+    vertical-align:middle;
+}
+.products-list .availability {
+    float:left;
+    margin:3px 0 0;
+}
+.products-list .desc {
+    margin:0 0 15px;
+    line-height:1.35;
+}
+.products-list .link-compare-lrg {
+    position:absolute;
+    left:160px;
+    bottom:20px;
+}
+.products-list button.btn-cart {
+    margin:0 0 0 10px;
+}
+.products-list .price-btn-holder {
+    position:absolute;
+    right:0;
+    bottom:20px;
+    height:31px;
+}
+.link-compare-lrg, .link-compare-lrg:hover {
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/lrg-compare-btn.png") no-repeat;
+    color: #fff;
+    text-align: left;
+    font-family: 'ColaborateMediumRegular',arial,helvetica,sans-serif;
+    font-size: 1em;
+    height: 31px;
+    line-height: 31px;
+    margin: 0 10px 0 0;
+    padding: 0 0 0 8px;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #c3981f;
+    width: 96px;
+    text-decoration:none;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    vertical-align:middle;
+    text-transform:uppercase;
+}
+button.btn-cart span span:after {
+    background-position: 0 -135px;
+    height: 23px;
+    width: 17px;
+}
+button.btn-cart {
+    border: 0 none;
+    cursor: pointer;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    vertical-align:middle;
+    height: 31px;
+    margin: 0;
+    outline: medium none;
+    overflow: visible;
+    padding: 0;
+    width: auto;
+}
+button.btn-cart span span {
+    background: none;
+    padding: 9px 0 0 23px;
+    color: #CC2666;
+    display: block;
+    height: 31px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.add-to-cart button.btn-cart span span{
+
+background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png") no-repeat scroll 0px -133px transparent}
+
+
+
+/******* products ********/
+.no-rating {
+    margin:0;
+}
+.ratings {
+    font-size:11px;
+    line-height:1.25;
+    margin:7px 0;
+}
+.ratings strong {
+    float:left;
+    margin:1px 3px 0 0;
+}
+.ratings .rating-links {
+    margin:0;
+}
+.ratings .rating-links .separator {
+    margin:0 2px;
+}
+.ratings dt {
+}
+.ratings dd {
+}
+.rating-box {
+    width:69px;
+    height:13px;
+    font-size:0;
+    line-height:0;
+    text-indent:-999em;
+    overflow:hidden;
+}
+.rating-box .rating {
+    float:left;
+    height:13px;
+}
+.ratings .rating-box {
+    float:left;
+    margin-right:3px;
+}
+.ratings .amount {
+}
+.ratings-table th, .ratings-table td {
+    font-size:11px;
+    line-height:1.15;
+    padding:3px 0;
+}
+.ratings-table th {
+    font-weight:bold;
+    padding-right:8px;
+}
+/* Availability */
+.availability.in-stock span {
+}
+.availability.out-of-stock span {
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/soldout.png") no-repeat scroll left center transparent;
+    color: #CC2666;
+    padding: 2px 0 2px 23px;
+}
+.availability-only {
+    margin:10px 0 7px;
+    line-height:16px;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_availability_only.gif) 0 50% no-repeat;
+    padding-left:15px;
+}
+.availability-only span, .availability-only a {
+    border-bottom:1px dashed #751d02;
+    color:#000;
+}
+.availability-only a {
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_availability_only_arrow.gif) 100% 0 no-repeat;
+    cursor:pointer;
+    padding-right:15px;
+    text-decoration:none;
+}
+.availability-only .expanded {
+    background-position:100% -15px;
+}
+.availability-only strong {
+    color:#be2c00;
+}
+.availability-only-details {
+    margin:0 0 7px;
+}
+.availability-only-details th {
+    background:#d2d6d9;
+    font-size:10px;
+    padding:0 8px;
+}
+.availability-only-details td {
+    background:#ebf0f3;
+    border-bottom:1px solid #fff;
+    font-size:11px;
+    padding:2px 8px 1px;
+}
+.availability-only-details tr.odd td.last {
+    color:#d95e00;
+    font-weight:bold;
+}
+/* Email to a Friend */
+.email-friend {
+    margin:0;
+}
+/* Alerts */
+.alert-price {
+    margin:0;
+    font-size:11px;
+}
+.alert-stock {
+    margin:0;
+    font-size:11px;
+}
+
+/********** Product Prices > */
+
+/* Tier Prices */
+.tier-prices {
+    margin:10px 0;
+    padding:10px;
+    background-color:#f4f7f7;
+    border:1px solid #dadddd;
+}
+.tier-prices li {
+    line-height:1.4;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_tier.gif) no-repeat 0 3px;
+    padding:2px 0 2px 10px;
+    color:#424242;
+}
+.tier-prices .benefit {
+    font-style:italic;
+    font-weight:bold;
+    color:#2f2f2f;
+}
+.tier-prices .price {
+    font-weight:bold;
+    color:#2f2f2f;
+}
+.tier-prices-grouped li {
+    padding:2px 0;
+    color:#e26703;
+}
+.tier-prices-grouped li .price {
+    font-weight:bold;
+}
+/* Add to Links */
+.add-to-links {
+    font-size:11px;
+    margin:5px 0 0;
+}
+.add-to-links .separator {
+    display:none;
+}
+/* Add to Cart */
+.add-to-cart label {
+    float:left;
+    margin-right:5px;
+    font-weight:bold;
+    color:#666;
+}
+.add-to-cart .qty {
+    float:left;
+    margin-right:5px;
+}
+.add-to-cart button.button {
+    float:left;
+    margin-top: -4px;
+}
+.add-to-cart .paypal-logo {
+    clear:left;
+    margin:0;
+    text-align:right;
+}
+.add-to-cart .paypal-logo .paypal-or {
+    clear:both;
+    display:block;
+    margin:5px 60px 5px 0;
+}
+.product-view .add-to-cart .paypal-logo {
+    margin:0;
+}
+/* Add to Links + Add to Cart */
+.add-to-box {
+    margin:10px 0;
+}
+.add-to-box .add-to-cart {
+    float:left;
+}
+.add-to-box .or {
+    float:left;
+    font-weight:bold;
+    margin:0 7px;
+    color:#666;
+}
+.add-to-box .add-to-links {
+    float:left;
+    margin:0;
+    font-size:12px !important;
+    line-height:1.25 !important;
+    text-align:left !important;
+}
+.add-to-box .add-to-links li {
+    display:block !important;
+}
+.add-to-box .add-to-links li .separator {
+    display:none !important;
+}
+.product-view {
+    width: 700px;
+}
+.product-collateral h2 {
+    font-weight:bold;
+    font-size:15px;
+    color:#e26703;
+    border-bottom:1px solid #e5dcc3;
+    padding:0 0 1px;
+    margin:0 0 15px;
+}
+.product-collateral .box-collateral {
+    margin:0 0 25px;
+}
+/* Product Images */
+#product-gallery {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #cccccc;
+}
+.product-view .product-img-box {
+    float: right;
+    width: 300px;
+    margin:0;
+}
+.product-img-box .product-image img#image {
+    width:300px;
+}
+.product-image .zoom-btn {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    text-indent: -999em;
+    width: 28px;
+    height: 28px;
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png") no-repeat scroll -233px -91px transparent;
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    padding: 7px;
+    cursor: pointer;
+}
+.product-view .product-img-box .more-views {
+    float:left;
+    width:338px;
+    position: relative;
+    margin:15px 0 0 0;
+    font-size:0;
+}
+.product-view .product-img-box .more-views a {
+    display: inline-block;
+    zoom: 1;
+    height: 70px;
+    margin: 0 13px 0 0;
+    padding: 10px;
+    width: 70px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    *display: inline;
+}
+
+/********** product-tabs **********/
+.product-collateral {
+    float:left;
+    margin:40px 0 22px;
+}
+ul.tabs {
+    margin: 0 0 0 10px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: 34px;
+}
+ul.tabs li {
+    position: relative;
+    float: left;
+    margin: 0 8px 0 0;
+    padding: 0;
+    height: 34px;
+    line-height: 34px;
+    overflow: hidden;
+}
+ul.tabs li a {
+    text-decoration: none;
+    font-weight: normal;
+    color: #555555;
+    display: block;
+    font-size: 1.333em;
+    padding: 0;
+    width:164px;
+    height:34px;
+    outline: none;
+    text-align:center;
+}
+ul.tabs li.active a, ul.tabs li.active a:hover {
+    background-color: #ECECEC;
+    border: 1px solid #999999;
+}
+.box-tags {
+    display:none;
+}
+.product-tabs {
+    border: 1px solid #999999;
+    background-color: #ececec;
+    overflow: hidden;
+    clear: both;
+    float: left;
+    margin:-1px 0 0 0;  width:700px;
+}
+.tab-content {
+    padding: 1.5em 10px;
+    width: 680px;
+}
+
+/* Product Shop */
+.main > .breadcrumbs { display: none; }
+.product-view .product-shop {
+    position:relative;
+    float:left;
+    width:380px;
+}
+.product-view .product-shop .product-name {
+    margin:0 0 15px;
+}
+.product-view .product-shop .product-name h1 {
+    color: #666666;
+    font-weight: normal;
+    font-size: 1.6em;
+    margin:0;
+}
+.product-name a { color: #666; }
+.product-view .product-shop .availability {
+    margin:0;
+}
+.product-view .product-shop .short-description { margin-bottom: 20px; }
+.product-view .product-shop .short-description p {
+    margin:0;
+    padding:0;
+}
+.product-view .product-shop .price-box {
+    margin:10px 0;
+}
+.product-view .product-shop .add-to-cart label {
+    color: #2F2F2F;
+    font-weight: bold;
+    line-height: 22px;
+    width: 100px;
+}
+.product-view .product-shop .add-to-cart .qty {
+    margin-right: 25px;
+    text-align: center;
+}
+.product-view .add-to-box .add-to-cart {
+    margin:0 10px 0 0;
+}
+
+/* Product Options */
+.product-options {
+    margin: 20px -7px 0;
+    padding: 10px 0px 0px;
+    position: relative;
+}
+.product-options dl {
+    overflow: hidden;
+}
+.product-options dt {
+    float: left;
+    width: 100px;
+    padding:10px 0 0;
+    font-weight:normal;
+}
+.product-options dt label {
+    font-weight:bold;
+    color:#2f2f2f;
+}
+.product-options dt label.required em {
+    color:#eb340a;
+    margin-left:5px;
+}
+.product-options dd .qty-holder {
+    display:block;
+    padding:10px 0 0;
+}
+.product-options dd .qty-holder label {
+    vertical-align:middle;
+}
+.product-options dt .qty-disabled {
+    background:none;
+    border:0;
+    padding:3px;
+    color:#2f2f2f;
+}
+.product-options dd {
+    float: left;
+    width: 225px;
+    padding:5px 10px 15px;
+    margin:0 0 5px;
+    border-bottom:1px solid #e4e4e4;
+}
+.product-options dl.last dd.last {
+    padding-right: 0;
+    border-bottom:0;
+    padding-bottom:5px;
+    margin-bottom:0;
+}
+.product-options dd input.input-text {
+    width:98%;
+}
+.product-options dd input.datetime-picker {
+    width:150px;
+}
+.product-options dd .time-picker {
+    display:-moz-inline-box;
+    display:inline-block;
+    padding:2px 0;
+    vertical-align:middle;
+}
+.product-options dd textarea {
+    width:98%;
+    height:8em;
+}
+.product-options dd select {
+    width:99%;
+}
+.product-options dd .multiselect option {
+    border-bottom:1px dotted #d9e5ee;
+    padding:2px 4px;
+}
+.product-options ul.options-list {
+    margin-right:5px;
+}
+.product-options ul.options-list li {
+    line-height:1.5;
+    padding:2px 0;
+}
+.product-options ul.options-list input.radio {
+    float:left;
+    margin-top:3px;
+}
+.product-options ul.options-list input.checkbox {
+    float:left;
+    margin-top:3px;
+}
+.product-options ul.options-list .label {
+    display:block;
+    margin-left:18px;
+}
+.product-options ul.options-list label {
+    font-weight:normal;
+}
+.product-options ul.validation-failed {
+    padding:0 7px;
+}
+.product-options p.note {
+    margin:0;
+    font-size:11px;
+}
+.product-options p.required {
+    right:20px;
+    top:20px;
+}
+.product-options-bottom {
+    padding: 0;
+}
+.product-options-bottom .tier-prices {
+    margin:0;
+    padding:0 0 10px;
+    border:0;
+    background:0;
+}
+.product-options-bottom .tier-prices li {
+    background:0;
+    padding:2px 0;
+    color:#e26703;
+}
+.product-options-bottom .tier-prices .price, .product-options-bottom .tier-prices .benefit {
+    color:#e26703;
+}
+.product-options-bottom .price-box {
+    float:left;
+    margin:0;
+    padding:0;
+}
+.product-options-bottom .add-to-links {
+    clear:both;
+    padding:5px 0 0;
+    text-align:right;
+}
+.col3-layout .product-options-bottom .price-box {
+    float:none;
+    padding:0 0 5px;
+}
+.product-options-bottom .price-label {
+    float:left;
+    padding-right:5px;
+}
+.product-options-bottom .price-tax {
+    float:left;
+}
+.product-options-bottom .add-to-cart {
+    float:left;
+}
+.product-shop .product-options-bottom {
+    margin:0 0 10px;
+}
+.product-shop .product-options-bottom .price-box {
+    float:none;
+    margin:0 0 5px;
+}
+.product-shop .product-options-bottom .price-label {
+    float:none;
+    padding-right:0;
+}
+.product-shop .product-options-bottom .price-tax {
+    float:none;
+}
+.product-shop .product-options-bottom .add-to-cart-box {
+    clear:both;
+    float:left;
+    padding-top:12px;
+}
+.product-shop .product-options-bottom .add-to-links {
+    clear:both;
+    padding:5px 0 0;
+    text-align:right;
+}
+/* Grouped Product */
+.product-view .grouped-items-table .price-box {
+    margin:0;
+    padding:0;
+}
+/* Block: Description */
+.product-view .box-description {
+}
+/* Block: Additional */
+.product-view .box-additional .data-table th, .product-view .box-additional .data-table td {
+    line-height:1.25;
+}
+/* Block: Upsell */
+.product-view .box-up-sell h2 {
+    padding:0 0 5px 0;
+    margin:0;
+}
+.product-view .box-up-sell .products-grid {
+    width:100%;
+    margin:18px 0 0 0;
+}
+.category-products .actions a:not(.buy-now) {
+    color: #666666;
+}
+.product-view .box-up-sell .products-grid ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    font-size:0;
+}
+.product-view .box-up-sell .products-grid li {
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    width:220px;
+    margin:0 17px 0 0;
+    padding:0;
+    font-size:12px;
+}
+.product-view .box-up-sell .products-grid h3 a{
+    font-size:1.5em;
+}
+.product-view .box-up-sell .products-grid .product-image {
+    width:220px;
+    margin:0 0 18px 0;
+    padding:15px 0;
+    text-align:center;
+}
+.product-view .box-up-sell .products-grid .regular-price .price{
+    /*    font-size:1.667em;*/
+}
+.product-view .box-up-sell .products-grid .ratings .rating-box {
+    float:none;
+    display:block;
+    margin:0 0 3px;
+}
+.products-grid .read-more,
+.products-list .read-more {
+    float: left;
+    position: relative;
+    margin: 8px 0 0 15px;
+}
+.products-grid .read-more:before,
+.products-list .read-more:before {
+    content: " ";
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png") no-repeat scroll 0 -241px transparent;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: -1px;
+    left: -17px;
+}
+.products-grid .buy-now,
+.products-list .buy-now {
+    padding: 2px 0 0 0;
+    display: block;
+    float: right;
+    line-height: 24px;
+    color: #CC2666;
+    margin: 0 10px 0 0;
+    position: relative;
+}
+/*.products-grid .buy-now:before,
+.products-list .buy-now:before {
+    content: " ";
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png") no-repeat scroll 0 -135px transparent;
+    width: 17px;
+    height: 23px;
+    position: absolute;
+    top: -1px;
+    left: -22px;
+}*/
+
+.products-grid .buy-now, .products-list .buy-now {
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png") no-repeat scroll 0 -135px transparent;
+    float: right;
+    height: 23px;
+    padding-left: 25px;
+}
+
+.products-list .actions {
+    width: 225px;
+    margin-top: 10px;
+}
+.product-view .box-up-sell .products-grid .btn-cart {
+    float:right;
+    margin:0;
+}
+/* Block: Tags */
+.product-view .box-tags {
+    margin:0;
+}
+.product-view .box-tags h3 {
+    font-size:13px;
+}
+.product-view .box-tags .product-tags {
+    display:block;
+    margin:0 0 15px;
+}
+.product-view .box-tags .product-tags li {
+    display:inline;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/bkg_pipe3.gif) 100% 4px no-repeat;
+    padding:0 7px 0 4px;
+}
+.product-view .box-tags .product-tags li.first {
+    padding-left:0;
+}
+.product-view .box-tags .product-tags li.last {
+    background:none;
+    padding-right:0;
+}
+.product-view .box-tags .form-add label {
+    display:block;
+    font-size:13px;
+    font-weight:bold;
+    margin:0 0 5px;
+    color:#0a263c;
+}
+.product-view .box-tags .form-add .input-box {
+    float:left;
+    width:305px;
+    margin:0 5px 0 0;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_tag_add.gif) 0 2px no-repeat;
+    padding:0 0 0 23px;
+}
+.product-view .box-tags .form-add input.input-text {
+    width:299px;
+}
+.product-view .box-tags .form-add button.button span {
+    border-color:#406a83;
+    background:#618499;
+}
+.product-view .box-tags .note {
+    margin:3px 0 0;
+    padding:0 0 0 23px;
+    font-size:11px;
+}
+/* Block: Reviews */
+.product-view .box-reviews dl {
+    margin:15px 0;
+}
+.product-view .box-reviews dt a, .product-view .box-reviews dt span {
+    font-weight:bold;
+}
+.product-view .box-reviews dd {
+    margin:0 0 15px;
+}
+.product-view .box-reviews dd small {
+    font-style:italic;
+}
+.product-view .box-reviews .form-add {
+    margin:15px 0 0;
+}
+.product-view .box-reviews .form-add h3 {
+    font-size:13px;
+    font-weight:normal;
+}
+.product-view .box-reviews .form-add h3 span {
+    font-weight:bold;
+}
+.product-view .box-reviews .form-add h4 {
+    font-size:12px;
+}
+.product-view .box-reviews .form-add .data-table td {
+    text-align:center;
+}
+.product-view .box-reviews .form-add .form-list {
+    margin:15px 0 0;
+}
+.product-view .box-reviews .form-add .form-list .input-box {
+    width:360px;
+}
+.product-view .box-reviews .form-add .form-list input.input-text, .product-view .box-reviews .form-add .form-list textarea {
+    width:354px;
+}
+/* Send a Friend */
+.send-friend .form-list {
+    width:615px;
+    overflow:hidden;
+}
+.send-friend .form-list li {
+    margin-right:-15px;
+}
+.send-friend .form-list li p {
+    margin:0 15px 0 0;
+}
+.send-friend .form-list .field {
+    width:315px;
+}
+.send-friend .form-list .input-box {
+    width:300px;
+}
+.send-friend .form-list input.input-text, .send-friend .form-list textarea {
+    width:294px;
+}
+.send-friend .form-list li.wide .input-box {
+    width:612px;
+}
+.send-friend .form-list li.wide textarea {
+    width:609px;
+}
+.send-friend .buttons-set .limit {
+    float:right;
+    margin:0 7px 0 0;
+    font-size:11px;
+    line-height:21px;
+}
+/******* right-compare ********/
+.right-compare {
+    position: relative;
+    float:right;
+    width: 207px;
+}
+.right-compare ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.right-compare ul li{
+    padding:0;
+    margin:0;
+    width:207px;
+    height:72px;
+    font-size:1em;
+}
+.right-compare .product-image {
+    float:left;
+    display:block;
+    height:64px;
+    width:64px;
+    margin:0 6px 0 0;
+    border:1px solid #ccc;
+}
+.right-compare h4 {
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    margin:0;
+    font-size:1.167em;
+}
+.right-compare h4 a{
+    color:#000;
+}
+.right-compare h5 {
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    margin:0;
+    height:22px;
+    font-size:1.333em;
+    color: #0EB2BC;
+    font-weight: normal;
+}
+.right-compare button {
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+}
+
+/******* prices ********/
+.price {
+    white-space:nowrap !important;
+}
+.price-box {
+    margin: 12px 0;
+}
+.price-box .price {
+    font-weight:normal;
+    color:#CC2666;
+}
+/* Regular price */
+.regular-price {
+    font-weight:normal;
+    font-size: 1.5em;
+    color: #CC2666;
+}
+.regular-price .price {
+    /*    font-size: 1.5em;*/
+}
+.block .regular-price, .block .regular-price .price {
+    color:#0eb2bc;
+}
+/* Old price */
+.old-price {
+    margin:0;
+}
+.old-price .price-label {
+    white-space:nowrap;
+    color:#999;
+    font-weight:normal;
+}
+.old-price .price {
+    color:#999;
+    font-weight:normal;
+    text-decoration:line-through;
+}
+/* Special price */
+.special-price {
+    margin:0;
+    padding:3px 0;
+}
+.special-price .price-label {
+    font-size:1.1em;
+    white-space:nowrap;
+    color:#35cad3;
+    font-weight:normal;
+}
+.special-price .price {
+    font-size:1.1em;
+    color:#35cad3;
+    font-weight:normal;
+}
+/* Minimal price (as low as) */
+.minimal-price {
+    margin:0;
+}
+.minimal-price .price-label {
+    font-weight:normal;
+    white-space:nowrap;
+}
+.minimal-price-link {
+    display:block;
+}
+.minimal-price-link .label {
+    color:#999;
+    font-weight:normal;
+}
+.minimal-price-link .price {
+    color:#999;
+    font-weight:normal;
+}
+/* Excluding tax */
+.price-excluding-tax {
+    display:block;
+    color:#999;
+}
+.price-excluding-tax .label {
+    white-space:nowrap;
+    color:#999;
+}
+.price-excluding-tax .price {
+    font-size:13px;
+    font-weight:normal;
+    color:#999;
+}
+/* Including tax */
+.price-including-tax {
+    display:block;
+    color:#999;
+}
+.price-including-tax .label {
+    white-space:nowrap;
+    color:#999;
+}
+.price-including-tax .price {
+    font-size:13px;
+    font-weight:bold;
+    color:#999;
+}
+/* Configured price */
+.configured-price {
+    margin:0;
+}
+.configured-price .price-label {
+    font-weight:normal;
+    white-space:nowrap;
+}
+.configured-price .price {
+    font-weight:normal;
+}
+/* FPT */
+.weee {
+    display:block;
+    font-size:11px;
+    color:#444;
+}
+.weee .price {
+    font-size:11px;
+    font-weight:normal;
+}
+/* Excl tax (for order tables) */
+.price-excl-tax {
+    display:block;
+}
+.price-excl-tax .label {
+    display:block;
+    white-space:nowrap;
+}
+.price-excl-tax .price {
+    display:block;
+}
+/* Incl tax (for order tables) */
+.price-incl-tax {
+    display:block;
+}
+.price-incl-tax .label {
+    display:block;
+    white-space:nowrap;
+}
+.price-incl-tax .price {
+    display:block;
+    font-weight:bold;
+}
+.price-from {
+    margin:0;
+}
+.price-from .price-label {
+    font-weight:normal;
+    white-space:nowrap;
+}
+.price-to {
+    margin:0;
+}
+.price-to .price-label {
+    font-weight:normal;
+    white-space:nowrap;
+}
+.price-notice {
+    padding-left:10px;
+    color:#999;
+}
+.price-notice .price {
+    font-weight:normal;
+    color:#2f2f2f;
+}
+.price-as-configured {
+    margin:0;
+}
+.price-as-configured .price-label {
+    font-weight:normal;
+    white-space:nowrap;
+}
+.price-box-bundle {
+    padding:0 0 10px 0;
+}
+.price-box-bundle .price-box {
+    margin:0 !important;
+    padding:0 !important;
+}
+.price-box-bundle .price {
+    color:#555;
+}
+/******* sidebar *******/
+.block-layered-nav {
+    width:207px;
+    font-size:1.1em;
+    font-weight: normal;
+}
+.block-layered-nav a {
+    color: #666666;
+}
+.block .btn-remove, .block .btn-edit {
+    float: right;
+    margin: 5px 0 0 5px;
+}
+/* Block: Layered Navigation */
+.block-layered-nav .block-subtitle {
+    color:#000;
+    font-size:1.2em;
+    font-weight: normal;
+    padding: 0;
+    margin: 0 0 20px;
+}
+.block-layered-nav dt {
+    margin: 0;
+    padding: 0;
+}
+.block-layered-nav dd {
+    padding: 0 0 20px;
+    margin:0;
+}
+.block-layered-nav .currently li {
+    padding:0;
+}
+.block-layered-nav dt {
+    color:#000;
+    font-size:1em;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.block-layered-nav .actions {
+    padding:10px 0 0 0;
+    margin:10px 0 0 0;
+    border-top:1px dashed #000;
+    border-width:1px 0;
+    text-align:right;
+}
+.block-layered-nav .actions a {
+    float:none;
+}
+.block-content dl dd ul,
+.block-content .currently ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+/*.block-content .currently ul li,
+.block-content dl dd ul li {
+    padding: 6px 0 6px 24px; background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png") no-repeat scroll -90px -206px transparent;
+}*/
+
+.block-content dl dd ul li a {
+  position: relative;    padding: 0 0 0 24px; background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png") no-repeat scroll -90px -179px transparent; display:inline-block; *display:inline; zoom:1; height:19px; line-height:19px;
+}
+
+.block-content .currently ul li span,
+.block-content dl dd ul li:hover a {
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png") no-repeat scroll -90px -235px transparent; padding-left:24px; display:inline-block; *display:inline; zoom:1; height:19px; line-height:19px;
+}
+
+
+
+
+.block-content dl dd ul li:hover a,
+.block-content .currently ul li {
+    color: #CC2666;
+    text-decoration: none;
+}
+
+/* Block: Account */
+.block-account .block-content ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.block-account .block-content li {
+    font-weight: normal;
+    font-size:1.1em;
+    padding:3px 0 3px 18px;
+    background: url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/block-nav-arrow.gif') 0 50% no-repeat;
+}
+.customer-account-index .block-compare {
+    border:none;
+}
+.block-account .block-content li.current {
+    padding:3px 0 3px 18px;
+    background: url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/block-nav-arrow.gif) 0 50% no-repeat;
+}
+.customer-account-index .block-compare .block-title {
+    padding: 0 0 20px 0;
+}
+
+/* Block: Cart */
+.block-cart .summary {
+    background:none;
+    padding:0 0 8px 0;
+    margin:0;
+    position:relative;
+    z-index:1;
+}
+#cart-sidebar {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+#cart-sidebar li{
+    margin:0;
+    font-size:1.2em;
+    font-weight:normal;
+    padding:0 0 10px 0;
+}
+#cart-sidebar .product-image{
+    display:block;
+    height:50px;
+    width:50px;
+    padding:5px;
+    float:left;
+    margin: 0 8px 0 0;
+    border:1px solid #ccc;
+}
+.block-cart .actions {
+    border-top: 1px dashed #000000;
+    margin: 10px 0 0;
+    padding: 10px 0 0;
+    text-align: right;
+    vertical-align: middle;
+}
+.block-cart .block-subtitle {
+    padding:0 0 8px;
+    margin:0;
+    font-size:1.2em;
+    font-weight:normal;
+}
+.block-cart .actions .paypal-logo {
+    float:left;
+    width:100%;
+    margin:3px 0 0;
+    text-align:right;
+}
+.block-cart .actions .paypal-logo .paypal-or {
+    clear:both;
+    display:block;
+    padding:0 55px 8px 0;
+}
+/* Block: Wishlist */
+.block-wishlist .block-title strong {
+}
+.block-wishlist .actions {
+    text-align:right;
+}
+.block-wishlist .actions a {
+    float:none;
+}
+/* Block: Related */
+.block-related .block-title strong {
+    background-image:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_block-related.gif);
+    background-position:0 1px;
+}
+.block-related input.checkbox {
+    float:left;
+}
+.block-related .product {
+    margin-left:20px;
+}
+/* Block: Compare Products */
+.block-compare {
+    border-top:1px dashed #000;
+    padding:10px 0 20px 0;
+}
+.block-compare .block-title strong {
+    color: #000000;
+    font-size: 2em;
+    font-weight: normal;
+    margin:0 0 18px;
+}
+.block-compare button.button span {
+    border-color:#406a83;
+    background:#618499;
+}
+.block-compare .block-title {
+    padding:10px 0 20px 0;
+}
+.block-compare .actions {
+    border-top: 1px dashed #000000;
+    border-width: 1px 0;
+    margin: 10px 0 0;
+    padding: 10px 0 0;
+    text-align: right;
+    vertical-align:middle;
+}
+.block-compare .actions a {
+    font-size: 1.1em;
+    font-weight: normal;
+    float:right;
+}
+.block-compare .actions a.link-compare {
+    float:left;
+    margin:0;
+    font-size: .95em;
+}
+#compare-items {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+#compare-items li {
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/block-nav-arrow.gif") no-repeat scroll 0 50% transparent;
+    padding: 3px 0 3px 18px;
+    font-size: 1.1em;
+    font-weight: normal;
+}
+.catalog-product-compare-index .page-title h1{
+    width:auto;
+}
+.catalog-product-compare-index .page-title {
+    background:none;
+}
+#compare-items li .product-name a {
+    color:#666;
+}
+.page-popup .link-print {
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_print.gif) 0 50% no-repeat;
+    padding:0 25px 0 0;
+    font-weight:bold;
+    color:#0eb2bc;
+    line-height:58px;
+    height:58px;
+    width:115px;
+    float:right;
+    display:block;
+}
+.compare-table {
+    border:0;
+}
+.compare-table thead tr.first th, .compare-table thead tr.first td {
+    border:0;
+    background:none;
+    padding:0;
+    font-size:0;
+    line-height:0;
+}
+.compare-table .btn-remove {
+    float:right;
+    background-image:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/btn_remove2.gif);
+    width:72px;
+    height:15px;
+}
+.compare-table tbody th {
+    background:#3fb8ba;
+}
+.compare-table tbody td {
+    padding:10px;
+    border:0;
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+}
+.compare-table tbody th {
+    padding:10px;
+    border:0;
+    border-top:1px solid #339798;
+    border-left:1px solid #339798;
+}
+.compare-table tbody td.last {
+    border-right:1px solid #ccc;
+}
+.compare-table tbody tr.last th, .compare-table tbody tr.last td {
+    border-bottom:1px solid #ccc !important;
+}
+.compare-table tr.add-to-row td {
+    background:#fff;
+    text-align:center;
+}
+.compare-table tr.first td {
+    text-align:center;
+}
+.compare-table tr.first td .product-name {
+    font-size:13px;
+    font-weight:bold;
+    margin:0 0 5px;
+    color:#203548;
+}
+.compare-table tr th {
+    color:#fff;
+}
+.compare-table tr.even td {
+    background:#f8f7f5;
+}
+.compare-table tr.first td .product-name a {
+    color:#203548;
+}
+.compare-table tr.first td .ratings {
+    width:69px;
+    margin:0 auto;
+}
+.compare-table tr.first td p, .compare-table tr.add-to-row td p {
+    margin:0;
+}
+.page-sitemap {
+    font-size:1.2em;
+    font-weight: normal;
+}
+
+.page-sitemap .pager{ float:left; width:100%; }
+
+.page-sitemap .sitemap{ float:left;  }
+
+
+.page-sitemap .pager .amount {
+    padding:0;
+}
+.page-sitemap .pager .amount strong {
+    font-weight:normal;
+}
+
+/* Block: Recently Compared */
+.block-compared .block-title strong {
+
+}
+/* Block: Poll */
+.block-poll .block-title strong {
+
+}
+.block-poll .block-subtitle {
+    font-size:12px;
+}
+.block-poll label {
+    color:#777;
+    font-weight:bold;
+}
+.block-poll input.radio {
+    float:left;
+    margin:1px -18px 0 0;
+}
+.block-poll .label {
+    display:block;
+    margin-left:18px;
+}
+.block-poll li {
+    padding:3px 9px;
+}
+.block-poll .actions {
+    margin:5px 0 0;
+}
+.block-poll button.button span {
+    border-color:#406a83;
+    background:#618499;
+}
+.block-poll .answer {
+    font-weight:bold;
+}
+.block-poll .votes {
+    float:right;
+    margin-left:10px;
+}
+/* Block: Tags */
+.block-tags .block-title strong {
+    background-image:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_block-tags.gif);
+}
+.block-tags .block-content .tags-list {
+    background:none;
+    border:0;
+    font-size:12px;
+}
+.block-tags .block-content a {
+    color:#1b2d3b;
+}
+.block-tags .actions {
+    text-align:right;
+}
+.block-tags .actions a {
+    float:none;
+}
+/* Block: Reorder */
+.block-reorder .block-title strong {
+    background-image:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_block-list.gif);
+}
+.block-reorder input.checkbox {
+    float:left;
+    margin:2px -20px 0 0;
+}
+.block-reorder .product-name {
+    margin-left:20px;
+}
+.block-reorder .validation-advice {
+    margin:3px 9px 7px;
+}
+/* Block: Banner */
+.block-banner {
+    border:0;
+}
+.block-banner .block-content {
+    padding:0;
+    text-align:center;
+}
+/* Block: Login */
+.block-login .block-title strong {
+    background-image:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_ma-info.gif);
+}
+.block-login .block-content {
+    padding:5px 10px;
+}
+.block-login label {
+    font-weight:bold;
+    color:#666;
+}
+.block-login input.input-text {
+    display:block;
+    width:167px;
+    margin:3px 0;
+}
+.block-login .actions {
+    background:none;
+    padding:0;
+    margin:3px 0 0;
+}
+.block-login .actions button.button span {
+    border-color:#406a83;
+    background:#618499;
+}
+/* Paypal */
+.sidebar .paypal-logo {
+    display:block;
+    margin:10px 0;
+    text-align:center;
+}
+.sidebar .paypal-logo a {
+    float:none;
+}
+/******** Shopping Cart ********/
+.cart .page-title {
+    position: relative;
+    margin-left: 25px;
+}
+.cart .page-title{
+	display:inline-block; *display:inline; zoom:1; padding-left:29px;
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/sprite.png") no-repeat 3px -134px;
+
+}
+.cart .page-title .checkout-types li {
+    margin:0 0 5px;
+}
+.cart .title-buttons .checkout-types {
+    float:right;
+}
+.cart .title-buttons .checkout-types li {
+    float:left;
+    margin:0 0 5px 5px;
+}
+.cart .checkout-types .paypal-or {
+    margin:0 8px;
+    line-height:2.3;
+}
+.cart .totals .checkout-types .paypal-or {
+    clear:both;
+    display:block;
+    padding:8px 55px 0 0;
+    line-height:1.0;
+    font-size:11px;
+}
+/* Shopping Cart Table */
+.cart-table th {
+    padding:2px 10px;
+}
+.cart-table td {
+    color:#000;
+    padding:10px;
+    vertical-align:middle;
+}
+.cart-table .product-image {
+    display:block;
+    padding:10px;
+    border:1px solid #ccc;
+}
+.cart-table .product-name {
+    font-weight:bold;
+    margin:0 0 5px;
+    color:#000;
+}
+.cart-table .product-name a {
+    font-size: 1.1em;
+    font-weight: normal;
+    color:#000;
+}
+.cart-table td a Edit {
+    color:#21bec7;
+}
+.cart-table .item-msg {
+    margin:5px 0;
+    font-size:11px;
+    font-weight:bold;
+    color:#df280a;
+}
+
+/* Shopping Cart Collateral boxes */
+.cart .cart-collaterals {
+    margin:25px 0 0;
+    padding:15px 0 0;
+    border-top: 1px dashed #828282;
+}
+/* Discount Codes & Estimate Shipping and Tax Boxes */
+.cart .discount, .cart .shipping {
+    border:1px solid #d0cbc1;
+    padding:12px 15px;
+    margin:0;
+}
+.discount-form label {
+    font-size: 1em;
+    font-weight: normal;
+    color:#000;
+}
+.discount h2 {
+    margin: 0 0 6px 0;
+}
+.cart .discount .buttons-set, .cart .shipping .buttons-set {
+    margin:10px 0 0;
+    border:0;
+    padding:0;
+    text-align:left;
+}
+.cart .discount .buttons-set button.button, .cart .shipping .buttons-set button.button {
+    float:right;
+    margin:0;
+}
+.cart .discount .input-box {
+    margin:8px 0 0;
+    width:260px;
+}
+.cart .discount input.input-text {
+    width:264px;
+}
+.cart .shipping h2 {
+    background-image:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_shipping.gif);
+}
+.cart .shipping .sp-methods {
+    margin:10px 0 0;
+    padding:5px 0 0;
+}
+/* Shopping Cart Totals */
+.cart .totals {
+    float:right;
+    width:268px;
+    padding:6px 15px 12px 15px;
+    background:#FFE1ED;
+    border:1px solid #E5BBC9;
+}
+
+.cart .totals td {
+    font-size:1.167em;
+    font-weight: normal;
+    color:#000;
+    text-align:right;
+}
+.cart .totals .checkout-types {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.cart .totals .checkout-types li {
+    float:right;
+    clear:both;
+    padding:12px 8px 12px 0;
+    margin:0;
+}
+/* Options Tool Tip */
+.item-options dt {
+    font-weight:bold;
+    font-style:italic;
+    margin-bottom: 3px;
+}
+.item-options dd {
+    padding-left:10px;
+    margin:0 0 6px;
+}
+.truncated {
+    cursor:help;
+}
+.truncated a.dots {
+    cursor:help;
+}
+.truncated a.details {
+    cursor:help;
+}
+.truncated .truncated_full_value {
+    position:relative;
+    z-index:999;
+}
+.truncated .truncated_full_value .item-options {
+    position:absolute;
+    top:-99999em;
+    left:-99999em;
+    z-index:999;
+    width:250px;
+    padding:8px;
+    border:1px solid #ddd;
+    background-color:#f6f6f6;
+}
+.truncated .truncated_full_value .item-options > p {
+    font-weight:bold;
+    text-transform:uppercase;
+}
+.truncated .show .item-options {
+    top:-20px;
+    left:50%;
+}
+.col-left .truncated .show .item-options {
+    left:15px;
+    top:7px;
+}
+.col-right .truncated .show .item-options {
+    left:-240px;
+    top:7px;
+}
+
+/******* cms content ********/
+/*.std .subtitle {
+        padding:0;
+}
+.std ol.ol {
+        list-style:decimal outside;
+        padding-left:1.5em;
+}
+.std ul.disc {
+        list-style:disc outside;
+        padding-left:18px;
+        margin:0 0 10px;
+}
+.std dl dt {
+        font-weight:bold;
+}
+.std dl dd {
+        margin:0 0 10px;
+}
+.std ul, .std ol, .std dl, .std p, .std address, .std blockquote {
+        margin:0 0 1em;
+        padding:0;
+}
+.std ul {
+        list-style:disc outside;
+        padding-left:1.5em;
+}
+.std ol {
+        list-style:decimal outside;
+        padding-left:1.5em;
+}
+.std ul ul {
+        list-style-type:circle;
+}
+.std ul ul, .std ol ol, .std ul ol, .std ol ul {
+        margin:.5em 0;
+}
+.std dt {
+        font-weight:bold;
+}
+.std dd {
+        padding:0 0 0 1.5em;
+}
+.std blockquote {
+        font-style:italic;
+        padding:0 0 0 1.5em;
+}
+.std address {
+        font-style:normal;
+}
+.std b, .std strong {
+        font-weight:bold;
+}
+.std i, .std em {
+        font-style:italic;
+}
+
+
+*/
+/* ======================================================================================= */
+.page-title .separator {
+    margin:0 3px;
+}
+.page-title .link-rss {
+    float:right;
+    margin:7px 0 0;
+}
+.title-buttons {
+    text-align:right;
+}
+.title-buttons h1, .title-buttons h2, .title-buttons h3, .title-buttons h4, .title-buttons h5, .title-buttons h6 {
+    float:left;
+}
+/* Global Styles ========================================================================= */
+
+/* Customer */
+.form-list .customer-name-prefix .input-box, .form-list .customer-name-suffix .input-box, .form-list .customer-name-prefix-suffix .input-box, .form-list .customer-name-prefix-middlename .input-box, .form-list .customer-name-middlename-suffix .input-box, .form-list .customer-name-prefix-middlename-suffix .input-box {
+    width:auto;
+}
+.form-list .name-prefix {
+    width:65px;
+}
+.form-list .name-prefix select {
+    width:55px;
+}
+.form-list .name-prefix input.input-text {
+    width:49px;
+}
+.form-list .name-suffix {
+    width:65px;
+}
+.form-list .name-suffix select {
+    width:55px;
+}
+.form-list .name-suffix input.input-text {
+    width:49px;
+}
+.form-list .name-middlename {
+    width:70px;
+}
+.form-list .name-middlename input.input-text {
+    width:49px;
+}
+.form-list .customer-name-prefix-middlename-suffix .name-firstname, .form-list .customer-name-prefix-middlename .name-firstname {
+    width:140px;
+}
+.form-list .customer-name-prefix-middlename-suffix .name-firstname input.input-text, .form-list .customer-name-prefix-middlename .name-firstname input.input-text {
+    width:124px;
+}
+.form-list .customer-name-prefix-middlename-suffix .name-lastname {
+    width:205px;
+}
+.form-list .customer-name-prefix-middlename-suffix .name-lastname input.input-text {
+    width:189px;
+}
+.form-list .customer-name-prefix-suffix .name-firstname {
+    width:210px;
+}
+.form-list .customer-name-prefix-suffix .name-lastname {
+    width:205px;
+}
+.form-list .customer-name-prefix-suffix .name-firstname input.input-text, .form-list .customer-name-prefix-suffix .name-lastname input.input-text {
+    width:189px;
+}
+.form-list .customer-name-prefix-suffix .name-firstname {
+    width:210px;
+}
+.form-list .customer-name-prefix-suffix .name-lastname {
+    width:205px;
+}
+.form-list .customer-name-prefix-suffix .name-firstname input.input-text, .form-list .customer-name-prefix-suffix .name-lastname input.input-text {
+    width:189px;
+}
+.form-list .customer-name-prefix .name-firstname, .form-list .customer-name-middlename .name-firstname {
+    width:210px;
+}
+.form-list .customer-name-suffix .name-lastname, .form-list .customer-name-middlename .name-firstname, .form-list .customer-name-middlename-suffix .name-firstname, .form-list .customer-name-middlename-suffix .name-lastname {
+    width:205px;
+}
+.form-list .customer-name-prefix .name-firstname input.input-text, .form-list .customer-name-suffix .name-lastname input.input-text, .form-list .customer-name-middlename .name-firstname input.input-text, .form-list .customer-name-middlename-suffix .name-firstname input.input-text, .form-list .customer-name-middlename-suffix .name-lastname input.input-text {
+    width:189px;
+}
+.form-list .customer-dob .dob-month, .form-list .customer-dob .dob-day, .form-list .customer-dob .dob-year {
+    float:left;
+    width:85px;
+}
+.form-list .customer-dob input.input-text {
+    display:block;
+    width:74px;
+}
+.form-list .customer-dob label {
+    font-size:10px;
+    font-weight:normal;
+    color:#888;
+}
+.form-list .customer-dob .dob-day, .form-list .customer-dob .dob-month {
+    width:60px;
+}
+.form-list .customer-dob .dob-day input.input-text, .form-list .customer-dob .dob-month input.input-text {
+    width:46px;
+}
+.form-list .customer-dob .dob-year {
+    width:140px;
+}
+.form-list .customer-dob .dob-year input.input-text {
+    width:134px;
+}
+/* Independent fields */
+/*.form-list li { margin:0 0 8px; }
+.form-list li.fields { margin:0; }
+.form-list .field { display:block; margin:0 0 8px; }
+.form-list li.control {}
+.form-list label { float:left; width:150px; padding:2px 10px 0 0; text-align:right; }
+.form-list label.required { font-weight:bold; }
+.form-list label.required em { font-variant:normal; color:#eb340a; margin-right:3px; }
+.form-list .input-box { float:left; width:260px; }
+.form-list input.input-text,
+.form-list textarea { width:254px; }
+.form-list select { width:260px; }
+.form-list li.additional-row { border-top:1px solid #ddd; margin-top:10px; }
+.form-list li.additional-row .btn-remove { float:right; margin:5px 5px 0 0; }
+.form-list .input-range input.input-text { width:96px; }*/
+/* Customer */
+/*.form-list .customer-dob .dob-month,
+.form-list .customer-dob .dob-day,
+.form-list .customer-dob .dob-year { float:left; width:85px; }
+.form-list .customer-dob input.input-text { display:block; width:74px; }
+.form-list .customer-dob label { font-size:11px; font-weight:normal; color:#777; text-align:left; }
+.form-list .customer-dob .dob-day,
+.form-list .customer-dob .dob-month { width:60px; }
+.form-list .customer-dob .dob-day input.input-text,
+.form-list .customer-dob .dob-month input.input-text { width:46px; }
+.form-list .customer-dob .dob-year { width:140px; }
+.form-list .customer-dob .dob-year input.input-text { width:134px; }*/
+
+.buttons-set {
+    clear:both;
+    margin:4em 0 0;
+    padding:8px 0 0;
+    border-top:1px solid #e4e4e4;
+    text-align:right;
+}
+.buttons-set p.required {
+    margin:0 0 10px;
+}
+.buttons-set .back-link {
+    float:left;
+    margin:0;
+}
+.buttons-set button.button {
+    float:right;
+    margin-left:15px;
+}
+.buttons-set-order {
+    margin:10px 0 0;
+}
+.buttons-set-order .please-wait {
+    padding:12px 7px 0 0;
+}
+.fieldset {
+    border:1px solid #ccc;
+    padding:32px 25px 12px 33px;
+    margin:28px 0;
+}
+.fieldset .legend {
+    float:left;
+    font-weight:normal;
+    font-size:1.3em;
+    border:1px solid #ccc;
+    background:#fff;
+    color:#000;
+    margin:-43px 0 0 -10px;
+    padding:0 15px;
+    position:relative;
+}
+/* Form Validation */
+.validation-advice {
+    clear:both;
+    min-height:13px;
+    margin:3px 0 0;
+    padding-left:17px;
+    font-size:11px;
+    font-weight:bold;
+    line-height:13px;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/validation_advice_bg.gif) 2px 0 no-repeat;
+    color:#eb340a;
+}
+.validation-failed {
+    border:1px dashed #eb340a !important;
+    background:#faebe7 !important;
+}
+.validation-passed {
+}
+p.required {
+    font-size:11px;
+    text-align:right;
+    color:#EB340A;
+}
+.newsletter-field-holder .validation-advice {
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/validation_advice_bg.gif") no-repeat scroll 10px 2px white;
+    color: #EB340A;
+    font-size: 11px;
+    font-weight: bold;
+    left: 0;
+    line-height: 13px;
+    margin: 0;
+    min-height: 13px;
+    padding: 4px 10px 8px 23px;
+    position: absolute;
+    top: 33px;
+    width: 267px;
+}
+/* Expiration date and CVV number validation fix */
+.v-fix {
+    float:left;
+}
+.v-fix .validation-advice {
+    display:block;
+    width:12em;
+    margin-right:-12em;
+    position:relative;
+}
+/* Global Messages  */
+.success {
+    color:#3d6611;
+    font-weight:bold;
+}
+.error {
+    color:#df280a;
+    font-weight:bold;
+}
+.notice {
+    color:#e26703;
+}
+.messages, .messages ul {
+    list-style:none !important;
+    margin:0 !important;
+    padding:0 !important;
+}
+.messages {
+    width:100%;
+}
+.messages li,
+.messages li li{
+    margin:0;
+    padding:0;
+}
+.error-msg, .success-msg, .note-msg, .notice-msg {
+    border-style:solid !important;
+    border-width:1px !important;
+    background-position:10px 50% !important;
+    background-repeat:no-repeat !important;
+    padding:2% 0 2% 5% !important;
+    margin:10px 0 !important;
+    font-size:11px !important;
+    font-weight:bold !important;
+    display: inline-block;
+    *display:inline;
+    zoom:1;
+    width:95%;
+    vertical-align: middle;
+}
+.error-msg {
+    border-color:#f16048;
+    background-color:#faebe7;
+    background-image:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_msg-error.gif);
+    color:#df280a;
+}
+.success-msg {
+    border-color:#446423;
+    background-color:#eff5ea;
+    background-image:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_msg-success.gif);
+    color:#3d6611;
+}
+.note-msg, .notice-msg {
+    border-color:#fcd344;
+    background-color:#fafaec;
+    background-image:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_msg-note.gif);
+    color:#3d6611;
+}
+
+/* Data Table */
+.data-table {
+    width:100%;
+}
+/*.data-table .odd {
+    background:#fff
+}
+.data-table .even {
+    background:#fff;
+}*/
+.data-table tbody tr.first td{
+    padding-top:20px;
+}
+.data-table td {
+    padding:10px 10px 10px 0;
+    vertical-align: middle;
+}
+.data-table thead th {
+    font-weight:bold;
+    color:#fff;
+    font-weight: normal;
+    font-size:1.1em;
+    padding:10px 45px 10px 0;
+    white-space:nowrap;
+    text-align: left;
+    vertical-align:middle;
+    background:#3db5b8;
+}
+.cart-table .qty-heading {
+    padding:10px 60px 10px 0;
+}
+.data-table thead th.wrap {
+    white-space:normal;
+}
+.data-table thead th a, .data-table thead th a:hover {
+    color:#fff;
+}
+.data-table thead th {
+    background:#D9D9D9;
+    color: #000000;
+}
+.data-table thead th .tax-flag {
+    font-size:11px;
+    white-space:nowrap;
+}
+.data-table tfoot td {
+    padding:10px 0 0;
+}
+/* Bundle products tables */
+.data-table tbody.odd tr {
+    background:#f8f7f5 !important;
+}
+.data-table tbody.even tr {
+    background:#f6f6f6 !important;
+}
+.data-table tbody.odd tr td, .data-table tbody.even tr td {
+    border-bottom:0;
+}
+.data-table tbody.odd tr.border td, .data-table tbody.even tr.border td {
+    border-bottom:1px solid #d9dde3;
+}
+.data-table tbody td .option-label {
+    font-weight:bold;
+    font-style:italic;
+}
+.data-table tbody td .option-value {
+    padding-left:10px;
+}
+/* Generic Info Box */
+.info-box {
+    background:#fff url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/bkg_block-title.gif) 0 0 repeat-x;
+    border:1px solid #d0cbc1;
+    padding:12px 15px;
+    margin:0 0 15px;
+}
+.info-box h2 {
+    font-weight:bold;
+    font-size:13px;
+}
+.info-table th {
+    font-weight:bold;
+    padding:2px 15px 2px 0;
+}
+.info-table td {
+    padding:2px 0;
+}
+/* Shopping cart total summary row expandable to details */
+tr.summary-total {
+    cursor:pointer;
+}
+tr.summary-total td {
+}
+tr.summary-total .summary-collapse {
+    float:right;
+    text-align:right;
+    padding-left:20px;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/bkg_collapse.gif) 0 5px no-repeat;
+    cursor:pointer;
+}
+tr.show-details .summary-collapse {
+    background-position:0 -52px;
+}
+tr.show-details td {
+}
+tr.summary-details td {
+    font-size:11px;
+    background-color:#dae1e4;
+    color:#626465;
+}
+tr.summary-details-first td {
+    border-top:1px solid #d2d8db;
+}
+tr.summary-details-excluded {
+    font-style:italic;
+}
+/* Shopping cart tax info */
+.cart-tax-info {
+    display:block;
+}
+.cart-tax-info, .cart-tax-info .cart-price {
+    padding-right:20px;
+}
+.cart-tax-total {
+    display:block;
+    padding-right:20px;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/bkg_collapse.gif) 100% 5px no-repeat;
+    cursor:pointer;
+}
+.cart-tax-info .price, .cart-tax-total .price {
+    display:inline !important;
+    font-weight:normal !important;
+}
+.cart-tax-total-expanded {
+    background-position:100% -52px;
+}
+/* Misc */
+.links li {
+    display:inline;
+}
+.links li.first {
+    padding-left:0 !important;
+}
+.links li.last {
+    background:none !important;
+    padding-right:0 !important;
+}
+.link-cart {
+    color:#dc6809 !important;
+    font-weight:bold;
+}
+.link-wishlist {
+    color:#dc6809 !important;
+    font-weight:bold;
+}
+.link-reorder {
+    font-weight:bold;
+}
+
+.link-print { /*background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_print.gif) 0 2px no-repeat; padding:2px 0 2px 25px;*/
+    font-weight:bold;
+    color:#dc6809;
+}
+.link-rss {
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_rss.gif) 0 2px no-repeat;
+    padding-left:18px;
+    line-height:14px;
+    white-space:nowrap;
+}
+.btn-remove {
+    display:block;
+    width:11px;
+    height:11px;
+    font-size:0;
+    line-height:0;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/btn_remove.gif) 0 0 no-repeat;
+    text-indent:-999em;
+    overflow:hidden;
+}
+.btn-remove2 {
+    display:block;
+    width:16px;
+    height:16px;
+    font-size:0;
+    line-height:0;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/btn_trash.gif) 0 0 no-repeat;
+    text-indent:-999em;
+    overflow:hidden;
+}
+.btn-edit {
+    display:block;
+    width:11px;
+    height:11px;
+    font-size:0;
+    line-height:0;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/btn_edit.gif) 0 0 no-repeat;
+    text-indent:-999em;
+    overflow:hidden;
+}
+.cards-list dt {
+    margin:5px 0 0;
+}
+.cards-list .offset {
+    padding:2px 0 2px 20px;
+}
+.separator {
+    margin:0 3px;
+}
+.divider {
+    clear:both;
+    display:block;
+    font-size:0;
+    line-height:0;
+    height:1px;
+    margin:10px 0;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/bkg_divider1.gif) 0 50% repeat-x;
+    text-indent:-999em;
+    overflow:hidden;
+}
+/* Noscript Notice */
+.noscript {
+    border:1px solid #ddd;
+    border-width:0 0 1px;
+    background:#ffff90;
+    font-size:12px;
+    line-height:1.25;
+    text-align:center;
+    color:#2f2f2f;
+}
+.noscript .noscript-inner {
+    width:950px;
+    margin:0 auto;
+    padding:12px 0 12px;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_notice.gif) 20px 50% no-repeat;
+}
+.noscript p {
+    margin:0;
+}
+/* Demo Notice */
+.demo-notice {
+    margin:0;
+    padding:6px 10px;
+    background:#d75f07;
+    font-size:12px;
+    line-height:1.15;
+    text-align:center;
+    color:#fff;
+}
+/* ======================================================================================= */
+
+
+
+/********** < Navigation */
+.nav-container {
+	position: relative;
+    float: left;
+    width: 940px;
+	margin: 10px 0 0 0;
+	z-index: 98;
+}
+#nav {
+    width:918px;
+    margin:0 auto;
+    padding:0;
+    font-size:13px;
+}
+/* All Levels */ /* Style consistent throughout all nav levels */
+#nav li {
+    position:relative;
+    text-align:left;
+}
+#nav li.over {
+    z-index:998;
+}
+#nav a, #nav a:hover {
+    display:block;
+    line-height:1.3em;
+    text-decoration:none;
+}
+#nav span {
+    display:block;
+    cursor:pointer;
+    white-space:nowrap;
+}
+#nav li ul span {
+    white-space:normal;
+}
+#nav ul li.parent a {
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/bkg_nav2.gif) 100% 100% no-repeat;
+}
+#nav ul li.parent li a {
+    background-image:none;
+}
+/* 0 Level */
+#nav li {
+    float:left; margin-top:-2px; list-style:none; margin-right:10px;
+}
+#nav li.active a {
+    color:#fff;
+}
+#nav a {
+    float:left;
+    padding:7px 12px 8px 8px;
+    color:#888888;
+    font-weight:bold;
+}
+#nav li.over a, #nav a:hover {
+    color:#fff;
+    background-color:#CC2666;
+}
+/* 1st Level */
+#nav ul li, #nav ul li.active {
+    float:none;
+    margin:0;
+    padding-bottom:1px;
+    background-color:#CC2666;
+}
+#nav ul li.last {
+    padding-bottom:10px;
+}
+#nav ul li.first {
+    padding-top:10px;
+}
+#nav ul a, #nav ul a:hover {
+    float:none;
+    padding:0;
+    background:none;
+}
+#nav ul li a {
+    font-weight:normal !important; font-size:12px;
+}
+/* 2nd Level */
+#nav ul, #nav div {
+    position:absolute;
+    width:15em;
+    top:35px;
+    left:-10000px;
+    border:none; padding:0;
+}
+#nav div ul {
+    position:static;
+    width:auto;
+    border:none;
+}
+/* 3rd+ Level */
+#nav ul ul, #nav ul div {
+    top:5px;
+}
+#nav ul li a {
+	background: #CC2666 url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/navArrow.png') no-repeat 9px -35px; margin:0 9px;
+}
+
+#nav ul li a:hover {
+   background: #fff url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/navArrow.png') no-repeat 9px 7px;
+}
+#nav ul li a {
+    color:#ffffff;
+}
+#nav ul li a:hover {
+    color:#CC2666;
+}
+#nav ul span, #nav ul li.last li span {
+    padding:4px 15px 4px 22px;
+}
+/* Show menu */
+#nav li ul.shown-sub, #nav li div.shown-sub {
+    left:0;
+    z-index:999;
+}
+#nav li .shown-sub ul.shown-sub, #nav li .shown-sub li div.shown-sub {
+    left:100px;
+}
+/********** Navigation > */
+/* ======================================================================================= */
+
+
+
+/* ======================================================================================= */
+
+
+
+
+
+
+/* ======================================================================================= */
+
+
+/* Content Styles ================================================================= */
+.product-name {
+    margin:0;
+    font-size:1em;
+    font-weight:normal;
+/*    min-height: 48px;*/
+    margin-bottom: 20px;
+}
+/* Product Tags */
+.tags-list {
+    display:block;
+    font-size:13px;
+    border:1px solid #c1c4bc;
+    background:#f8f7f5;
+    padding:10px;
+}
+.tags-list li {
+    display:inline !important;
+    margin:0 4px 0 0;
+}
+.tags-list li a {
+    color:#1b2d3b;
+}
+/* Advanced Search */
+.advanced-search .form-list label {
+    width:160px;
+    padding-right:10px;
+}
+.advanced-search .form-list .input-box, .advanced-search .form-list .input-range {
+    float:left;
+    clear:none;
+}
+.advanced-search-amount {
+    margin:0 0 10px;
+}
+.advanced-search-summary {
+    margin:10px 0;
+    border:1px solid #e9d7c9;
+    background:#fff6f1;
+    padding:10px;
+}
+.advanced-search-summary ul {
+    float:left;
+    width:49%;
+}
+.advanced-search-summary strong {
+    color:#E17C24;
+    padding-left:15px;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_search_criteria.gif) 0 3px no-repeat;
+}
+.advanced-search-summary p {
+    clear:both;
+    font-weight:bold;
+    margin:0;
+}
+/* CMS Home Page */
+.cms-index-index .subtitle {
+    margin:0;
+}
+/* Sitemap */
+.page-sitemap .links {float: left;
+    margin: 0 0 13px;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+.page-sitemap .links a {
+    text-decoration:none;
+    position:relative;
+}
+.page-sitemap .links a:hover {
+    text-decoration:underline;
+}
+.page-sitemap .sitemap {
+    margin:12px;
+}
+.page-sitemap .sitemap a {
+    color:#1b2d3b;
+}
+.page-sitemap .sitemap li {
+    margin:3px 0;
+}
+.page-sitemap .sitemap li.level-0 {
+    margin:10px 0 0 -22px;
+    font-weight:bold; list-style:none;
+}
+
+
+.page-sitemap .sitemap li.level-1 { padding-left:6px !important; margin-left:10px;  }
+
+.catalog-seo-sitemap-category .pages, .catalog-seo-sitemap-product .pages{ float:left;  margin:5px 0;}
+.catalog-seo-sitemap-category .amount, .catalog-seo-sitemap-product .amount{  width:100%;  }
+
+
+.page-sitemap .sitemap li.level-0 a {
+    color:#CC2666;
+}
+
+
+.catalog-seo-sitemap-category .pages li.current, .catalog-seo-sitemap-product .pages li.current{ background:#CC2666; }
+.page-sitemap .pager .amount { margin:10px 0 ; }
+
+
+/* RSS */
+.rss-title h1 {
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_rss-big.png) 0 4px no-repeat;
+    padding-left:27px;
+}
+.rss-table .link-rss {
+    display:block;
+    line-height:1.55;
+    background-position:0 4px;
+}
+/* ======================================================================================= */
+
+
+
+
+
+/* Checkout ============================================================================== */
+/********** < Common Checkout Styles */
+/* Shipping and Payment methods */
+.sp-methods {
+    margin:0 0 8px;
+}
+.sp-methods dt {
+    margin:13px 0 5px;
+    font-weight:bold;
+}
+.sp-methods dd {
+}
+.sp-methods dd li {
+    margin:5px 0;
+}
+.sp-methods label {
+    font-weight:bold;
+    color:#666;
+}
+.sp-methods .price {
+    font-weight:bold;
+}
+.sp-methods .form-list {
+    padding-left:20px;
+}
+.sp-methods .form-list li {
+    margin:0 0 8px;
+}
+.sp-methods select.month {
+    width:154px;
+    margin-right:10px;
+}
+.sp-methods select.year {
+    width:96px;
+}
+.sp-methods input.cvv {
+    width:3em !important;
+}
+.sp-methods .checkmo-list li {
+    margin:0 0 5px;
+}
+.sp-methods .checkmo-list label {
+    width:135px;
+    padding-right:10px;
+    text-align:right;
+}
+.sp-methods .checkmo-list address {
+    float:left;
+}
+.sp-methods .centinel-logos a {
+    margin-right:3px;
+}
+.sp-methods .centinel-logos img {
+    vertical-align:middle;
+}
+.sp-methods .release-amounts {
+    margin:0.5em 0;
+}
+.sp-methods .release-amounts button {
+    float:left;
+    margin:5px 10px 0 0;
+}
+.please-wait {
+    float:right;
+}
+.please-wait img {
+    vertical-align:middle;
+}
+.cvv-what-is-this {
+    font-size:11px;
+    cursor:help;
+    margin-left:10px;
+}
+/* Tooltip */
+.tool-tip {
+    border:1px solid #7BA7C9;
+    background:#EAF6FF;
+    padding:15px 20px;
+    position:absolute;
+    z-index:9999;
+}
+.tool-tip .btn-close {
+    margin:-9px -14px 0;
+    text-align:right;
+}
+.tool-tip .btn-close a {
+    display:block;
+    margin:0 0 0 auto;
+    width:15px;
+    height:15px;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/btn_window_close.gif) 100% 0 no-repeat;
+    text-align:left;
+    text-indent:-999em;
+    overflow:hidden;
+}
+.tool-tip .tool-tip-content {
+    padding:5px;
+}
+/* Gift Messages */
+.gift-messages h3 {
+    font-size:12px;
+    font-weight:bold;
+    color:#e87403;
+}
+.gift-messages p.control {
+    color:#8e8d8b;
+}
+.gift-messages-form {
+    position:relative;
+}
+.gift-messages-form label {
+    float:none !important;
+    position:static !important;
+}
+.gift-messages-form h4 {
+    font-size:12px;
+    font-weight:bold;
+    color:#e87403;
+}
+.gift-messages-form .whole-order {
+    margin:0 0 25px;
+}
+.gift-messages-form .item {
+    margin:0 0 10px;
+}
+.gift-messages-form .item .product-img-box {
+    float:left;
+    width:75px;
+}
+.gift-messages-form .item .product-image {
+    margin:0 0 7px;
+}
+.gift-messages-form .item .number {
+    margin:0;
+    font-weight:bold;
+    text-align:center;
+    color:#8a8987;
+}
+.gift-messages-form .item .details {
+    margin-left:90px;
+}
+.gift-messages-form .item .details .product-name {
+    font-size:13px;
+    font-weight:bold;
+    margin:0 0 10px;
+}
+.gift-messages-form .item .details .form-list .field {
+    width:255px;
+}
+.gift-messages-form .item .details .form-list .input-box {
+    width:240px;
+}
+.gift-messages-form .item .details .form-list input.input-text {
+    width:234px;
+}
+.gift-messages-form .item .details .form-list li.wide .input-box {
+    width:500px;
+}
+.gift-messages-form .item .details .form-list li.wide textarea {
+    width:494px;
+}
+.gift-message-link {
+    font-size:11px;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/bkg_collapse-gm.gif) 100% 6px no-repeat;
+    padding-right:7px;
+}
+.gift-message-link.expanded {
+    background-position:100% -40px;
+}
+.gift-message-row {
+    background:#f2efe9;
+}
+.gift-message-row .btn-close {
+    float:right;
+    width:16px;
+    height:16px;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/btn_gm-close.gif) 0 0 no-repeat;
+    font-size:0;
+    line-height:0;
+    text-indent:-999em;
+    overflow:hidden;
+}
+/* Checkout Agreements */
+.checkout-agreements li {
+    margin:30px 0;
+}
+.checkout-agreements .agreement-content {
+    overflow:auto;
+    height:12em;
+    padding:10px;
+    background-color:#fbfaf6;
+    border:1px solid #bbb6a5;
+}
+.checkout-agreements .agree {
+    margin:0;
+    padding:10px 0 10px 11px;
+}
+.checkout-agreements .agree input.checkbox {
+    margin-right:6px;
+}
+.checkout-agreements .agree label {
+    font-weight:bold;
+    color:#666;
+}
+.opc .checkout-agreements {
+    border:1px solid #d9dde3;
+    border-width:0 1px;
+    padding:5px 30px;
+}
+.opc .checkout-agreements li {
+    margin:20px 0 0;
+}
+.opc .checkout-agreements .agreement-content {
+    background-color:#fff;
+    border-color:#e4e4e4;
+    padding:5px;
+}
+.opc .checkout-agreements .agree {
+    padding-left:6px;
+}
+/* Centinel */
+.centinel {
+}
+.centinel .authentication {
+    border:1px solid #ddd;
+    background:#fff;
+}
+.centinel .authentication iframe {
+    width:99%;
+    height:400px;
+    background:transparent !important;
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+}
+.opc .centinel {
+    border:1px solid #bbb6a5;
+    border-width:0 1px 1px;
+    padding:10px 30px;
+}
+/* Generic Info Set */
+.info-set {
+    background:#fbfaf6 url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/bkg_checkout.gif) 0 0 repeat-x;
+    border:1px solid #bbb6a5;
+    margin:0 0 25px;
+    padding:20px;
+}
+.info-set h2 {
+    font-size:13px;
+    font-weight:bold;
+    margin:0 0 10px;
+}
+.info-set h3, .info-set h4 {
+    font-size:13px;
+    font-weight:bold;
+    color:#E26703;
+}
+.info-set h2 a, .info-set h3 a, .info-set h4 a {
+    font-weight:normal;
+}
+.info-set h2.legend {
+    margin:-20px -20px 15px;
+    padding:5px 10px;
+    background:#f9f3e3;
+    border-bottom:1px solid #bbafa0;
+    position:relative;
+}
+.info-set h3.legend {
+    margin:0 0 10px;
+    color:#0a263c;
+}
+.info-set .divider {
+    margin:0 -20px;
+    padding:25px 0;
+    position:relative;
+}
+.info-set .box {
+    margin:0 0 15px;
+}
+.info-set .box h2 {
+    color:#e26703;
+}
+.info-set .data-table .product-name {
+    font-size:1em !important;
+    font-weight:bold !important;
+    color:#1e7ec8 !important;
+}
+.info-set .data-table .product-name a {
+    font-weight:bold !important;
+}
+.info-set .data-table .item-options {
+    margin:5px 0 0;
+}
+/********** Common Checkout Styles > */
+
+/* One Page Checkout */
+.block-progress {
+    border:0;
+    margin:0;
+}
+.block-progress .block-title {
+    background:none;
+    border:0;
+    padding:0;
+    margin:0 0 5px;
+}
+.block-progress .block-title strong {
+    font-size:13px;
+    color:#0a263c;
+}
+.block-progress .block-content {
+    background:none;
+}
+.block-progress dt {
+    color:#000;
+    font-size: 1.1em;
+    font-weight: normal;
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/block-nav-arrow.gif") no-repeat scroll 0 50% transparent;
+    padding: 3px 0 3px 18px;
+}
+.block-progress dd {
+    color:#000;
+    font-size: 1.1em;
+    font-weight: normal;
+    padding: 3px 0 3px 18px;
+    margin:0 0 6px;
+}
+.block-progress dt.complete {
+    font-weight:bold;
+}
+.block-progress dd.complete address {
+    font-style:normal;
+}
+.block-progress p {
+    margin:0;
+}
+.block-progress .cards-list dt {
+    background:none;
+    border:0 none;
+    color:inherit;
+    font-size:12px;
+    margin:5px 0;
+    padding:0;
+}
+.block-progress .cards-list dd {
+    border:0 none;
+    margin:0;
+    padding:0;
+}
+.block-progress .cards-list .info-table th {
+    font-weight:normal;
+}
+#checkoutSteps,
+#checkoutSteps ul,
+.no-display{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.opc .buttons-set {
+    margin-top:0;
+    padding-top:2em;
+}
+.opc .buttons-set p.required {
+    margin:0;
+    padding:0 0 10px;
+}
+.opc .buttons-set .back-link small {
+    display:none;
+}
+.opc .buttons-set .back-link a {
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/i_arrow-top.gif) 0 50% no-repeat;
+    padding-left:16px;
+}
+.opc .buttons-set.disabled button.button {
+    display:none;
+}
+.opc .buttons-set .please-wait {
+    height:21px;
+    line-height:21px;
+}
+.opc {
+    position:relative;
+}
+.opc li.section {
+    padding:0 0 1px 0;
+}
+.opc .step-title {
+    background:#b8b8b8;
+    padding:6px 8px;
+    text-align:right;
+}
+.opc .step-title .number {
+    float:left;
+    background: url('http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/structure/step-no.png') 0 0 no-repeat;
+    width:18px;
+    height:17px;
+    display:block;
+    text-align:center;
+    color:#000;
+    font-weight:normal;
+    line-height:17px;
+    font-family: 'ColaborateThinRegular',arial,helvetica,sans-serif;
+    margin:0 10px 0 0;
+}
+.opc .step-title h2 {
+    float:left;
+    margin:0;
+    line-height:16px;
+    font-family: 'ColaborateThinRegular',arial,helvetica,sans-serif;
+    font-weight:normal;
+    color:#fff;
+    font-size:1.25em;
+}
+.opc .step-title a {
+    display:none;
+    float:right;
+    font-size:1em;
+    line-height:16px;
+}
+.opc .allow .step-title {
+    background:#B8B8B8;
+    border:1px solid #fff;
+    border-bottom:0;
+    cursor:pointer;
+    margin:0;
+    padding:6px 8px;
+    color:#fff;
+}
+/*.opc .active .step-title a { display:none; }*/
+
+.opc .active .step-title {
+    background:#CC2666;
+    padding:6px 8px;
+    color:#ffffff;
+    cursor:default;
+}
+.opc .step,
+.order-review{
+    border:1px solid #ddd;
+    border-top:0;
+    padding:15px 30px;
+    position:relative;
+}
+.opc .step .tool-tip {
+    right:30px;
+}
+#opc-login .buttons-set {
+    border-top:0;
+}
+#opc-login h3 {
+    font-size:13px;
+    border-bottom:1px solid #e4e4e4;
+    padding-bottom:2px;
+    text-transform:uppercase;
+}
+#opc-login h4 {
+    font-weight:bold;
+    font-size:1em;
+    font-family: Arial,Helvetica,sans-serif;
+    color:#666;
+}
+#opc-shipping_method .buttons-set {
+    border-top:0;
+}
+.opc .gift-messages-form {
+    margin:0 -30px;
+    background:#f6f1eb;
+    border:1px solid #e9e4de;
+    border-width:1px 0;
+    padding:22px 24px 22px 30px;
+}
+.opc .gift-messages-form .inner-box {
+    padding:5px;
+    height:260px;
+    overflow:auto;
+}
+#opc-review .step {
+    border:0;
+    padding:0;
+}
+#opc-review .product-name {
+    font-weight:bold;
+    font-family: Arial,Helvetica,sans-serif;
+    color:#888;
+}
+#opc-review .item-options {
+    margin:5px 0 0;
+}
+#opc-review .buttons-set p {
+    margin:0;
+    line-height:34px;
+}
+#opc-review .buttons-set .please-wait {
+    height:34px;
+    line-height:34px;
+}
+#opc-review .authentication {
+    margin:0 auto;
+    width:570px;
+}
+#opc-review .warning-message {
+    color:#222;
+    font-weight:bold;
+    text-align:center;
+    padding:10px 10px 0;
+}
+#checkout-review-table-wrapper {
+    width:639px;
+}
+#checkout-review-table-wrapper .data-table thead tr th {
+    padding: 10px 20px;
+    background:#aaa;
+}
+#checkout-review-table-wrapper .data-table tbody tr td {
+    padding: 10px 20px;
+}
+#checkout-review-table-wrapper .data-table tbody tr td.last {
+    text-align:right;
+}
+#checkout-review-table-wrapper .data-table tfoot {
+    font-style:normal;
+}
+#checkout-review-table-wrapper .data-table tfoot tr td {
+    padding: 10px 20px;
+    text-align:right;
+}
+#checkout-review-table-wrapper .data-table tbody tr td.a-center {
+    text-align:center;
+}
+#checkout-review-table-wrapper .data-table tbody tr.first td {
+    padding-top:20px;
+}
+/* Multiple Addresses Checkout */
+.checkout-progress {
+    padding:0 90px;
+    margin:0 0 20px;
+}
+.checkout-progress li {
+    float:left;
+    width:19%;
+    margin:0 3px 0 0;
+    border-top:10px solid #999;
+    padding:2px 0 0;
+    font-weight:bold;
+    text-align:center;
+    color:#abb5ba;
+}
+.checkout-progress li.active {
+    border-top-color:#e96200;
+    color:#e96200;
+}
+.multiple-checkout h2 {
+    font-size:13px;
+    font-weight:bold;
+    margin:0 0 10px;
+}
+.multiple-checkout h3, .multiple-checkout h4 {
+    font-size:13px;
+    font-weight:bold;
+    color:#E26703;
+}
+.multiple-checkout h2 a, .multiple-checkout h3 a, .multiple-checkout h4 a {
+    font-weight:normal;
+}
+.multiple-checkout .data-table .product-name {
+    font-size:1em !important;
+    font-weight:bold !important;
+    color:#1e7ec8 !important;
+}
+.multiple-checkout .data-table .product-name a {
+    font-weight:bold !important;
+}
+.multiple-checkout .data-table .item-options {
+    margin:5px 0 0;
+}
+.multiple-checkout .gift-messages {
+    margin:15px 0 0;
+}
+.multiple-checkout .tool-tip {
+    top:50%;
+    margin-top:-120px;
+    right:20px;
+}
+.multiple-checkout .col2-set, .multiple-checkout .col3-set {
+    background:#fbfaf6 url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/bkg_checkout.gif) 0 0 repeat-x;
+    border:1px solid #bbb6a5;
+    margin:0 0 25px;
+    padding:20px;
+}
+.multiple-checkout .col2-set h2.legend {
+    margin:-20px -20px 15px;
+    padding:5px 10px;
+    background:#f9f3e3;
+    border-bottom:1px solid #bbafa0;
+    position:relative;
+}
+.multiple-checkout .col2-set h3.legend {
+    margin:0 0 10px;
+    color:#0a263c;
+}
+.multiple-checkout .col2-set .divider {
+    margin:0 -20px;
+    padding:25px 0;
+    position:relative;
+}
+.multiple-checkout .box {
+    margin:0 0 15px;
+}
+.multiple-checkout .box h2 {
+    color:#e26703;
+}
+.multiple-checkout .place-order .please-wait {
+    float:right;
+    padding:27px 7px 0 0;
+}
+.multiple-checkout .place-order .grand-total {
+    float:right;
+    height:71px;
+    font-size:1.5em;
+    padding:0 0 0 21px;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/bkg_grand-total.gif) 0 0 no-repeat;
+    overflow:hidden;
+}
+.multiple-checkout .place-order .grand-total .inner {
+    float:left;
+    height:57px;
+    padding:14px 21px 0 0;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/bkg_grand-total.gif) 100% 0 no-repeat;
+}
+.multiple-checkout .place-order .grand-total .inner div {
+    display:inline;
+}
+.multiple-checkout .place-order .grand-total big {
+    display:inline;
+    margin-right:12px;
+}
+.multiple-checkout .place-order .grand-total .price {
+    color:#E26703;
+}
+.multiple-checkout .place-order .grand-total button.button span {
+    font-size:16px;
+}
+.multiple-checkout .place-order .grand-total button.button span span {
+    padding:0 45px 0 36px;
+}
+/* Step 1 */
+.multiple-checkout .title-buttons button.button span {
+    border-color:#406a83;
+    background:#618499;
+}
+#multiship-addresses-table td {
+    padding:10px;
+}
+#multiship-addresses-table tfoot td {
+    padding:5px 10px;
+}
+#multiship-addresses-table tfoot button.button span {
+    border-color:#406a83;
+    background:#618499;
+}
+/* Step 2 */
+.multiple-checkout .gift-messages-form .item .details .form-list {
+    width:100%;
+    overflow:hidden;
+}
+.multiple-checkout .gift-messages-form .item .details .form-list li {
+    margin-right:-15px;
+}
+.multiple-checkout .gift-messages-form .item .details .form-list .field {
+    width:230px;
+}
+.multiple-checkout .gift-messages-form .item .details .form-list .input-box {
+    width:215px;
+}
+.multiple-checkout .gift-messages-form .item .details .form-list input.input-text {
+    width:209px;
+}
+.multiple-checkout .gift-messages-form .item .details .form-list li.wide .input-box {
+    width:445px;
+}
+.multiple-checkout .gift-messages-form .item .details .form-list li.wide textarea {
+    width:439px;
+}
+.checkout-multishipping-shipping .box-sp-methods {
+    border:1px solid #d9d2be;
+    background:#f9f3e3;
+    padding:13px;
+    position:relative;
+}
+.checkout-multishipping-shipping .box-sp-methods .pointer {
+    position:absolute;
+    top:-20px;
+    right:-40px;
+    width:178px;
+    height:41px;
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/bkg_sp-methods.gif) 0 0 no-repeat;
+    overflow:hidden;
+}
+/* Step 3 */
+.checkout-multishipping-billing .multiple-checkout {
+    position:relative;
+}
+/* ======================================================================================= */
+
+/* Account Login/Create Pages ============================================================ */
+
+
+/* Remember Me Popup ===================================================================== */
+.window-overlay {
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/window_overlay.png) repeat;
+    background:rgba(0, 0, 0, 0.35);
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index:990;
+}
+.remember-me label {
+    float:none;
+    margin:0 6px;
+}
+.remember-me-popup {
+    background:#fff;
+    border:1px solid #ccc;
+    left:50%;
+    top:50%;
+    position:absolute;
+    margin:-85px 0 0 -200px;
+    width:400px;
+    text-align:left;
+    -moz-box-shadow:0 0 6px #ccc;
+    -webkit-box-shadow:0 0 6px #ccc;
+    -box-shadow:0 0 6px #ccc;
+    z-index:1000;
+}
+.remember-me-popup h3 {
+    background:#d9e5ee;
+    border-bottom:1px solid #ccc;
+    font-size:14px;
+    padding:5px 10px;
+}
+.remember-me-popup .remember-me-popup-head {
+    position:relative;
+}
+.remember-me-popup .remember-me-popup-head .remember-me-popup-close {
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/btn_window_close.gif) no-repeat;
+    display:block;
+    position:absolute;
+    top:7px;
+    right:7px;
+    height:15px;
+    width:15px;
+    text-indent:-9999em;
+}
+.remember-me-popup .remember-me-popup-body {
+    padding:10px;
+}
+.remember-me-popup .remember-me-popup-body a {
+    display:inline-block;
+    height:19px;
+    border:1px solid #de5400;
+    background:#f18200;
+    padding:0 8px;
+    font:bold 12px/19px Arial, Helvetica, sans-serif;
+    text-align:center;
+    text-decoration:none;
+    white-space:nowrap;
+    color:#fff;
+}
+/* Remember Me Popup ===================================================================== */
+
+
+/* My Account ============================================================================= */
+.my-account .title-buttons .link-rss {
+    float:none;
+    margin:0;
+}
+/********** < Dashboard */
+.dashboard .welcome-msg {
+    margin:0 8em 1.5em 0;
+}
+.dashboard .welcome-msg p {
+    margin:0;
+}
+.dashboard .welcome-msg p.hello {
+    color:#000;
+    margin: 0 0 10px;
+}
+.dashboard .welcome-msg p.hello strong {
+    font-weight: normal;
+}
+.dashboard .col2-set {
+    margin:0 0 15px;
+}
+/* General Box */
+.box-account {
+    border:1px solid #ccc;
+    padding:15px;
+    margin: 0 0 20px;
+}
+.box-account .box-head {
+    border-bottom:1px solid #ccc;
+    margin:0 0 10px;
+}
+
+.dashboard .box .box-title {
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/bkg_divider1.gif) 0 100% repeat-x;
+    padding:0 0 2px;
+    margin:0 0 8px;
+    text-align:right;
+}
+.dashboard .box .box-title h3, .dashboard .box .box-title h4 {
+    float:left;
+    font:bold 13px/19px Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    margin:0;
+    color:#1d1d1d;
+}
+/* Block: Recent Orders */
+
+/* Block: Account Information */
+.dashboard .box-info h4 {
+    font-size:11px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+/* Block: Reviews */
+
+.dashboard .box-reviews .number {
+    float:left;
+    font-size:10px;
+    font-weight:bold;
+    line-height:1;
+    color:#fff;
+    margin:3px -20px 0 0;
+    padding:2px 3px;
+    background:#0a263c;
+}
+.dashboard .box-reviews .details {
+    margin-left:20px;
+}
+.dashboard .box-reviews li.item {
+    margin:0 0 7px;
+}
+.dashboard .box-reviews li.item.last {
+    margin:0;
+}
+.dashboard .box-reviews .ratings {
+    margin:7px 0 0;
+}
+/* Block: Tags */
+
+.dashboard .box-tags .number {
+    float:left;
+    font-size:10px;
+    font-weight:bold;
+    line-height:1;
+    color:#fff;
+    margin:3px -20px 0 0;
+    padding:2px 3px;
+    background:#0a263c;
+}
+.dashboard .box-tags .details {
+    margin-left:20px;
+}
+.dashboard .box-tags li.item {
+    margin:0 0 7px;
+}
+.dashboard .box-tags li.item.last {
+    margin:0;
+}
+.dashboard .box-tags .tags strong, .dashboard .box-tags .tags ul, .dashboard .box-tags .tags ul li {
+    display:inline;
+}
+/********** Dashboard > */
+
+/* Address Book */
+.addresses-list h2 {
+    font-weight:bold;
+    font-size:13px;
+    color:#e26703;
+    text-transform:uppercase;
+}
+.addresses-list h3 {
+    font-weight:bold;
+    font-size:13px;
+}
+.addresses-list address {
+    margin:0 0 3px;
+}
+.addresses-list p {
+    margin:0;
+}
+.addresses-list a {
+    font-weight:bold;
+}
+.addresses-list .link-remove {
+    color:#646464;
+}
+.addresses-list .separator {
+    margin:0 3px;
+}
+.addresses-list li.item {
+    background:#fff url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/bkg_account_box.gif) 0 0 repeat-x;
+    border:1px solid #ccc;
+    padding:10px 13px;
+    margin:0 0 10px;
+}
+.addresses-list li.empty {
+    background:none;
+    border:0;
+    padding:0;
+}
+.addresses-list li.empty p {
+    font-weight:bold;
+}
+.addresses-list .addresses-additional li.item {
+    background:none;
+    border:0;
+    padding:0;
+}
+/* Order View */
+.order-info {
+    background:#dee5e8;
+    border:1px solid #d0cbc1;
+    padding:4px 8px;
+    margin:0 0 8px;
+}
+.order-info dt, .order-info dd, .order-info ul, .order-info li {
+    display:inline;
+}
+.order-info .current {
+    font-weight:bold;
+}
+.order-info li {
+    margin:0 3px;
+}
+.order-date {
+    margin:10px 0;
+}
+.order-info-box {
+    background:#fff url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/bkg_block-title.gif) 0 0 repeat-x;
+    border:1px solid #d0cbc1;
+    padding:12px 15px;
+    margin:0 0 15px;
+}
+.order-info-box h2 {
+    font-weight:bold;
+    font-size:13px;
+}
+.order-info-box .box-payment p {
+    margin:0 0 3px;
+}
+.order-info-box .box-payment th {
+    font-weight:bold;
+    padding-right:7px;
+}
+.order-items {
+    width:100%;
+    overflow-x:auto;
+}
+.order-items h2, .order-items h3 {
+    clear:none;
+    font-weight:bold;
+    font-size:13px;
+    padding:0;
+    margin:0 0 5px;
+    color:#0a263c;
+}
+.order-items .product-name {
+    font-size:1em !important;
+    font-weight:bold !important;
+}
+.order-items .link-print {
+    color:#1e7ec8;
+    font-weight:normal;
+}
+.order-items .order-links {
+    text-align:right;
+}
+.order-additional {
+    margin:15px 0;
+}
+/* Order Gift Message */
+.gift-message dt strong {
+    color:#666;
+}
+.gift-message dd {
+    font-size:13px;
+    margin:5px 0 0;
+}
+/* Order Comments */
+.order-about dt {
+    font-weight:bold;
+}
+.order-about dd {
+    font-size:13px;
+    margin:0 0 7px;
+}
+.tracking-table {
+    margin:0 0 15px;
+}
+.tracking-table th {
+    font-weight:bold;
+    white-space:nowrap;
+}
+.tracking-table-popup {
+    width:100%;
+}
+.tracking-table-popup th {
+    font-weight:bold;
+    white-space:nowrap;
+}
+.tracking-table-popup th, .tracking-table-popup td {
+    padding:1px 8px;
+}
+/* Order Print Pages */
+.page-print .print-head {
+    margin:0 0 15px;
+}
+.page-print .print-head .logo {
+    float:left;
+}
+.page-print .print-head address {
+    float:left;
+    margin-left:15px;
+}
+.page-print h1 {
+    font-size:16px;
+    font-weight:bold;
+}
+.page-print h2, .page-print h3 {
+    font-size:13px;
+    font-weight:bold;
+}
+.page-print h2.h2 {
+    font-size:16px;
+    font-weight:bold;
+}
+.page-print .order-date {
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/bkg_divider1.gif) 0 100% repeat-x;
+    padding:0 0 10px;
+    margin:0 0 10px;
+}
+.page-print .col2-set {
+    margin:0 0 10px;
+}
+/* Price Rewrites */
+.page-print .gift-message-link {
+    display:none;
+}
+.page-print .price-excl-tax, .page-print .price-incl-tax {
+    display:block;
+    white-space:nowrap;
+}
+.page-print .cart-price, .page-print .price-excl-tax .label, .page-print .price-incl-tax .label, .page-print .price-excl-tax .price, .page-print .price-incl-tax .price {
+    display:inline;
+}
+/* My Wishlist */
+.my-wishlist .data-table td {
+    padding:10px;
+}
+.my-wishlist .product-image {
+    display:block;
+    width:113px;
+    height:113px;
+    margin:0 0 5px;
+}
+.my-wishlist textarea {
+    display:block;
+    width:97%;
+    height:109px;
+}
+.my-wishlist .buttons-set {
+    margin-top:2em;
+}
+.my-wishlist .buttons-set button.button {
+    float:none;
+}
+.my-wishlist .buttons-set .btn-add span, .my-wishlist .buttons-set .btn-share span {
+    border-color:#406a83;
+    background:#618499;
+}
+#wishlist-table .add-to-links {
+    white-space:nowrap;
+}
+/* My Tags */
+.my-tag-edit {
+    float:left;
+    margin:0 0 10px;
+}
+.my-tag-edit .btn-remove {
+    float:right;
+    margin:4px 0 0 5px;
+}
+#my-tags-table {
+    clear:both;
+}
+#my-tags-table td {
+    padding:10px;
+}
+#my-tags-table .add-to-links {
+    white-space:nowrap;
+}
+/* My Reviews */
+#my-reviews-table td {
+    padding:10px;
+}
+.product-review .product-img-box {
+    float:left;
+    width:140px;
+}
+.product-review .product-img-box .product-image {
+    display:block;
+    width:125px;
+    height:125px;
+}
+.product-review .product-img-box .label {
+    font-size:11px;
+    margin:0 0 3px;
+}
+.product-review .product-img-box .ratings .rating-box {
+    float:none;
+    display:block;
+    margin:0 0 3px;
+}
+.product-review .product-details {
+    margin-left:150px;
+}
+.product-review .product-name {
+    font-size:16px;
+    font-weight:bold;
+    margin:0 0 10px;
+}
+.product-review h3 {
+    font-size:12px;
+    margin:0 0 3px;
+    color:#2f2f2f;
+}
+.product-review .ratings-table {
+    margin:0 0 10px;
+}
+.product-review dt {
+    font-weight:bold;
+}
+.product-review dd {
+    font-size:13px;
+    margin:5px 0 0;
+}
+/* Billing Agreements */
+.billing-agreements .info-box {
+    margin:15px 0;
+}
+.billing-agreements .form-list li select {
+    float:left;
+}
+.billing-agreements .form-list li button.button {
+    float:left;
+    margin-left:10px;
+}
+.billing-agreements .table-caption {
+    font-weight:bold;
+    font-size:13px;
+}
+/* ======================================================================================= */
+
+
+/* MAP Popup============================================================================== */
+.cart-msrp-totals {
+    color:red;
+    font-size:12px !important;
+    font-weight:bold;
+    margin:10px 10px 0;
+    padding:10px;
+    text-align:right;
+    text-transform:uppercase;
+}
+.map-cart-sidebar-total {
+    color:red;
+    display:block;
+    font-size:10px;
+    font-weight:bold;
+    text-align:left;
+    padding:2px 5px;
+    text-shadow:0 1px 0 #fff;
+}
+.map-popup {
+    background:#fff;
+    border:1px solid #aaa;
+    margin:12px 0 0;
+    position:absolute;
+    -moz-box-shadow:0 0 6px #ccc;
+    -webkit-box-shadow:0 0 6px #ccc;
+    box-shadow:0 0 6px #ccc;
+    text-align:left;
+    width:300px;
+    z-index:100;
+}
+.map-popup-heading {
+    background:#d9e5ee;
+    border-bottom:1px solid #ccc;
+    padding:5px 30px 5px 10px;
+    width:260px;
+}
+.map-popup-heading h2 {
+    font-size:16px;
+    margin:0;
+    text-shadow:0 1px 0 #f6f6f6;
+    overflow:hidden;
+    white-space:nowrap;
+    word-wrap:break-word;
+    text-align:left;
+    text-overflow:ellipsis;
+}
+.map-popup-arrow {
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/map_popup_arrow.gif) no-repeat;
+    position:absolute;
+    left:50%;
+    top:-10px;
+    height:10px;
+    width:19px;
+}
+.map-popup-close {
+    background:url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/btn_window_close.gif) no-repeat;
+    display:block;
+    position:absolute;
+    top:8px;
+    right:10px;
+    height:15px;
+    width:15px;
+    text-indent:-9999em;
+    -moz-box-shadow:0 0 3px #999;
+    -webkit-box-shadow:0 0 3px #999;
+    box-shadow:0 0 3px #999;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+}
+.map-popup-content {
+    border-top:1px solid #eee;
+    padding:10px;
+    overflow:hidden;
+    text-align:left;
+    width:280px;
+}
+.map-popup-checkout {
+    display:inline;
+    float:right;
+    text-align:right;
+}
+.map-popup-checkout span {
+    display:block;
+    padding-right:30px;
+}
+.map-popup-checkout .paypal-logo {
+    margin:0 0 5px;
+}
+.map-popup-price .price-box, .map-popup-price .price-box .special-price {
+    margin:0;
+    padding:0;
+}
+.map-popup-price {
+    margin:5px 0 0;
+}
+.map-popup-text {
+    clear:right;
+    margin:0 10px;
+    padding:10px 0;
+    text-align:left;
+    word-wrap:break-word;
+}
+.map-popup-only-text {
+    border-top:1px solid #ddd;
+}
+
+
+
+
+
+.cart-collaterals .col-2, .cart-collaterals  .col-3{ padding-right:0; }
+.category-products .product-name{ min-height:none; margin:0;  }
+.product-essential{ margin:10px 0 0; }
+#review-buttons-container .f-left{ line-height: 16px !important; }
+
+.col-right.sidebar .block-viewed{ margin: 27px 0 20px; }
+.cartSlider{ margin-left:-16px; }
+/*#menu{ !padding-bottom:6px; }*/
+
+html{ height:auto; }
+
+
+
+.catalog-product-view .product-essential {
+    margin: 21px 0 0;}
+
+
+
+
+
+
+body,
+.block-layered-nav .block-subtitle,
+.breadcrumbs li,
+.footer-col h2,
+.top-basket li .view-cart,
+.top-basket li .items,
+.block-progress dt,
+.opc .step-title .number{
+
+color: #727272 }
+
+
+.breadcrumbs{
+
+margin: 9px 0px 5px 0px;
+padding: 0 0 2px 0;}
+
+
+
+.checkout-onepage-index .page-title,
+.checkout-onepage-index .sidebar,
+.checkout-cart-index .page-title,
+.page-sitemap .page-title,
+.checkout-onepage-success .page-title{
+
+margin: 25px 0 10px 0;}
+
+
+
+.page-title h1{
+
+text-transform: uppercase;
+color: #727272;
+line-height: 24px; margin:10px 0}
+
+
+ul li{line-height:1;}
+
+
+h1{
+
+font-size: 18px;}
+
+---------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================================================= */
+
+
+
+
+/* Sample Data============================================================================ */
+.home-callout {
+    margin-bottom:12px;
+}
+.home-callout img {
+    display:block
+}
+.home-spot {
+    float:left;
+    width:470px;
+    margin-left:20px;
+}
+.best-selling h3 {
+    margin:12px 0 6px 0;
+    color:#e25203;
+    font-size:1.2em;
+}
+.best-selling table {
+    border-top:1px solid #ccc;
+}
+.best-selling tr.odd {
+    background:#eee url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/best_selling_tr_odd_bg.gif) 0 100% repeat-x;
+}
+.best-selling tr.even {
+    background:#fff url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/best_selling_tr_even_bg.gif) 0 100% repeat-x;
+}
+.best-selling td {
+    width:50%;
+    border-bottom:1px solid #ccc;
+    padding:8px 10px 8px 8px;
+    font-size:11px;
+}
+.best-selling .product-img {
+    float:left;
+    border:2px solid #dcdcdc;
+}
+.best-selling .product-description {
+    margin-left:107px;
+    line-height:1.3em;
+}
+.best-selling a.product-name, .home-spot .best-selling a.product-name:hover {
+    color:#203548;
+}
+/* ======================================================================================= */
+
+
+/* Clears ================================================================================ */
+.clearer:after, .header-container:after, .header-container .top-container:after, .header:after, .header .quick-access:after, #nav:after, .main:after, .footer:after, .footer-container .bottom-container:after, .col-main:after, .col2-set:after, .col3-set:after, .col3-layout .product-options-bottom .price-box:after, .col4-set:after, .search-autocomplete li:after, .block .block-content:after, .block .actions:after, .block li.item:after, .block-poll li:after, .block-layered-nav .currently li:after, .page-title:after, .products-grid:after, .products-list li.item:after, .box-account .box-head:after, .dashboard .box .box-title:after, .box-reviews li.item:after, .box-tags li.item:after, .pager:after, .sorter:after, .ratings:after, .add-to-box:after, .add-to-cart:after, .product-essential:after, .product-collateral:after, .product-view .product-img-box .more-views ul:after, .product-view .box-tags .form-add:after, .product-view .product-shop .short-description:after, .product-view .box-description:after, .product-options .options-list li:after, .product-options-bottom:after, .product-review:after, .cart:after, .cart-collaterals:after, .cart .crosssell li.item:after, .opc .step-title:after, .checkout-progress:after, .multiple-checkout .place-order:after, .group-select li:after, .form-list li:after, .form-list .field:after, .buttons-set:after, .page-print .print-head:after, .advanced-search-summary:after, .gift-messages-form .item:after, .send-friend .form-list li p:after {
+    display:block;
+    content:".";
+    clear:both;
+    font-size:0;
+    line-height:0;
+    height:0;
+    overflow:hidden;
+}
+/* ======================================================================================= */
+
+.guest-select {
+    width:305px !important;
+}
+button.button {
+    -webkit-border-fit:initial;
+} /* <- Safari & Google Chrome Fix Fix */
+
+
+.category-container {
+    width: 700px;
+    float: right;
+}
+
+
+.discount-form label{
+
+color: #727272;}
+
+
+
+.cart .totals td{
+
+color: #727272; }
+
+.brands-container {
+    float: left;
+    min-height:280px;
+    height:auto !important;
+    height:280px;
+    width: 33%;
+}
+
+.brands-container h2 { color: #CC2666;}
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/* Widgets =============================================================================== */
+.widget { display:inline; }
+.widget .widget-title { clear:both; padding:15px 0 0; margin:0 0 7px; }
+.widget .widget-title h2 { font-size:15px; font-weight:bold; color:#e25203; }
+
+.widget .mini-products-images-list .product-image { display:block; width:76px; height:76px; border:1px solid #a9a9a9; margin:0 auto; }
+.widget .mini-products-images-list li.item { float:left; width:77px; height:77px; }
+
+/* Widget: Catalog New Proructs List */
+.widget-new-products { display:block; }
+.col-main .widget-new-products { margin:7px 0; }
+.widget-new-products .products-grid .product-image,
+.widget-new-products .products-list .product-image { width:85px; height:85px; }
+.widget-new-products .products-list .product-shop { margin-left:100px; }
+.sidebar .widget-new-products .block { font-size:11px; line-height:1.25; }
+.sidebar .widget-new-products .block-title strong { background:url(http://www.kidscavern.co.uk/skin/frontend/base/default/images/widgets/i_widget-new.gif) 0 1px no-repeat; padding-left:21px; color:#dc5033; }
+
+/* Widget: Recently Viewed Proructs */
+.widget-viewed { display:block; }
+.col-main .widget-viewed { margin:7px 0; }
+.widget-viewed .products-grid .product-image,
+.widget-viewed .products-list .product-image { width:85px; height:85px; }
+.widget-viewed .products-list .product-shop { margin-left:100px; }
+.sidebar .widget-viewed .block { font-size:11px; line-height:1.25; }
+.sidebar .widget-viewed .block-title strong { background:url(http://www.kidscavern.co.uk/skin/frontend/base/default/images/widgets/i_block-list.gif) 0 0 no-repeat; padding-left:21px; }
+
+/* Widget: Recently Compared Proructs */
+.widget-compared { display:block;}
+.col-main .widget-compared { margin:7px 0; }
+.widget-compared .products-grid .product-image,
+.widget-compared .products-list .product-image { width:85px; height:85px; }
+.widget-compared .products-list .product-shop { margin-left:100px; }
+.sidebar .widget-compared .block { font-size:11px; line-height:1.25; }
+.sidebar .widget-compared .block-title strong { background:url(http://www.kidscavern.co.uk/skin/frontend/base/default/images/widgets/i_block-list.gif) 0 0 no-repeat; padding-left:21px; }
+
+/* Widget: CMS Static Block */
+.widget-static-block {}
+.sidebar .widget-static-block { display:block; margin:0 0 15px; }
+
+/* Widgets: Links Common Styles */
+.top-container .widget a { padding:0 0 0 7px; }
+
+.bottom-container .widget a { padding:0 3px; }
+
+/* Widget: Catalog Product Link */
+.widget-product-link-inline { display:inline; }
+
+.col-main .widget-product-link { display:block; text-align:right; margin:7px 0; }
+.col-main .widget-product-link a { background:url(http://www.kidscavern.co.uk/skin/frontend/base/default/images/widgets/i_widget-link.gif) 100% 4px no-repeat; padding-right:15px; }
+
+.sidebar .widget-product-link { display:block; margin:0 0 15px; padding:0 10px; }
+.sidebar .widget-product-link a { background:url(http://www.kidscavern.co.uk/skin/frontend/base/default/images/widgets/i_widget-link.gif) 100% 4px no-repeat; padding:0 15px 0 0; }
+
+/* Widget: Catalog Category Link */
+.widget-category-link-inline { display:inline; }
+
+.col-main .widget-category-link { display:block; text-align:right; margin:7px 0; }
+.col-main .widget-category-link a { background:url(http://www.kidscavern.co.uk/skin/frontend/base/default/images/widgets/i_widget-link.gif) 100% 4px no-repeat; padding-right:15px; }
+
+.sidebar .widget-category-link { display:block; margin:0 0 15px; padding:0 10px; }
+.sidebar .widget-category-link a { background:url(http://www.kidscavern.co.uk/skin/frontend/base/default/images/widgets/i_widget-link.gif) 100% 4px no-repeat; padding:0 15px 0 0; }
+
+/* Widget: CMS Page Link */
+.widget-cms-link-inline { display:inline; }
+
+.col-main .widget-cms-link { display:block; text-align:right; margin:7px 0; }
+.col-main .widget-cms-link a { background:url(http://www.kidscavern.co.uk/skin/frontend/base/default/images/widgets/i_widget-link.gif) 100% 4px no-repeat; padding-right:15px; }
+
+.sidebar .widget-cms-link { display:block; margin:0 0 15px; padding:0 10px; }
+.sidebar .widget-cms-link a { background:url(http://www.kidscavern.co.uk/skin/frontend/base/default/images/widgets/i_widget-link.gif) 100% 4px no-repeat; padding:0 15px 0 0; }
+/* ======================================================================================= */
+
+ul#menu {
+    width: 100%;
+}
+ul#menu li.drop > a {
+    color: #727272;
+    display: block;
+    font-size: small;
+}
+ul#menu li.drop {
+    width: auto;
+    float: left;
+    position: static;
+    padding: 0px 3px 0 3px;
+}
+ul#menu li.drop > a:hover {
+    text-decoration: none;
+}
+ul#menu li.drop.over {
+    background-color: #cc2666;
+}
+ul#menu li.drop.over > a {
+    color: #fff;
+}
+ul#menu li.drop > div {
+    display:none;
+    width: auto;
+    padding:10px 20px 10px 0;
+    margin:14px 0 0;
+}
+#menu div.hover {
+    display: inline !important;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 700px;
+    background-color: #CC2666;
+}
+.menu-item > div {
+    float: left;
+    border-right: 1px solid #DA5C8C; padding:0 15px;
+}
+.menu-item div:last-child{ border:0 !important; }
+.menu-item > div:last-child {
+    border-right: 0;
+}
+
+#home-slides{ margin-top:3px;  }
+
+.menu-item h2 {
+    color: #fff;
+    padding: 10px 8px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+.menu-item div ul {
+    list-style-type: none;
+    height: auto;
+    width: 126px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.menu-item div ul li {
+    float: left;
+    clear: both;
+    width: 120px;
+    padding-left: 6px; margin:0 0 1px;
+}
+.menu-item div ul li a {
+   background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/mega-menu.png") no-repeat scroll 0 3px transparent;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 2px 10px 2px 19px;
+    position: relative;
+    text-transform: none;
+    width: 120px;
+}
+.menu-item div ul li:hover {
+    background: #fff;
+}
+.menu-item div ul li:hover a {
+    color: #CC2666 !important;
+    text-decoration: none;
+    background: url("http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/cavern/mega-menu.png") no-repeat 0 -84px transparent
+}
+/*.col-2, .col-3 {	
+    padding-right:20px;
+}*/
+
+    /**
+* We tried to list as many classes in this sheet as we could
+* but it's more than likely we missed a bunch.
+**/
+.rewards-special-review-summary
+{
+	margin-top: 12px;
+	font-size: 8pt;
+}
+.rewards-customer-sidebar
+{
+}
+.rewards-customer-sidebar .block-content {
+}
+.rewards-customer-sidebar .block-content > * {
+    margin: 0;
+    padding: 5px;
+}
+
+.rewards-checkout-cart-before_total-head
+{
+}
+.rewards-checkout-cart-points-head
+{
+	width: 80px;
+}
+.item-points-header-redeemed, .item-points-header-earned
+{
+	color: rgb(30, 126, 200);
+	font-weight: bold;
+	cursor: pointer;
+}
+.item-points-list-redeemed, .item-points-list-earned
+{
+}
+.item-points-block
+{
+	font-size: 8pt;
+}
+.item-no-points-caption
+{
+	font-style: italic;
+}
+.points-checkout-onepage-sidebox
+{
+}
+.points-checkout-onepage-sidebox .points-checkout-onepage-sidebox-header
+{
+}
+.points-checkout-onepage-sidebox .points-checkout-onepage-sidebox-header
+{
+	background-color: #D0DCE1;
+}
+.points-checkout-onepage-sidebox
+{
+	background-color: #EEEEEE;
+	border: 1px solid #B7B7B7;
+	margin-bottom: 11px;
+	padding-left: 0px;
+}
+.points-checkout-onepage-sidebox .points-checkout-onepage-sidebox-content
+{
+	padding: 6px;
+}
+.points-checkout-onepage-sidebox H4.points-checkout-onepage-sidebox-header
+{
+	list-style: none;
+}
+.points-checkout-onepage-sidebox .points-checkout-onepage-sidebox-header
+{
+	background-color: #D0DCE1;
+}
+.points-checkout-onepage-sidebox .points-checkout-onepage-sidebox-header H4
+{
+	float: left;
+	color: #5E8AB4;
+	font-size: 13px;
+	margin-top: 2px;
+}
+.points-checkout-onepage-sidebox .points-checkout-onepage-sidebox-header
+{
+	background-color: #D0DCE1;
+	float: left;
+	width: 184px;
+}
+.points-checkout-onepage-sidebox .points-checkout-onepage-sidebox-header
+{
+	background-color: #D0DCE1;
+	padding: 2px 0px 0px 9px;
+	border-bottom: 1px solid #AFAFAF;
+	font-size: 10pt;
+}
+.points-checkout-onepage-sidebox .onepage-sidebox-header
+{
+}
+.points-checkout-onepage-sidebox .onepage-sidebox-content
+{
+}
+.mypoints-page-head
+{
+}
+.mypoints-sendfriend
+{
+	float: left;
+	width: 45%;
+	height: 260px;
+}
+.shopping-cart-collaterals .rewards-cart-box H4
+{
+	min-height: 16px;
+	color: #E26703;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	padding: 1px 0 1px 21px;
+	text-transform: uppercase;
+	background-image: url(http://www.kidscavern.co.uk/skin/frontend/kidscavern/default/images/icon_asterick.gif);
+	padding-left: 23px;
+}
+.rewards-customer-index .mypoints-sendfriend TD
+{
+	padding: 2px 2px 4px 0;
+}
+.shopping-cart-collaterals .rewards-cart-box
+{
+	padding: 12px 15px 15px;
+}
+.rewards-cart-box .applied-redemptions
+{
+	margin-bottom: 10px;
+}
+.rewards-cart-box .applied-redemptions
+{
+	margin-bottom: 10px;
+}
+.rewards-cart-box .distributions
+{
+	margin-bottom: 10px;
+}
+.rewards-cart-box .no_extra_points
+{
+	font-style: italic;
+}
+.rewards-cart-box
+{
+	margin-top: 0px;
+	margin-bottom: 20px;
+	float: left;
+	text-align: left;
+	width: 100%;
+}
+.mypoints-redeemcatalog
+{
+	vertical-align: middle;
+	float: right;
+	width: 45%;
+	height: 260px;
+}
+/*@nelkaake Thursday May 27, 2010 : Added*/
+.mypoints-redeemcatalog .head
+{
+	text-align: left;
+}
+.mypoints-redeemcatalog .listing
+{
+	font-size: 8pt;
+	height: 230px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.mypoints-redeemcatalog .noproducts
+{
+/*font-size:8pt;*/
+	font-style: italic;
+	margin-top: 30px;
+	text-align: center;
+}
+.mypoints-transfers
+{
+}
+.mypoints-transfers .content TABLE TBODY
+{
+	height: 200px;
+	overflow-x: hidden;
+}
+.mypoints-transfers H2
+{
+	margin-top: 12px;
+}
+.mypoints-summary
+{
+	padding-bottom: 20px;
+	padding-top: 2px;
+}
+.mypoints-summary .usable-points
+{
+	margin-bottom: 6px;
+}
+.mypoints-summary .pendingapproval-points { }
+.mypoints-summary .pendingevent-points { }
+.mypoints-summary .pendingtime-points { }
+.mypoints-summary .pending-points
+{
+	margin-bottom: 12px;
+}
+.mypoints-summary .msg
+{
+}
+.points-summary-emphasize
+{
+	font-weight: bold;
+}
+.cart-points-total_spent
+{
+}
+.cart-points-total_spent .warning
+{
+	color: #FF0000;
+	font-size: 8pt;
+}
+.cart-points-total_spent .caption, .cart-points-total_earned .caption
+{
+	font-weight: bold;
+}
+.cart-points-total_item_discounts .rendering_area
+{
+	font-weight: bold;
+}
+.rewards-customer-sidebar .warning
+{
+	color: #FF0000;
+	font-size: 8pt;
+}
+.rewards-customer-sidebar .to_spend
+{
+}
+.rewards-customer-sidebar .remaining
+{
+}
+.rewards-customer-sidebar .balance
+{
+}
+.rewards-customer-sidebar .notice
+{
+	color: #444444;
+}
+.mypoints-transfers
+{
+	width: 100%;
+}
+.mypoints-transfers .data-table
+{
+}
+.mypoints-transfers .content
+{
+	padding: 0;
+}
+.points-prediction
+{
+	margin-top: 12px;
+	font-size: 8pt;
+	width: 100%;
+}
+.points-prediction .as_low_as
+{
+	width: 100%;
+}
+.points-prediction .earnable
+{
+}
+.order-points-earned .caption
+{
+}
+.order-points-earned .amount, .order-points-spent .amount, .order-print-points-earned .amount, .order-print-points-spent .amount
+{
+	font-size: 7pt;
+}
+.product-view-points
+{
+}
+.product-view-points .redeem_section
+{
+}
+.product-view-points .distri_section
+{
+}
+.product-view-points .distri_section .you_will_earn
+{
+}
+.product-view-points .distri_section .points_image
+{
+}
+.product-view-points
+{
+}
+.points-special-header
+{
+	color: #FFFFFF;
+}
+.points-multishipping-warning
+{
+}
+.points-checkout-onepage-sidebox .change-points-usage
+{
+	float: left;
+	margin-right: 7px;
+	margin-left: 10px;
+	border-left: 1px solid #A7A7A7;
+	padding-left: 8px;
+	font-weight: bold;
+}
+
+
+.cart-points-total_spent .points-amount {
+	min-width: 100px;
+}
+
+.cart-points-spending_warnings .notice {
+	font-size: 8pt;
+}
+
+.rewards-checkout-onepage-guestwarn {
+	top: -6px;
+	position: relative;
+	font-style: italic;
+}
+
+.item-points-undername .item-points-header-redeemed, .item-points-undername .item-points-header-earned  {
+	float: left;
+	cursor: inherit;
+	color: inherit;
+	padding-right: 4px;
+}
+
+.item-points-undername .item-points-redeemed-section {
+    margin-bottom: 4px;    
+}
+
+.item-points-undername {
+	margin-left: 4px;
+	padding-top: 6px;
+    font-style: italic;
+}
+
+.rewards-checkout-onepage-guestwarn {
+	border: silver;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-align: center;
+	padding-top: 2px;
+	background-color: #F9F3E3;
+	box-shadow: 0px 0px 1px #AAAAAA;
+	padding-bottom: 2px;
+	border-style: dotted;
+	border-width: 1px;
+}
+/* This will be used on the catalog pages */
+
+.rewards-mini-icon-holder {
+    padding-right: 6px; 
+    width: 16px; /* //@nelkaake Thursday March 11, 2010 09:41:44 PM : changed to px */
+    vertical-align: bottom; 
+    height: 25px;
+}
+
+.points-prediction .free_with_points { } /*@nelkaake Added to catalog listing page 3/12/2010 2:13:43 PM */
+
+.col-main .facebook-like-rewards-notification {
+    font-size: 11px; 
+    font-family: arial, sans-serif; 
+}
+
+.main-container.col2-right-layout .col-main .facebook-like-rewards-notification {
+    float: right; 
+    top: -28px;
+    position: relative; 
+    left: 0px;
+}
+
+.main-container.col2-right-layout .col-main .facebook-like-rewards-notification-2 {
+    top: -38px;
+}
+
+.main-container.col3-layout .col-main .facebook-like-rewards-notification {
+	float: left;
+	top: -4px;
+	position: relative;
+	left: 2px;
+}
+
+.main-container.col3-layout .col-main .facebook-like-rewards-notification-2 {
+	float: none;
+	top: -12px;
+}
+
+.facebook-like-rewards-notification .ajax-loading {
+    background-image: url('http://www.kidscavern.co.uk/skin/frontend/base/default/images/rewardssocial/facebook/ajax-loader.gif');
+	background-repeat: no-repeat;
+	line-height: 11px;
+	height: 11px;
+	width: 16px;
+	padding: 0;
+	margin: 0;
+}

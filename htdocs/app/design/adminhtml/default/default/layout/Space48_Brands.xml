@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <brands_adminhtml_brand_index>
+        <reference name="content">
+            <block type="brands/adminhtml_grid" name="brand_grid" as="brand_grid"/>
+        </reference>
+    </brands_adminhtml_brand_index>
+</layout>

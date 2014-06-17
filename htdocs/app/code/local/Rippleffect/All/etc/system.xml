@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <rippleffect translate="label" module="rippleffect">
+            <label>Rippleffect</label>
+            <sort_order>1</sort_order>
+        </rippleffect>
+    </tabs>
+    <sections>
+        <rippleffect translate="label" module="rippleffect">
+            <label>General</label>
+            <tab>rippleffect</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>Storefront Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <name translate="label">
+                            <label>Settings</label>
+                        </name>
+                        <all_products_menu_item translate="label">
+                            <sort_order>10</sort_order>
+                            <label>Show All Products menu item</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </all_products_menu_item>
+                        <all_products_menu_item_page translate="label">
+                            <sort_order>20</sort_order>
+                            <label>Link to All Products page</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_cms_page</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </all_products_menu_item_page>
+                        <all_products_menu_item_page_position translate="label">
+                            <sort_order>30</sort_order>
+                            <label>Display All Products page before or after the other category links</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>rippleffect/adminhtml_beforeafter</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </all_products_menu_item_page_position>
+                        <auto_refresh_invalid_cache>
+                            <sort_order>40</sort_order>
+                            <label>Automatically refresh invalidated cache after product save</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>Disable this on high traffic/large sites to prevent performance hit when product is saved. Crontab runs a complete refresh every 24 hours anyway.</comment>
+                        </auto_refresh_invalid_cache>
+                    </fields>
+                </settings>
+                <mobile translate="label">
+                    <label>Mobile Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <redirect_on_mobile_useragent>
+                            <sort_order>10</sort_order>
+                            <label>Redirect to mobile site when mobile Useragent detected</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </redirect_on_mobile_useragent>
+                        <mobile_useragents>
+                            <sort_order>20</sort_order>
+                            <label>Useragents to trigger mobile site redirection</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>Comma separate strings to match. All strings are wildcarded on both sides. Not case sensitive.</comment>
+                        </mobile_useragents>
+                        <redirect_to_mobile>
+                            <sort_order>30</sort_order>
+                            <label>Location to redirect to if mobile useragent detected not on mobile site</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>Enter a path (e.g; /mobile) to redirect to a particular path or a full URL (e.g; http://mobile.example.com) to redirect to a different hostname entirely.</comment>
+                        </redirect_to_mobile>
+                        <redirect_to_normal>
+                            <sort_order>40</sort_order>
+                            <label>Location to redirect to if mobile useragent not detected on mobile site</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>Enter a path (e.g; /store) to redirect to a particular path or a full URL (e.g; http://www.example.com) to redirect to a different hostname entirely.</comment>
+                        </redirect_to_normal>
+                    </fields>
+                </mobile>
+            </groups>
+        </rippleffect>
+    </sections>
+</config>

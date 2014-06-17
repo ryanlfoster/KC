@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Space48_DisplayOutofstock>
+            <version>0.1.0</version>
+        </Space48_DisplayOutofstock>
+    </modules>
+    <global>
+        <blocks>
+            <s48displayoos>
+                <class>Space48_DisplayOutofstock_Block</class>
+            </s48displayoos>
+            <catalog>
+                    <rewrite>
+                        <product_view_type_configurable>Space48_DisplayOutofstock_Block_Product_View_Type_Configurable</product_view_type_configurable>
+                    </rewrite>
+            </catalog>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <s48displayoos>
+                    <file>space48/display_outofstock.xml</file>
+                </s48displayoos>
+            </updates>
+        </layout>
+    </frontend>
+</config>

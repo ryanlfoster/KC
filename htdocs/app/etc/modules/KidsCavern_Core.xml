@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Configuration XML for the KidsCavern_Core module
+ *
+ * XML Version 1.0
+ *
+ * @category Config_XML
+ * @package  KidsCavern_Core
+ * @author   George Schiopu <george@space48.com>
+ * @license  MIT http://www.google.com
+ * @version  GIT: 0.1.0
+ * @link     http://www.space48.com
+ */
+-->
+<config>
+    <modules>
+        <KidsCavern_Core>
+            <active>true</active>
+            <codePool>local</codePool>
+        </KidsCavern_Core>
+    </modules>
+</config>

@@ -1,0 +1,7 @@
+<ul class="top-basket">
+    <li><a href="<?php echo $this->getCartUrl() ?>" class="view-cart"><?php echo $this->__("SHOPPING BAG") ?></a></li>
+    <li><a href="<?php echo $this->getCartUrl() ?>" class="items"><?php echo $this->__("%s Item%s", $this->countCartItems(), ($this->countCartItems() != 1 ? "s" : ""))  ?></a></li>
+    <li>&nbsp;-&nbsp;</li>
+    <li><?php echo $this->helper("core")->currency($this->getCartSubtotal()) ?></li>
+    <li><a href="<?php echo $this->getCartUrl() ?>" class="pink_arrow_btn">Checkout</a></li>
+</ul>

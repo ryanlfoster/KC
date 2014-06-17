@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <KidsCavern_Shop>
+            <version>0.0.1</version>
+        </KidsCavern_Shop>
+    </modules>
+    <global>
+        <helpers>
+            <kidscavern>
+                <class>KidsCavern_Shop_Helper</class>
+            </kidscavern>
+        </helpers>
+        <models>
+            <kidscavern>
+                <class>KidsCavern_Shop_Model</class>
+            </kidscavern>
+        </models>
+        <events>
+<!--            <controller_action_layout_render_before>-->
+            <core_block_abstract_to_html_before>
+                <observers>
+                    <apply_site_background>
+                        <type>singleton</type>
+                        <class>KidsCavern_Shop_Model_Observer</class>
+                        <method>applySiteBackground</method>
+                    </apply_site_background>
+                </observers>
+            </core_block_abstract_to_html_before>
+<!--            </controller_action_layout_render_before>     -->
+        </events>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <kidscavern module="kidscavern">
+                    <file>kidscavern.xml</file>
+                </kidscavern>
+            </updates>
+        </layout>
+    </frontend>
+</config>
+

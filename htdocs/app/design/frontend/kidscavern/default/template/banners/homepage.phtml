@@ -1,0 +1,19 @@
+<div id="home-slides">
+    <?php if (Mage::getModel('cms/block')->load('homepage_banner')->getIsActive()): ?>
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('homepage_banner')->toHtml(); ?> 
+    <?php endif; ?>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+$('#home-slides').bjqs({
+'width' : 940,
+'height' : 429,
+animtype : 'slide', // accepts 'fade' or 'slide'
+animduration : 450, // how fast the animation are
+animspeed : 4000, // the delay between each slide
+automatic : true, // automatic
+showcontrols : true // show next and prev controls
+});
+});
+</script>

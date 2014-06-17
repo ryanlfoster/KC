@@ -1,0 +1,30 @@
+<div class="header">
+    <div class="top-links clearfix">
+        <div class="links right">
+            <?php echo $this->getChildHtml('topLinks') ?>
+        </div>
+    </div>
+    <h1 class="logo"><a href="<?php echo $this->getUrl('') ?>"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+
+    <div class="mobile-menu">
+        <span>MENU</span>
+    </div>
+
+    <div class="mobile-search">
+        <span>Search</span>
+    </div>
+
+    <?php echo $this->getChildHtml('top.cart') ?>
+
+    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('languages')->toHtml(); ?>
+    <div class="top-nav">
+        <?php echo $this->getChildHtml('topMenu') ?>
+        <?php echo $this->getChildHtml('topSearch') ?>
+    </div>
+
+    <div class="global-promos">
+        <ul class="global-banner">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('header_promotions')->toHtml(); ?>
+        </ul>
+    </div>
+</div><!--/header -->

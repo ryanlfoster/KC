@@ -1,0 +1,24 @@
+<?php
+/**
+ * Product:     Shop By Brands
+ * Package:     Aitoc_Aitmanufacturers_3.1.6_374174
+ * Purchase ID: tVvdGs19UDRv1nt8kXtoMgj1k0nJnuQXyRfYV0sM51
+ * Generated:   2012-09-26 12:38:30
+ * File path:   app/design/adminhtml/default/default/template/aitmanufacturers/selectattribute.phtml
+ * Copyright:   (c) 2012 AITOC, Inc.
+ */
+?>
+<div class="entry-edit">
+    <?php
+        echo $this->getFormHtml();
+    ?>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+    var productTemplateSyntax = /(^|.|\r|\n)({{(\w+)}})/;
+    function setSettings(urlTemplate, attElement) {
+        var template = new Template(urlTemplate, productTemplateSyntax);
+        setLocation(template.evaluate({attributecode:$F(attElement)}));
+    }
+//]]>
+</script>

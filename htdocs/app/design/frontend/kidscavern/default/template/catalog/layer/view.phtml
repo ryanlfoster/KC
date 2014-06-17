@@ -1,0 +1,53 @@
+<?php if($this->canShowBlock()): ?>
+<div class="block block-layered-nav">
+    <div class="layered-mobile-nav"><span>Refine products</span></div>
+    <div class="block-content">
+        <?php echo $this->getStateHtml() ?>
+        <?php if($this->canShowOptions()): ?>
+        
+            <dl id="narrow-by-list">
+                <?php $_filters = $this->getFilters() ?>
+                <?php foreach ($_filters as $_filter): ?>
+                <?php if($_filter->getItemsCount()): ?>
+                    <dt><p class="block-subtitle"><?php echo $this->__("Shop By %s", $_filter->getName()) ?></p></dt>
+                    <dd><?php echo $_filter->getHtml() ?></dd>
+                <?php endif; ?>
+                <?php endforeach; ?>
+            </dl>
+            
+            <script type="text/javascript">decorateDataList('narrow-by-list')</script>
+        <script>
+            jQuery(function($){
+                $('#narrow-by-list dd').each(function() {
+                    if($(this).find('li').length > 5) {
+                        $(this).find('li:gt(4)').addClass('hide');
+                        $(this).find('ul').append('<li class="toggle-view"><a class="toggle" href="#"><strong>Show more</strong></a></li>');
+                    };
+                });
+
+                $(".toggle").live("click", function(e) {
+                    var filters = $(this).parent().siblings();
+
+                    if(filters.hasClass("hide")) {
+                        filters.removeClass("hide");
+                        $(this).parent().html('<a class="toggle" href="#"><strong>Show less</strong></a>');
+                        console.log('show fewer');
+                    } else {
+                        $(this).parent().parent().find("li:gt(4)").not(".toggle-view").addClass("hide");
+                        $(this).parent().html('<a class="toggle" href="#"><strong>Show more</strong></a>');
+                        console.log('show more');
+                    }
+
+                    e.preventDefault();
+                });
+            });
+        </script>
+            <style>
+                .hide{
+                    display: none;
+                }
+            </style>
+        <?php endif; ?>
+    </div>
+</div>
+<?php endif; ?>

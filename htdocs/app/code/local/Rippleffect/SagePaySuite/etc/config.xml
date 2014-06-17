@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rippleffect_SagePaySuite>
+            <version>0.0.1</version>
+        </Rippleffect_SagePaySuite>
+    </modules>
+    <global>
+        <helpers>
+            <rippleffect_sagepagesuite>Rippleffect_SagePaySuite_Helper</rippleffect_sagepagesuite>
+            <core>
+                <rewrite>
+                    <http>Rippleffect_SagePaySuite_Helper_Http</http>
+                </rewrite>
+            </core>
+        </helpers>
+        <models>
+            <rippleffect_sagepaysuite>
+                <class>Rippleffect_SagePaySuite_Model</class>
+            </rippleffect_sagepaysuite>
+            <sagepaysuite>
+                <rewrite>
+                    <session>Rippleffect_SagePaySuite_Model_Session</session>
+                </rewrite>
+            </sagepaysuite>
+        </models>
+    </global>
+</config>

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Space48_FreeshippingPromo
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Open Software License (OSL 3.0), a
+* copy of which is available through the world-wide-web at this URL:
+* http://opensource.org/licenses/osl-3.0.php
+*
+* @category   Space48
+* @package    Space48_FreeshippingPromo
+* @author     Space48 <hello@space48.com>
+* @copyright  Copyright (c) 2012 Space 48 LTD.
+* @license    http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+*/
+-->
+<config>
+	<modules>
+		<Space48_FreeshippingPromo>
+			<version>0.1.1</version>
+		</Space48_FreeshippingPromo>
+	</modules>
+	<global>
+		<helpers>
+			<freeshippingpromo>
+				<class>Space48_FreeshippingPromo_Helper</class>
+			</freeshippingpromo>
+		</helpers>
+		<models>
+			<freeshippingpromo>
+				<class>Space48_FreeshippingPromo_Model</class>
+			</freeshippingpromo>
+		</models>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<freeshippingpromo>
+					<file>freeshippingpromo.xml</file>
+				</freeshippingpromo>
+			</updates>
+		</layout>
+        
+        <translate>
+            <modules>
+                <Space48_FreeshippingPromo>
+                    <files>
+                        <default>Space48_FreeshippingPromo.csv</default>
+                    </files>
+                </Space48_FreeshippingPromo>
+            </modules>
+        </translate>
+        
+	</frontend>
+	<adminhtml>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<freeshippingpromo_settings>
+											<title>Space 48 Free Shipping Promo Message - All</title>
+										</freeshippingpromo_settings>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+</config>

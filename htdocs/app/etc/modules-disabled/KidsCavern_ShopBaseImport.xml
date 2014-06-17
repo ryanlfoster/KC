@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <KidsCavern_ShopBaseImport>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Rippleffect_All />
+            </depends>
+        </KidsCavern_ShopBaseImport>
+    </modules>
+</config>

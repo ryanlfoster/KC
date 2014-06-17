@@ -1,0 +1,23 @@
+<?php
+$brand = $this->getBrandPage();
+$_productCollection=$this->getLoadedProductCollection();
+?>
+
+<div class="category-header">
+    <?php if(isset($brand[0]['large_logo'])) : ?>
+    <div class="category-image">
+        <img src="/media/aitmanufacturers/<?php echo $brand[0]['large_logo']; ?>" />
+    </div><!-- / category-title -->
+    <?php endif; ?>
+
+    <div class="category-title">
+        <h1><?php echo $brand[0]['title']; ?></h1>
+    </div><!-- / category-title -->
+
+    <div class="category-description std">
+        <?php echo $brand[0]['description']; ?>
+    </div><!-- / category-description -->
+</div><!-- / catgeory-header -->
+
+
+<?php echo $this->getChildHtml('product_list_brand'); ?>

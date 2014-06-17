@@ -1,0 +1,161 @@
+<layout>
+    <default>
+        <remove name="rewards.special.header" />
+        <remove name="rewards.top.links.points_balance" />
+
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/ga/distilled.FirstTouch.js</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/mobile.css</name></action>
+        </reference>
+
+        <reference name="top.links">
+            <action method="removeLinkByUrl"><url helper="customer/getAccountUrl"/></action>
+            <action method="addLink" translate="label title" module="customer"><label>My Account</label><url helper="customer/getAccountUrl"/><title>My Account</title><prepare/><urlParams/><position>20</position></action>
+            <action method="addLink" translate="label title" module="kidscavern"><label>Help</label><url helper="kidscavern/getHelpUrl"/><title>Help</title><prepare/><urlParams/><position>50</position></action>
+            <action method="addLink" translate="label title" module="kidscavern"><label>Contact</label><url helper="kidscavern/getContactsUrl"/><title>Contact</title><prepare/><urlParams/><position>60</position></action>
+        </reference>
+
+        <reference name="before_body_end">
+            <block name="google_adwords_tracking" template="tracking/tracking.phtml" type="core/template" />
+        </reference>
+    </default>
+
+    <customlandingpage_index_index>
+        <update handle="page_one_column"/>
+    </customlandingpage_index_index>
+
+    <catalogsearch_result_index>
+        <reference name="search_result_list">
+            <action method="setDefaultDirection"><string>desc</string></action>
+            <action method="setDefaultOrder"><string>relevance</string></action>
+        </reference>
+    </catalogsearch_result_index>
+
+    <checkout_cart_index>
+        <reference name="content">
+            <action method="unsetChild"><name>freeshippingpromo</name></action>
+        </reference>
+
+        <reference name="checkout.cart">
+            <action method="insert"><name>freeshippingpromo</name></action>
+        </reference>
+
+        <!--<remove name="checkout.cart.coupon" />-->
+    </checkout_cart_index>
+
+    <customer_account>
+        <reference name="breadcrumbs">
+            <action method="addCrumb">
+                <crumbName>home</crumbName>
+                <crumbInfo>
+                    <label>Home</label>
+                    <link>/</link>
+                </crumbInfo>
+            </action>
+            <action method="addCrumb">
+                <crumbName>dashboard</crumbName>
+                <crumbInfo>
+                    <label>Dashboard</label>
+                </crumbInfo>
+            </action>
+        </reference>
+    </customer_account>
+
+    <customer_logged_in>
+        <reference name="top.links">
+            <action method="removeLinkByUrl"><url helper="customer/getLogoutUrl"/></action>
+            <action method="addLink" translate="label title" module="customer"><label>Log Out</label><url helper="customer/getLogoutUrl"/><title>Log Out</title><prepare/><urlParams/><position>10</position></action>
+        </reference>
+    </customer_logged_in>
+
+    <customer_logged_out>
+        <reference name="top.links">
+            <action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
+            <action method="addLink" translate="label title" module="customer"><label>Log In</label><url helper="customer/getLoginUrl"/><title>Log In</title><prepare/><urlParams/><position>10</position></action>
+        </reference>
+    </customer_logged_out>
+
+    <customer_account_confirmation>
+        <reference name="breadcrumbs">
+            <action method="addCrumb">
+                <crumbName>home</crumbName>
+                <crumbInfo>
+                    <label>Home</label>
+                    <link>/</link>
+                </crumbInfo>
+            </action>
+            <action method="addCrumb">
+                <crumbName>account_confirmation</crumbName>
+                <crumbInfo>
+                    <label>Account Confirmation</label>
+                </crumbInfo>
+            </action>
+        </reference>
+    </customer_account_confirmation>
+
+    <customer_account_login>
+        <reference name="breadcrumbs">
+            <action method="addCrumb">
+                <crumbName>home</crumbName>
+                <crumbInfo>
+                    <label>Home</label>
+                    <link>/</link>
+                </crumbInfo>
+            </action>
+            <action method="addCrumb">
+                <crumbName>login</crumbName>
+                <crumbInfo>
+                    <label>Login</label>
+                </crumbInfo>
+            </action>
+        </reference>
+    </customer_account_login>
+
+    <customer_account_create>
+        <reference name="breadcrumbs">
+            <action method="addCrumb">
+                <crumbName>home</crumbName>
+                <crumbInfo>
+                    <label>Home</label>
+                    <link>/</link>
+                </crumbInfo>
+            </action>
+            <action method="addCrumb">
+                <crumbName>register</crumbName>
+                <crumbInfo>
+                    <label>Register</label>
+                </crumbInfo>
+            </action>
+        </reference>
+    </customer_account_create>
+
+    <customer_account_forgotpassword>
+        <reference name="breadcrumbs">
+            <action method="addCrumb">
+                <crumbName>home</crumbName>
+                <crumbInfo>
+                    <label>Home</label>
+                    <link>/</link>
+                </crumbInfo>
+            </action>
+            <action method="addCrumb">
+                <crumbName>forgot</crumbName>
+                <crumbInfo>
+                    <label>Forgotten Password</label>
+                </crumbInfo>
+            </action>
+        </reference>
+    </customer_account_forgotpassword>
+
+    <cms_index_index>
+        <!-- OLD BANNER CODE -->
+        <!--<reference name="content">
+            <block type="core/template" before="breadcrumbs" name="banners" template="banners/homepage.phtml" />
+        </reference> -->
+
+        <!-- New Homepage static blocks to replace banner -->
+        <reference name="content">
+            <block type="core/template" before="breadcrumbs" name="banners" template="banners/newHomepage.phtml" />
+        </reference>
+    </cms_index_index>
+</layout>

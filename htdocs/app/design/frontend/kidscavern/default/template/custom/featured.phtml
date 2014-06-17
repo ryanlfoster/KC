@@ -1,0 +1,41 @@
+<?php
+$_storeId = Mage::app()->getStore()->getId();
+$_catalog = $this->getLayout()->createBlock('catalog/product_list')->setStoreId($_storeId);
+$_collection = $this->getFeaturedProductsCollection();
+?>
+
+<div id="home-featured">
+    <?php if (count($_collection) == 0): ?>
+	<p class="note-msg"><?php echo $this->__('There are no featured products at the moment.') ?></p>
+    <?php else : ?>
+	<div class="category-products clearfix">
+	<?php
+            $_collectionSize = count($_collection);
+            $_columnCount = 4;
+            $i = 0;
+            foreach ($_collection as $_product): ?>
+                <?php /* @var $_product Mage_Catalog_Model_Product */ ?>
+                <?php if (!$_product->isSaleable()) { continue; } ?>
+                <?php if ($i++%$_columnCount==0): ?>
+                    <ul class="products-grid">
+                        <?php endif ?>
+                            <li class="item<?php if(($i-1)%$_columnCount==0): ?> first<?php elseif($i%$_columnCount==0): ?> last<?php endif; ?>">
+                                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(135); ?>" width="135" height="135" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
+                                <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $this->helper("catalog/output")->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
+                                <?php if($_product->getRatingSummary()): ?>
+                                    <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+                                <?php endif; ?>
+                                <?php echo $_catalog->getPriceHtml($_product, true) ?>
+                                <div class="actions">
+                                    <a class="read-more" href="<?php echo $_product->getProductUrl() ?>"><?php echo $this->__("View Details") ?></a>
+                                    <!--<a class="buy-now" href="<?php echo $this->helper('checkout/cart')->getAddUrl($_product); ?>"><?php echo $this->__("Add To Bag") ?></a>-->
+                                </div>
+                            </li>
+                        <?php if ($i%$_columnCount==0 || $i==$_collectionSize): ?>
+                    </ul>
+                <?php endif ?>
+            <?php endforeach ?>
+            <script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script>
+	</div>
+    <?php endif ?>
+</div><!--//home feat-->

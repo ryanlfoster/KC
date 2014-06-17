@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Space48_Brands>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Space48_Brands>
+    </modules>
+</config>

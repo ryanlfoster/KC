@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <KidsCavern_StockUpdate>
+            <version>0.0.1</version>
+        </KidsCavern_StockUpdate>
+    </modules>
+    <global>
+        <models>
+            <kidscavern_stockupdate>
+                <class>KidsCavern_StockUpdate_Model</class>
+            </kidscavern_stockupdate>
+        </models>
+    </global>
+    <crontab>
+        <jobs>
+            <stock_update>
+                <schedule>
+                    <cron_expr>0 */10 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>kidscavern_stockupdate/updater::run</model>
+                </run>
+            </stock_update>
+        </jobs>
+    </crontab>
+</config>

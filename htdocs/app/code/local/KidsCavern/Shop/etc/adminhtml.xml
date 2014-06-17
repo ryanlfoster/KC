@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <kidscavern translate="title">
+                                        <title>Kids Cavern</title>
+                                        <sort_order>100</sort_order>
+                                    </kidscavern>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
+

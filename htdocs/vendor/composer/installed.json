@@ -1,0 +1,129 @@
+[
+    {
+        "name": "magento-hackathon/magento-composer-installer",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/magento-hackathon/magento-composer-installer.git",
+            "reference": "2da5ba8de75e62b2bc074423c02da2e68e5b4c18"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/magento-hackathon/magento-composer-installer/zipball/2da5ba8de75e62b2bc074423c02da2e68e5b4c18",
+            "reference": "2da5ba8de75e62b2bc074423c02da2e68e5b4c18",
+            "shasum": ""
+        },
+        "require-dev": {
+            "composer/composer": "*",
+            "phpunit/phpunit": "*"
+        },
+        "suggest": {
+            "magento-hackathon/composer-command-integrator": "*"
+        },
+        "time": "2013-03-26 20:54:51",
+        "type": "composer-installer",
+        "extra": {
+            "composer-command-registry": [
+                "MagentoHackathon\\Composer\\Magento\\Command\\DeployCommand"
+            ],
+            "class": "MagentoHackathon\\Composer\\Magento\\Installer"
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "MagentoHackathon\\Composer\\Magento": "src/"
+            }
+        },
+        "license": [
+            "OSL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Daniel Fahlke aka Flyingmana",
+                "email": "daniel@digitalmanufaktur.com"
+            },
+            {
+                "name": "Jörg Weller",
+                "email": "weller@flagbit.de"
+            },
+            {
+                "name": "Karl Spies",
+                "email": "karl.spies@gmx.net"
+            },
+            {
+                "name": "Tobias Vogt",
+                "email": "tobi@webguys.de"
+            },
+            {
+                "name": "David Fuhr",
+                "email": "fuhr@flagbit.de"
+            },
+            {
+                "name": "Vinai Kopp",
+                "email": "vinai@netzarbeiter.com"
+            }
+        ],
+        "description": "Composer installer for Magento modules",
+        "homepage": "https://github.com/magento-hackathon/magento-composer-installer",
+        "keywords": [
+            "composer-installer",
+            "magento"
+        ],
+        "support": {
+            "source": "https://github.com/magento-hackathon/magento-composer-installer/tree/master",
+            "issues": "https://github.com/magento-hackathon/magento-composer-installer/issues"
+        }
+    },
+    {
+        "name": "space48/customlandingpage",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "ssh://space48@space48.com:22322/var/www/space48.com/Space48Modules/CustomLandingPage.git",
+            "reference": "7f44714eb299323994ccb2a129c70efeea5e918e"
+        },
+        "require": {
+            "magento-hackathon/magento-composer-installer": "*"
+        },
+        "time": "2013-04-04 09:06:09",
+        "type": "magento-module",
+        "extra": {
+            "map": [
+                [
+                    "app/etc/modules/Space48_CustomLandingPage.xml",
+                    "app/etc/modules/Space48_CustomLandingPage.xml"
+                ],
+                [
+                    "app/code/local/Space48/CustomLandingPage",
+                    "app/code/local/Space48/CustomLandingPage"
+                ],
+                [
+                    "app/design/adminhtml/default/default/layout/Space48_LandingPage.xml",
+                    "app/design/adminhtml/default/default/layout/Space48_LandingPage.xml"
+                ],
+                [
+                    "app/design/frontend/base/default/layout/Space48_LandingPage.xml",
+                    "app/design/frontend/base/default/layout/Space48_LandingPage.xml"
+                ],
+                [
+                    "app/design/frontend/base/default/template/Brands",
+                    "app/design/frontend/base/default/template/Brands"
+                ]
+            ]
+        },
+        "installation-source": "source",
+        "license": [
+            "OSL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Space48",
+                "email": "webmaster@space48.com"
+            }
+        ],
+        "description": "Magento extension to allow custom brand pages based on attribute.",
+        "homepage": "http://wiki.space48.com/modules/brands"
+    }
+]

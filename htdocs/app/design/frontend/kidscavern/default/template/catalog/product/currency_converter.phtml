@@ -1,0 +1,62 @@
+<?php
+$_product      = $this->getProduct();
+$_id           = $_product->getId();
+
+$baseCurr      = Mage::app()->getBaseCurrencyCode();
+$usdLocale     = 'en_US';
+$toUsd         = 'USD';
+$usdCurrency   = new Zend_Currency($usdLocale);
+$usdPrice      = number_format( Mage::helper('directory')->currencyConvert( $_product->getFinalPrice(), $baseCurr, $toUsd ), 2 );
+$usdSymbol     = $usdCurrency->getSymbol();
+$finalUsdPrice = $usdSymbol . $usdPrice;
+
+$toEur         = 'EUR';
+$eurCurrency   = new Zend_Currency($toEur);
+$eurPrice      = number_format( Mage::helper('directory')->currencyConvert( $_product->getFinalPrice(), $baseCurr, $toEur ), 2 );
+$eurSymbol     = $eurCurrency->getSymbol();
+$finalEurPrice = $eurSymbol . $eurPrice;
+?>
+
+<div class="usdPrice" style="display:none;">
+    <div class="price-box">
+        <span id="product-price-<?php echo $_id;?>" class="regular-price">
+            Price: <span class="price"><?php echo $finalUsdPrice;?></span>
+        </span>
+    </div>
+</div>
+
+<div class="eurPrice" style="display:none;">
+    <div class="price-box">
+        <span id="product-price-<?php echo $_id;?>" class="regular-price">
+            Price: <span class="price"><?php echo $finalEurPrice;?></span>
+        </span>
+    </div>
+</div>
+
+<a class="gbpShow change-currency currency-selected">£</a>
+<a class="eurShow change-currency">€</a>
+<a class="usdShow change-currency">$</a>
+
+<script type="text/javascript">
+    jQuery(function($){
+        $('.change-currency').click(function(){
+            $(this).addClass('currency-selected');
+            $(this).siblings().removeClass('currency-selected');
+            var name = $(this).attr('class');
+            if (name.indexOf('eurShow') == 0) {
+                $('.price-box').first().hide();
+                $('.eurPrice').show();
+                $('.usdPrice').hide();
+            } else if (name.indexOf('usdShow') == 0) {
+                $('.price-box').first().hide();
+                $('.eurPrice').hide();
+                $('.usdPrice').show();
+            } else if (name.indexOf('gbpShow') == 0) {
+                $('.price-box').first().show();
+                $('.eurPrice').hide();
+                $('.usdPrice').hide();
+            }
+        });
+    })
+</script>
+

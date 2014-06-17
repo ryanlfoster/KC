@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <sales>
+            <children>
+                <rippleffect_shipping translate="title" module="rippleffect_shipping">
+                    <title>Shipping Methods</title>
+                    <sort_order>500</sort_order>
+                    <action>rippleffect_shipping/adminhtml_methods</action>
+                </rippleffect_shipping>
+            </children>
+        </sales>
+    </menu>
+</config>

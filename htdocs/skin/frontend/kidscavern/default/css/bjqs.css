@@ -1,0 +1,47 @@
+/* Basic jQuery Slider essential styles */
+
+ul.bjqs{position:relative; list-style:none;padding:0;margin:0;overflow:hidden; display:none;}
+li.bjqs-slide{position:absolute; display:none;}
+ul.bjqs-controls{list-style:none;margin:0;padding:0;z-index:10; position:relative; top:-50%; margin-top: -51px; width:100%;}
+ul.bjqs-controls.v-centered li a{/*position:absolute;*/}
+
+ul.bjqs-controls.v-centered li.bjqs-prev a {
+    background: url("../images/cavern/slider-left.png") 0 0 no-repeat;
+    cursor: pointer;
+    display: block;
+    height: 93px;
+    width: 51px;
+    left:0;
+    position: absolute;
+    text-indent: -999999px;
+    top: 170px;
+    z-index: 1;
+}
+
+ul.bjqs-controls.v-centered li.bjqs-prev a:hover {
+    background: url("../images/cavern/slider-left.png") 0 bottom no-repeat;
+}
+
+ul.bjqs-controls.v-centered li.bjqs-next a{
+    background: url("../images/cavern/slider-right.png") 0 0 no-repeat;
+    cursor: pointer;
+    display: block;
+    height: 93px;
+    width: 51px;
+    right: 0;
+    position: absolute;
+    text-indent: -999999px;
+    top: 0;
+    z-index: 1;
+    padding:0px;
+}
+
+ul.bjqs-controls.v-centered li.bjqs-next a:hover {
+    background: url("../images/cavern/slider-right.png") 0 bottom no-repeat;
+}
+
+ol.bjqs-markers{list-style: none; padding: 0; margin: 0; width:100%; display:none;}
+ol.bjqs-markers.h-centered{text-align: center;}
+ol.bjqs-markers li{display:inline;}
+ol.bjqs-markers li a{display:inline-block;}
+p.bjqs-caption{display:block;width:96%;margin:0;padding:2%;position:absolute;bottom:0;}

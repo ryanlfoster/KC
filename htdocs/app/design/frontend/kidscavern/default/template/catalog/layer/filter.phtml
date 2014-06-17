@@ -1,0 +1,25 @@
+<?php
+$_currentCategory = Mage::registry('current_category');
+if (is_object($_currentCategory)) {
+    $_categoryUrl = "/" . $_currentCategory->getUrlPath();
+}
+else {
+    $_categoryUrl = "";
+}
+?>
+<ul>
+<?php foreach ($this->getItems() as $_item): ?>
+    <?php if ($_categoryUrl != "" && strstr($_item->getUrl(), $_categoryUrl, "?")): ?>
+        <?php $url = $_item->getUrl(); ?>
+    <?php else: ?>
+        <?php $url = $_categoryUrl . substr($_item->getUrl(), strpos($_item->getUrl(), "?")); ?>
+    <?php endif; ?>
+    <li>
+        <?php if ($_item->getCount() > 0): ?>
+        <a href="<?php echo $url ?>"><?php echo $_item->getLabel() ?></a>
+        <?php else: echo $_item->getLabel() ?>
+        <?php endif; ?>
+        (<?php echo $_item->getCount() ?>)
+    </li>
+<?php endforeach ?>
+</ul>

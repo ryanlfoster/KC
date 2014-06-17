@@ -1,0 +1,48 @@
+<?php
+/**
+ * Product:     Shop By Brands
+ * Package:     Aitoc_Aitmanufacturers_3.1.6_374174
+ * Purchase ID: tVvdGs19UDRv1nt8kXtoMgj1k0nJnuQXyRfYV0sM51
+ * Generated:   2012-09-26 12:38:30
+ * File path:   app/design/frontend/default/default/template/aitmanufacturers/manufacturers.phtml
+ * Copyright:   (c) 2012 AITOC, Inc.
+ */
+?>
+<?php
+/**
+* @copyright  Copyright (c) 2009 AITOC, Inc. 
+*/
+?>
+<?php $items = $this->getItems() ?>
+<div class="page-head">
+<h3><?php echo Mage::helper('aitmanufacturers')->__('All '.Mage::getModel('aitmanufacturers/config')->getAttributeName($this->getAttributeCode()).'s')?></h3>
+</div>
+<div class="content">
+<?php //$showListIcons = Mage::getStoreConfig('catalog/aitmanufacturers/manufacturers_show_list_image', Mage::app()->getStore()->getId()); ?>
+<?php $showListIcons = Mage::helper('aitmanufacturers')->getShowListImage($this->getAttributeCode(), Mage::app()->getStore()->getId()); ?>
+
+<?php if ($cols = count($items)): ?>
+<?php $width = floor(100/$cols) ?>
+<?php foreach($items as $letters): ?>
+<div style="float: left; width: <?php echo $width ?>%;">
+<?php foreach ($letters as $letter => $manufacturers): ?>
+<dl>
+    <dt><?php echo $letter ?></dt>
+    <dd>
+        <ul class="bare-list">
+        <?php foreach ($manufacturers as $manufacturer): ?>
+        	<?php if ($manufacturer['item']->getManufacturer()): ?>
+            <li>
+            	<?php if($showListIcons && $manufacturer['item']->getListImage() && $manufacturer['item']->getShowListImage()){ ?><a href="<?php echo $manufacturer['item']->getUrl() ?>" style="text-decoration:none;"><img src="<?php echo Mage::helper('aitmanufacturers/image')->getIconUrl($manufacturer['item']->getListImage()) ?>" alt="<?php echo $this->htmlEscape($manufacturer['item']->getManufacturer()) ?>" /></a> <?php } ?>
+                <a href="<?php echo $manufacturer['item']->getUrl() ?>"><?php echo $this->htmlEscape($manufacturer['item']->getManufacturer()) ?> (<?php echo $manufacturer['number']?>)</a>
+            </li>
+            <?php endif ?>
+        <?php endforeach ?>
+        </ul>
+    </dd>
+</dl>
+<?php endforeach ?>
+</div>
+<?php endforeach ?>
+<?php endif ?>
+</div>

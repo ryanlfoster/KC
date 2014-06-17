@@ -1,0 +1,27 @@
+<?php
+/**
+ * Product:     Shop By Brands
+ * Package:     Aitoc_Aitmanufacturers_3.1.6_374174
+ * Purchase ID: tVvdGs19UDRv1nt8kXtoMgj1k0nJnuQXyRfYV0sM51
+ * Generated:   2012-09-26 12:38:30
+ * File path:   app/design/frontend/default/default/template/aitmanufacturers/manufacturers_featured.phtml
+ * Copyright:   (c) 2012 AITOC, Inc.
+ */
+?>
+<?php
+/**
+* @copyright  Copyright (c) 2009 AITOC, Inc. 
+*/
+?>
+<?php $manufacturers = $this->getItems() ?>
+<?php if (count($manufacturers)): ?>
+<div class="page-head">
+<h3><?php echo $this->__($this->getFeaturedAttributeName())?></h3>
+</div>
+<div>
+<?php foreach($manufacturers as $manufacturer): ?>
+<div style="float: left; margin: 0 7px 7px 0;"></span><a href="<?php echo $manufacturer->getUrl() ?>"><img src="<?php echo Mage::helper('aitmanufacturers/image')->getUrl($manufacturer->getImage()) ?>" title="<?php echo $this->htmlEscape($manufacturer->getManufacturer()) ?>" alt="<?php echo $this->htmlEscape($manufacturer->getManufacturer()) ?>" /></a></div>
+<?php endforeach ?>
+</div>
+<div style="clear: both;">&nbsp;</div>
+<?php endif ?>

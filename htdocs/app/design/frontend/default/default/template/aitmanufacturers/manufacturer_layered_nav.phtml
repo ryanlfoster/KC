@@ -1,0 +1,43 @@
+<?php
+/**
+ * Product:     Shop By Brands
+ * Package:     Aitoc_Aitmanufacturers_3.1.6_374174
+ * Purchase ID: tVvdGs19UDRv1nt8kXtoMgj1k0nJnuQXyRfYV0sM51
+ * Generated:   2012-09-26 12:38:30
+ * File path:   app/design/frontend/default/default/template/aitmanufacturers/manufacturer_layered_nav.phtml
+ * Copyright:   (c) 2012 AITOC, Inc.
+ */
+?>
+<?php
+/**
+* @copyright  Copyright (c) 2009 AITOC, Inc. 
+*/
+?>
+<?php
+
+$lnp = Mage::helper('aitmanufacturers')->getLayeredNavigationProStatus();
+
+$manufacturer = Mage::getModel('aitmanufacturers/aitmanufacturers')->load($this->getRequest()->getParam('id'))->getManufacturerId();
+$attribute = Mage::getModel('aitmanufacturers/config')->getAttributeIdByOption($manufacturer);
+$productIds = Mage::getModel('aitmanufacturers/aitmanufacturers')->getProductsByManufacturer($manufacturer, Mage::app()->getStore()->getId(), $attribute);
+
+if (Mage::helper('aitmanufacturers')->canUseLayeredNavigation(Mage::registry('shopby_attribute'), true) && $productIds != array())
+{
+    if ($lnp->getIsInstalled() && $lnp->getIsEnabled())
+    {
+        echo $this->getLayout()->createBlock('adjnav/catalog_layer_view', 'aitmanufacturers.adjnav', array('template' => 'adjnav/layer.phtml'))->toHtml();    
+    }
+    elseif(!$lnp->getIsInstalled() && !$lnp->getIsEnabled())
+    {
+        $blockLeftnav2 = $this->getLayout()->getBlock('aitmanufacturers.leftnav2');
+        if(!$blockLeftnav2){
+            $blockLeftnav2 = $this->getLayout()->createBlock('catalog/layer_view', 'aitmanufacturers.leftnav2', array('template' => 'catalog/layer/view.phtml'));
+        }
+        echo $blockLeftnav2->toHtml();    
+    }
+    else
+    {
+        echo $this->getLayout()->createBlock('catalog/layer_view', 'aitmanufacturers.leftnav', array('template' => 'catalog/layer/view.phtml'))->toHtml();
+    }
+}
+?>
