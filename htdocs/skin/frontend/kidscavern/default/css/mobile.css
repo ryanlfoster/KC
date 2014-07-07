@@ -214,7 +214,7 @@ screen and (device-width: 360px) and (-webkit-device-pixel-ratio: 3) {
 
     .products-grid li {
         width: 90%;
-        height: auto;
+        height: auto !important;
         margin: 1em 0 0 0;
         padding: 0 5%;
         border-right: 0;
@@ -222,6 +222,11 @@ screen and (device-width: 360px) and (-webkit-device-pixel-ratio: 3) {
         float: none;
         text-align: center;
     }
+	
+	.products-grid li[style]
+	{
+		height:auto !important;
+	}
 
     .products-grid li.empty {
         display: none !important;
@@ -239,7 +244,7 @@ screen and (device-width: 360px) and (-webkit-device-pixel-ratio: 3) {
         padding-right: 5%;
     }
 
-    .products-grid li img {
+    .products-grid li a.product-image img {
         max-width: 100%;
         min-width: 80%;
         height: auto;

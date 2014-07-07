@@ -40,7 +40,7 @@ body.halloween {
 }
 
 a {
-    color: #43b86a;
+    color: #cc2666;
 }
 dl {
     margin: 0 0 0.4em;
@@ -185,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .top-nav li a.active, .top-nav li.active a {
     color:#fff;
-    background:#43b86a;
+    background:#cc2666;
 }
 .top-nav li.search {
     width:217px;
@@ -347,7 +347,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
     width:100%;
     height: 139px;
-    background:#933e7b url('../images/cavern/footer.png') 0 0 repeat-x;
+    background:#cc2666 url('../images/cavern/footer.png') 0 0 repeat-x;
 }
 
 .footerInner {
@@ -428,8 +428,8 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 10%;
     width: 100%;
     padding: 0.3em 0;
-    border-top: 3px solid #43b86a;
-    border-bottom: 3px solid #43b86a;
+    border-top: 3px solid #cc2666;
+    border-bottom: 3px solid #cc2666;
     text-transform: uppercase;
     text-align: center;
 }
@@ -824,9 +824,10 @@ h1, h2, h3, h4, h5, h6 {
     background-color:#f7e8dd;
 }
 .header .form-language {
-    clear:both;
-    padding:5px 0 0;
     text-align:right;
+    position:absolute;
+    right:0;
+    top:93px;
 }
 .header .form-language label {
     font-weight:bold;
@@ -1044,7 +1045,7 @@ button.button span span{
     background-position: -90px -310px;
 }
 button.btn-proceed-checkout {
-    background-color: #43b86a;
+    background-color: #cc2666;
     height: 30px;
     padding: 5px 12px 0 13px;
 }
@@ -1258,7 +1259,7 @@ input.input-text:focus, select:focus, textarea:focus {
     font-weight: normal;
 }
 .breadcrumbs li a {
-    color: #43b86a;
+    color: #cc2666;
 }
 .breadcrumbs li strong {
     font-weight:bold;
@@ -1511,7 +1512,7 @@ input.input-text:focus, select:focus, textarea:focus {
 }
 
 .currency-selected{
-    background-color:#43b86a;
+    background-color:#cc2666;
     color:#FFFFFF;
 }
 
@@ -1579,7 +1580,7 @@ button.btn-cart {
 button.btn-cart span span {
     background: none;
     padding: 9px 0 0 23px;
-    color: #43b86a;
+    color: #cc2666;
     display: block;
     height: 31px;
     position: relative;
@@ -1651,7 +1652,7 @@ background: url("../images/cavern/sprite.png") no-repeat scroll 0px -133px trans
 }
 .availability.out-of-stock span {
     background: url("../images/soldout.png") no-repeat scroll left center transparent;
-    color: #43b86a;
+    color: #cc2666;
     padding: 2px 0 2px 23px;
 }
 .availability-only {
@@ -2220,7 +2221,7 @@ ul.tabs li.active a, ul.tabs li.active a:hover {
     display: block;
     float: right;
     line-height: 24px;
-    color: #43b86a;
+    color: #cc2666;
     margin: 0 10px 0 0;
     position: relative;
 }
@@ -2430,13 +2431,13 @@ ul.tabs li.active a, ul.tabs li.active a:hover {
 }
 .price-box .price {
     font-weight:normal;
-    color:#43b86a;
+    color:#cc2666;
 }
 /* Regular price */
 .regular-price {
     font-weight:normal;
     font-size: 1.5em;
-    color: #43b86a;
+    color: #cc2666;
 }
 .regular-price .price {
     /*    font-size: 1.5em;*/
@@ -2677,7 +2678,7 @@ ul.tabs li.active a, ul.tabs li.active a:hover {
 
 .block-content dl dd ul li:hover a,
 .block-content .currently ul li {
-    color: #43b86a;
+    color: #cc2666;
     text-decoration: none;
 }
 
@@ -3903,14 +3904,14 @@ tr.summary-details-excluded {
 }
 #nav li.over a, #nav a:hover {
     color:#fff;
-    background-color:#43b86a;
+    background-color:#cc2666;
 }
 /* 1st Level */
 #nav ul li, #nav ul li.active {
     float:none;
     margin:0;
     padding-bottom:1px;
-    background-color:#43b86a;
+    background-color:#cc2666;
 }
 #nav ul li.last {
     padding-bottom:10px;
@@ -3944,7 +3945,7 @@ tr.summary-details-excluded {
     top:5px;
 }
 #nav ul li a {
-	background: #43b86a url('../images/navArrow.png') no-repeat 9px -35px; margin:0 9px;
+	background: #cc2666 url('../images/navArrow.png') no-repeat 9px -35px; margin:0 9px;
 }
 
 #nav ul li a:hover {
@@ -3954,7 +3955,7 @@ tr.summary-details-excluded {
     color:#ffffff;
 }
 #nav ul li a:hover {
-    color:#43b86a;
+    color:#cc2666;
 }
 #nav ul span, #nav ul li.last li span {
     padding:4px 15px 4px 22px;
@@ -4077,11 +4078,11 @@ tr.summary-details-excluded {
 
 
 .page-sitemap .sitemap li.level-0 a {
-    color:#43b86a;
+    color:#cc2666;
 }
 
 
-.catalog-seo-sitemap-category .pages li.current, .catalog-seo-sitemap-product .pages li.current{ background:#43b86a; }
+.catalog-seo-sitemap-category .pages li.current, .catalog-seo-sitemap-product .pages li.current{ background:#cc2666; }
 .page-sitemap .pager .amount { margin:10px 0 ; }
 
 
@@ -4533,7 +4534,7 @@ tr.summary-details-excluded {
 /*.opc .active .step-title a { display:none; }*/
 
 .opc .active .step-title {
-    background:#43b86a;
+    background:#cc2666;
     padding:6px 8px;
     color:#ffffff;
     cursor:default;
@@ -5558,7 +5559,7 @@ color: #727272; }
     width: 33%;
 }
 
-.brands-container h2 { color: #43b86a;}
+.brands-container h2 { color: #cc2666;}
 
 /*languages */
 
