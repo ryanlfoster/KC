@@ -5582,3 +5582,108 @@ color: #727272; }
 .languages ul li a.ger { background-position: -159px 0;}
 
 .languages ul li a:hover { opacity: 0.8;}
+
+#post-list {
+    padding: 0;
+    width: 100%;
+}
+
+.post-list li {
+    float: left;
+    width: 308px;
+    margin: 0 8px 20px 0;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+.post-list li:nth-child(3n) {
+    margin: 0 0 20px 0;
+}
+
+.post-list .post-meta {
+    display: none;
+}
+
+.post-entry {
+    margin-bottom: 0 !important;
+    overflow: hidden;
+}
+
+.post-entry p, .post-entry div, .post-entry h1, .post-entry ul {
+    display: none;
+}
+
+.post-entry .featured-image {
+    display: block;
+    width: 100%;
+    margin: 0;
+    border: 0;
+}
+
+.post-entry .featured-image a {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+}
+
+.post-entry .featured-image img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.post-list li.item .post-list-item {
+    height: auto;
+    width: 100%;
+}
+
+.post-list h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    padding: 1em 10%;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    margin: 0 !important;
+    font-size: 14px;
+}
+
+.post-list-item h2 a {
+    color: #333;
+    text-decoration: underline;
+    line-height: 2em;
+}
+
+.blog-title h1 {
+    color: #cc2666;
+    margin: 1em 0 0 0;
+}
+
+.blog-home .pager {
+    clear: both;
+    width: 100%;
+    text-align: right;
+    background: url(../images/divider.png) repeat-x top;
+    padding-top: 2em;
+}
+
+.blog-home .pager ol {
+    text-align: right;
+}
+
+.blog-home .amount {
+    display: none;
+}
+
+.blog-home .pager li {
+    width: auto;
+    min-width: 25px;
+}
+
+.blog-home .pager .current {
+    background: #c3c3c3;
+}
