@@ -587,4 +587,14 @@ screen and (device-width: 360px) and (-webkit-device-pixel-ratio: 3) {
         padding: 0 5%;
     }
 
+    .blog-title {
+        width: 90%;
+        padding: 0 10%;
+    }
+
+    .blog-home {
+        width: 100%;
+        
+    }
+
 }
