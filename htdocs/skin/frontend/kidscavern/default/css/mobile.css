@@ -583,18 +583,29 @@ screen and (device-width: 360px) and (-webkit-device-pixel-ratio: 3) {
         padding: 0;
     }
 
-    .col2-left2-layout .col-main {
+    .col-main {
         padding: 0 5%;
-    }
-
-    .blog-title {
-        width: 90%;
-        padding: 0 10%;
     }
 
     .blog-home {
         width: 100%;
-        
+    }
+
+    .post-list .pages {
+        width: 100%;
+        text-align: center;
+    }
+
+    .post-list .pages ol {
+        text-align: center;
+    }
+
+    .post-list li {
+        width: 100%;
+    }
+
+    .post-title h1, .post-date.when {
+        width: 100%;
     }
 
 }
