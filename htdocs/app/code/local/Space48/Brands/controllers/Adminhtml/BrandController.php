@@ -44,6 +44,7 @@ class Space48_Brands_Adminhtml_BrandController extends Mage_Adminhtml_Controller
             }
 
             unset($postData['large_logo']);
+            unset($postData['small_logo']);
             $brandsModel->setData($postData);
             Mage::getSingleton('adminhtml/session')->setFormData($postData);
 
@@ -64,7 +65,23 @@ class Space48_Brands_Adminhtml_BrandController extends Mage_Adminhtml_Controller
 
                         $brandsModel->setLargeLogo($_FILES['large_logo']['name']);
                     } catch(Exception $e) {
-                        Mage::throwException(Mage::helper('brands')->__('Error saving the image' . $e));
+                        Mage::throwException(Mage::helper('brands')->__('Error saving the large logo image' . $e));
+                    }
+                }
+
+                if($_FILES['small_logo']['size'] > 0) {
+                    try {
+                        $uploader = new Varien_File_Uploader('small_logo');
+                        $uploader->setAllowedExtensions(array('jpg','png','jpeg','gif'));
+                        $uploader->setAllowRenameFiles(false);
+                        $uploader->setFilesDispersion(false);
+
+                        $path = Mage::getBaseDir('media') . DS  . 'aitmanufacturers';
+                        $uploader->save($path, $_FILES['small_logo']['name']);
+
+                        $brandsModel->setSmallLogo($_FILES['small_logo']['name']);
+                    } catch(Exception $e) {
+                        Mage::throwException(Mage::helper('brands')->__('Error saving the small logo image' . $e));
                     }
                 }
 

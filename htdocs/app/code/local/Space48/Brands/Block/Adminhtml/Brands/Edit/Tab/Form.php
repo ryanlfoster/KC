@@ -25,15 +25,15 @@ class Space48_Brands_Block_Adminhtml_Brands_Edit_Tab_Form extends Mage_Adminhtml
             'name'     => 'title'
         ));
 
-        /*$fieldset->addField('small_logo', 'image', array(
-            'value'    => 'http://someurl.com/image.png',
-            'label'    => Mage::helper('splash')->__('Small Logo'),
+        $fieldset->addField('small_logo', 'image', array(
+            'value'    => 'http://someuel.com/image.png',
+            'label'    =>  Mage::helper('brands')->__('Logo'),
             'name'     => 'small_logo',
-        ));*/
+        ));
 
         $fieldset->addField('large_logo', 'image', array(
             'value'    => 'http://someuel.com/image.png',
-            'label'    => Mage::helper('brands')->__('Logo'),
+            'label'    => Mage::helper('brands')->__('Banner'),
             'name'     => 'large_logo',
         ));
 

@@ -45,6 +45,27 @@ class Space48_Brands_Helper_Brands extends Mage_Core_Helper_Abstract
     }
 
     /**
+     * Returns the link for the brand banner
+     *
+     * @param $brandId
+     */
+    public function getBrandBanner($brandId)
+    {
+        $product      = Mage::getModel('catalog/product')->load($brandId);
+        $manufacturer = $product->getBrand();
+
+        $image = Mage::getModel('brands/brands')->getCollection()
+            ->addFilter('manufacturer_id', $manufacturer)
+            ->getData();
+
+        if($image[0]['small_logo']) {
+            return $image[0]['small_logo'];
+        } else {
+            return false;
+        }
+    }
+
+    /**
      * Returns the brand URL page
      *
      * @param $brandId

@@ -5595,6 +5595,7 @@ color: #727272; }
     position: relative;
     overflow: hidden;
     padding: 0;
+    min-height: 400px;
 }
 .post-list li:nth-child(3n) {
     margin: 0 0 20px 0;
@@ -5711,5 +5712,23 @@ color: #727272; }
 }
 
 .post-view{
+    clear: both;
+}
+
+.category-brand-logo {
+    float: left;
+    width: 45%;
+    margin: 0 1.5% 1.8em 0;
+}
+
+.category-brand-logo img {
+    width: 100%;
+}
+
+.category-image {
+    margin-bottom: 1.8em;
+}
+
+.category-products {
     clear: both;
 }

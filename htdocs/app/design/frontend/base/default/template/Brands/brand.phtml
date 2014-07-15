@@ -9,6 +9,11 @@ $_productCollection=$this->getLoadedProductCollection();
         <img src="/media/aitmanufacturers/<?php echo $brand[0]['large_logo']; ?>" />
     </div><!-- / category-title -->
     <?php endif; ?>
+    <?php if(isset($brand[0]['small_logo'])) : ?>
+        <div class="category-brand-logo">
+            <img src="/media/aitmanufacturers/<?php echo $brand[0]['small_logo']; ?>" />
+        </div><!-- / category-brand-logo -->
+    <?php endif; ?>
 
     <div class="category-title">
         <h1><?php echo $brand[0]['title']; ?></h1>

@@ -209,7 +209,22 @@ screen and (device-width: 360px) and (-webkit-device-pixel-ratio: 3) {
     }
 
     .category-image {
-        display: none;
+        margin-bottom: 1em;
+    }
+
+    .category-image img {
+       width: 100%;
+    }
+
+    .category-brand-logo {
+        float: none;
+        width: 100%;
+        margin: 0 0 1em 0;
+    }
+
+    .category-description, .category-title {
+        width: 90% !important;
+        padding: 0 5% !important;
     }
 
     .products-grid li {
