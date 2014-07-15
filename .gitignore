@@ -9,7 +9,7 @@ htdocs/var/report/*
 htdocs/var/session/*
 htdocs/media/*
 
-wp/wp-content/uploads/*
+htdocs/wp/wp-content/uploads/*
 
 *.~
 1
