@@ -1503,12 +1503,13 @@ input.input-text:focus, select:focus, textarea:focus {
 
 .usdShow, .eurShow, .gbpShow{
     display:inline-block;
-    padding:5px;
+    padding:0.3em;
     margin-right: 5px;
     font-size:1.3em;
     text-align: center;
     background-color:#EFEFEF;
     color:#838383;
+    border-radius: 50%;
 }
 
 .currency-selected{
@@ -1591,9 +1592,21 @@ button.btn-cart span span {
     font-weight: bold;
 }
 
-.add-to-cart button.btn-cart span span{
+.add-to-cart button.btn-cart > span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
 
-background: url("../images/cavern/sprite.png") no-repeat scroll 0px -133px transparent}
+.add-to-cart button.btn-cart span span {
+    background: url("../images/cavern/sprite_new.png") no-repeat scroll 0px -133px transparent;
+    width: 80px;
+    line-height: 2.4em;
+    padding-top: 0.2em;
+    color: #fff;
+    margin: 0 auto;
+}
 
 
 
@@ -1760,8 +1773,8 @@ background: url("../images/cavern/sprite.png") no-repeat scroll 0px -133px trans
     margin-right:5px;
 }
 .add-to-cart button.button {
-    float:left;
-    margin-top: -4px;
+    width: 100%;
+    height: 100%;
 }
 .add-to-cart .paypal-logo {
     clear:left;
@@ -1802,9 +1815,6 @@ background: url("../images/cavern/sprite.png") no-repeat scroll 0px -133px trans
 .add-to-box .add-to-links li .separator {
     display:none !important;
 }
-.product-view {
-    width: 700px;
-}
 .product-collateral h2 {
     font-weight:bold;
     font-size:15px;
@@ -1835,13 +1845,14 @@ background: url("../images/cavern/sprite.png") no-repeat scroll 0px -133px trans
     height: 300px;
     overflow: hidden;
     position: relative;
-    border: 1px solid #cccccc;
+    border-bottom: 1px solid #000;
     z-index: 999;
 }
 .product-view .product-img-box {
-    float: right;
-    width: 300px;
-    margin:0;
+    float: left;
+    width: 304px;
+    margin: 0;
+    border: 1px solid #000;
 }
 .product-img-box .product-image img#image {
     width:300px;
@@ -1863,7 +1874,7 @@ background: url("../images/cavern/sprite.png") no-repeat scroll 0px -133px trans
     float:left;
     width:338px;
     position: relative;
-    margin:15px 0 0 0;
+    margin: 0.5em 0;
     font-size:0;
 }
 .product-view .product-img-box .more-views a {
@@ -1874,72 +1885,93 @@ background: url("../images/cavern/sprite.png") no-repeat scroll 0px -133px trans
     padding: 10px;
     width: 70px;
     font-size: 12px;
-    border: 1px solid #ccc;
     *display: inline;
 }
 
 /********** product-tabs **********/
 .product-collateral {
     float:left;
-    margin:40px 0 22px;
+    margin: 1.8em 0 0 0;
+    width: 100%;
 }
 ul.tabs {
-    margin: 0 0 0 10px;
+    margin: 0;
+    width: 100%;
     padding: 0;
     float: left;
-    list-style: none;
-    height: 34px;
 }
 ul.tabs li {
     position: relative;
     float: left;
-    margin: 0 8px 0 0;
+    width: 22.75%;
     padding: 0;
-    height: 34px;
-    line-height: 34px;
+    height: 2em;
+    line-height: 2em;
     overflow: hidden;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+}
+ul.tabs li.delivery {
+    width: 30.5%;
+}
+ul.tabs li.active {
+    border-bottom: 0;
+}
+ul.tabs li:last-child {
+    border-right: 0;
 }
 ul.tabs li a {
     text-decoration: none;
     font-weight: normal;
     color: #555555;
     display: block;
-    font-size: 1.333em;
+    font-size: 1em;
     padding: 0;
-    width:164px;
-    height:34px;
+    display: block;
+    width: 100%;
+    height: 100%;
     outline: none;
     text-align:center;
 }
 ul.tabs li.active a, ul.tabs li.active a:hover {
-    background-color: #ECECEC;
-    border: 1px solid #999999;
+    border-right: 1px solid #000;
 }
 .box-tags {
     display:none;
 }
 .product-tabs {
-    border: 1px solid #999999;
-    background-color: #ececec;
     overflow: hidden;
     clear: both;
     float: left;
-    margin:-1px 0 0 0;  width:700px;
+    margin: 0;
+    width:100%;
 }
 .tab-content {
-    padding: 1.5em 10px;
-    width: 680px;
+    padding: 1.5em 5%;
+    width: 90%;
 }
 
 /* Product Shop */
 .main > .breadcrumbs { display: none; }
+
 .product-view .product-shop {
     position:relative;
     float:left;
-    width:380px;
+    width:340px;
+    margin: 0 16px;
 }
+
+.product-shop .product-actions, .product-shop .product-collateral {
+    border: 1px solid #000;
+}
+
+.product-shop .product-actions {
+    width: 90%;
+    padding: 1em 5% 0 5%;
+}
+
 .product-view .product-shop .product-name {
-    margin:0 0 15px;
+    margin:0 0 0.5em;
 }
 .product-view .product-shop .product-name h1 {
     color: #666666;
@@ -1975,8 +2007,8 @@ ul.tabs li.active a, ul.tabs li.active a:hover {
 
 /* Product Options */
 .product-options {
-    margin: 20px -7px 0;
-    padding: 10px 0px 0px;
+    margin: 1em 0;
+    padding: 0 5%;
     position: relative;
 }
 .product-options dl {
@@ -2117,10 +2149,14 @@ ul.tabs li.active a, ul.tabs li.active a:hover {
     float:left;
 }
 .product-options-bottom .add-to-cart {
-    float:left;
+    width: 100%;
 }
 .product-shop .product-options-bottom {
-    margin:0 0 10px;
+    width: 111%;
+    margin-left: -5.5%;
+    background: #cc2666;
+    line-height: 3em;
+    height: 3em;
 }
 .product-shop .product-options-bottom .price-box {
     float:none;

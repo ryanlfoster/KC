@@ -4,7 +4,6 @@
 <script type="text/javascript">
     var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
 </script>
-<?php echo $this->getParentBlock()->getParentBlock()->getChildHtml("breadcrumbs"); ?>
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
 <div class="product-view">
     <div class="product-essential">
@@ -23,58 +22,86 @@
         </div>
 
         <div class="product-shop">
-            <div class="product-name">
-                <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
-            </div>
+            <div class="product-actions">
+                <div class="product-name">
+                    <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+                </div>
 
-            <h4>
-                <a href="/<?php echo Mage::helper('brands/brands')->getBrandUrl($_product->getId()); ?>" class="more-from-brand">
-                    see other <?php echo Mage::helper('brands/brands')->getBrand($_product->getId()); ?> products
-                </a>
-            </h4>
+                <?php
+                    $current_url = $this->helper('core/url')->getCurrentUrl();
+                    $review_url = Mage::getUrl('review/product/list', array('id' => $this->getProduct()->getId(), 'category'  => $this->getProduct()->getCategoryId()));
+                ?>
 
-            <?php if ($_product->getShortDescription()):?>
-                <div class="short-description">
-                    <div class="std">
-                        <p><?php echo $this->helper('cms')->getBlockTemplateProcessor()->filter($_product->getDescription()); ?></p>
+                <?php
+                    $reviewsCount = Mage::getModel('review/review')
+                        ->getTotalReviews($_product->getId(), true, Mage::app()->getStore()->getId());
+                ?>
+
+                <p class="write-review">(<?php echo $reviewsCount; ?>) <a href="<?php echo  $review_url ?>#review-form"><?php echo $this->__('Write a review') ?></a></p>
+
+                <?php echo $this->getChildHtml('alert_urls') ?>
+                <?php echo $this->getChildHtml('product_type_data') ?>
+                <?php echo $this->getChildHtml('currency-converter') ?>
+                <?php echo $this->getTierPriceHtml() ?>
+                <?php echo $this->getChildHtml('extrahint') ?>
+
+                <?php if (!$this->hasOptions()):?>
+                    <div class="add-to-box">
+                        <?php if($_product->isSaleable()): ?>
+                            <?php echo $this->getChildHtml('addtocart') ?>
+                        <?php endif; ?>
                     </div>
-                </div>
-            <?php endif;?>
+                    <?php //echo $this->getChildHtml('extra_buttons') ?>
+                <?php else: ?>
 
-            <div class="short-description">
-                <div class="std">
-                    <p>Product Code: <?php echo $_product->getSku() ?></p>
-                </div>
+                <?php if ($_product->isSaleable()): ?>
+                    <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+                <?php endif;?>
+
+                <?php endif; ?>
+
+
+
+                <?php echo $this->getChildHtml('other') ?>
+
+                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                    <?php //echo $this->getChildChildHtml('container1', '', true, true) ?>
+                <?php endif;?>
             </div>
-
-            <?php echo $this->getChildHtml('alert_urls') ?>
-            <?php echo $this->getChildHtml('product_type_data') ?>
-            <?php echo $this->getChildHtml('currency-converter') ?>
-            <?php echo $this->getTierPriceHtml() ?>
-            <?php echo $this->getChildHtml('extrahint') ?>
-
-            <?php if (!$this->hasOptions()):?>
-                <div class="add-to-box">
-                    <?php if($_product->isSaleable()): ?>
-                        <?php echo $this->getChildHtml('addtocart') ?>
+            <div class="product-collateral">
+                <ul class="tabs">
+                    <li><a href="#box-description"><?php echo $this->__("Description") ?></a></li>
+                    <li class="delivery"><a href="#box-delivery"><?php echo $this->__("Delivery/Returns") ?></a></li>
+                    <?php if ($_product->getSizingChart()): ?>
+                        <li><a href="#box-sizing"><?php echo $this->__("Sizing Chart") ?></a></li>
+                    <?php endif; ?>
+                    <li><a href="#box-review"><?php echo $this->__("Reviews") ?></a></li>
+                </ul>
+                <div class="product-tabs">
+                    <div id="box-description" class="tab-content">
+                        <h4>
+                            <a href="/<?php echo Mage::helper('brands/brands')->getBrandUrl($_product->getId()); ?>" class="more-from-brand">
+                                see other <?php echo Mage::helper('brands/brands')->getBrand($_product->getId()); ?> products
+                            </a>
+                        </h4>
+                        <?php echo Mage::helper('rippleffect/formatting')->wrapInPTags($_product->getDescription()) ?>
+                    </div>
+                    <div id="box-delivery" class="tab-content">
+                        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('delivery_callout')->toHtml() ?>
+                    </div>
+                    <?php if ($_product->getSizingChart()): ?>
+                        <div id="box-sizing" class="tab-content">
+                            <?php
+                            $chart_code = strtolower($_product->getResource()->getAttribute('sizing_chart')->getSource()->getOptionText($_product->getSizingChart()));
+                            echo $this->getLayout()->createBlock('cms/block')->setBlockId('sizing_' . $chart_code)->toHtml();
+                            ?>
+                        </div>
+                        <div id="box-review" class="tab-content">
+                            <?php echo $this->getChildHtml('reviews') ?>
+                        </div>
                     <?php endif; ?>
                 </div>
-                <?php //echo $this->getChildHtml('extra_buttons') ?>
-            <?php else: ?>
-
-            <?php if ($_product->isSaleable()): ?>
-                <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
-            <?php endif;?>
-
-            <?php endif; ?>
-
-
-
-            <?php echo $this->getChildHtml('other') ?>
-
-            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                <?php //echo $this->getChildChildHtml('container1', '', true, true) ?>
-            <?php endif;?>
+            </div>
         </div>
 
         <div class="clearer"></div>
@@ -124,34 +151,6 @@
         }.bind(productAddToCartForm);
     //]]>
     </script>
-    </div>
-
-    <div class="product-collateral">
-
-	<ul class="tabs">
-            <li><a href="#box-description"><?php echo $this->__("Product Description") ?></a></li>
-            <li><a href="#box-delivery"><?php echo $this->__("Delivery &amp; Returns") ?></a></li>
-            <?php if ($_product->getSizingChart()): ?>
-                <li><a href="#box-sizing"><?php echo $this->__("Sizing Chart") ?></a></li>
-            <?php endif; ?>
-	</ul>
-
-	<div class="product-tabs">
-            <div id="box-description" class="tab-content">
-                <?php echo Mage::helper('rippleffect/formatting')->wrapInPTags($_product->getDescription()) ?>
-            </div>
-            <div id="box-delivery" class="tab-content">
-                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('delivery_callout')->toHtml() ?>
-            </div>
-            <?php if ($_product->getSizingChart()): ?>
-            <div id="box-sizing" class="tab-content">
-                <?php
-                $chart_code = strtolower($_product->getResource()->getAttribute('sizing_chart')->getSource()->getOptionText($_product->getSizingChart()));
-                echo $this->getLayout()->createBlock('cms/block')->setBlockId('sizing_' . $chart_code)->toHtml();
-                ?>
-            </div>
-            <?php endif; ?>
-	</div>
     </div>
 
     <?php echo $this->getChildHtml('upsell_products') ?>
