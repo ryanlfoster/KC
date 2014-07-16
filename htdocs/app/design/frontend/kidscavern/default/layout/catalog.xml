@@ -168,7 +168,7 @@ Product view
         <label>Catalog Product View (Any)</label>
         <!-- Mage_Catalog -->
         <reference name="root">
-            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="head">
             <action method="addJs"><script>varien/product.js</script></action>
@@ -200,6 +200,8 @@ Product view
                 </block>
 
                 <action method="setTierPriceTemplate"><template>catalog/product/view/tierprices.phtml</template></action>
+
+                <block type="catalog/product_list_related" name="catalog.product.related" as="related_products" template="catalog/product/list/related.phtml"/>
                 
                 <block type="catalog/product_list_upsell" name="product.info.upsell" as="upsell_products" template="catalog/product/list/upsell.phtml">
                     <action method="setColumnCount"><columns>3</columns></action>
