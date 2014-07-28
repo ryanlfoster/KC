@@ -54,6 +54,20 @@
                     <?php //echo $this->getChildHtml('extra_buttons') ?>
                 <?php else: ?>
 
+
+                <?php if ($_product->getSizingChart()): ?>
+                    <a href="#size-guide-popup" id="size-guide--selector" class="size-guide--selector cboxElement">Size guide</a>
+                    <div style="display: none;">
+                        <div id="size-guide-popup" class="size-guide-popup" style="padding: 10px; background: #fff;">
+                            <?php
+                            $chart_code = strtolower($_product->getResource()->getAttribute('sizing_chart')->getSource()->getOptionText($_product->getSizingChart()));
+                            echo $this->getLayout()->createBlock('cms/block')->setBlockId('sizing_' . $chart_code)->toHtml();
+                            ?>
+                        </div>
+                    </div>
+
+                <?php endif; ?>
+
                 <?php if ($_product->isSaleable()): ?>
                     <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
                 <?php endif;?>
@@ -96,10 +110,10 @@
                             echo $this->getLayout()->createBlock('cms/block')->setBlockId('sizing_' . $chart_code)->toHtml();
                             ?>
                         </div>
-                        <div id="box-review" class="tab-content">
-                            <?php echo $this->getChildHtml('reviews') ?>
-                        </div>
                     <?php endif; ?>
+                    <div id="box-review" class="tab-content">
+                        <?php echo $this->getChildHtml('reviews') ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -107,6 +121,11 @@
 
     <?php echo $this->getChildHtml('related_products') ?>
     <?php echo $this->getChildHtml('upsell_products') ?>
+    <div class="product_help">
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('product_help')->toHtml(); ?>
+    </div>
+
+
 
     <script type="text/javascript">
     //<![CDATA[
@@ -170,6 +189,8 @@
             $jq(activeTab).fadeIn();
             return false;
         });
+
+        $jq("#size-guide--selector").colorbox({inline:true, width:"50%"});
 
         $jq('#product-gallery > img:first').addClass("zoom-active");
         $jq('#product-gallery > a').fancybox();

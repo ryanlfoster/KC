@@ -148,6 +148,12 @@
     </customer_account_forgotpassword>
 
 
+    <catalog_product_view translate="label">
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/jquery/libs/jquery.colorbox-min.js</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/colorbox.css</name></action>
+        </reference>
+    </catalog_product_view>
 
 
     <cms_index_index>
