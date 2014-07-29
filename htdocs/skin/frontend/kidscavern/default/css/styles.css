@@ -5442,6 +5442,7 @@ html{ height:auto; }
 #product_addtocart_form {
     float: left;
     width: 700px;
+    margin-bottom: 2em;
 }
 
 
@@ -5483,11 +5484,10 @@ html{ height:auto; }
 
 .product_help {
     width: 228px;
-    padding: 5px;
+    padding: 1em 5px 5px 5px;
     float: left;
     margin: 3em 0;
     text-align: center;
-    padding-top: 1em;
 }
 
 .product_help h3 {
@@ -5520,7 +5520,8 @@ html{ height:auto; }
     float: left;
     text-align: center;
     padding: 2em 0;
-    height: 140px;
+    height: 145px;
+    clear: both;
 }
 
 .product-cta-row a {
@@ -5552,7 +5553,7 @@ html{ height:auto; }
     width: 38%;
     border: 1px solid #000;
     margin-right: 2.5%;
-    height: 140px;
+    height: 145px;
     padding: 2em 0;
     text-align: center;
 }
@@ -5598,7 +5599,8 @@ html{ height:auto; }
     float: left;
     text-align: center;
     padding: 2em 0;
-    height: 140px;
+    height: 145px;
+    margin-bottom: 2em;
 }
 
 .size-guide--selector {

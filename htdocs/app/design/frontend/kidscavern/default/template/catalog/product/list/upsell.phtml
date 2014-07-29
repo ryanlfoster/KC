@@ -30,28 +30,30 @@
     $upsells = $_product->getUpSellProductCollection()->addStoreFilter();
 ?>
 
-<div class="product-upsells block">
-    <div class="block-title">
-        <strong><span>Goes well with...</span></strong>
-    </div>
-    <?php
-        $counter = 0;
-        foreach($upsells as $_item) {
-            if($counter < 3) { ?>
-                <div class="product">
-                    <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>" class="product-image">
-                        <img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(150) ?>" width="150" height="150" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" />
-                        <p class="product-name"><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a></p>
+<?php if(count($upsells) > 0) { ?>
+    <div class="product-upsells block">
+        <div class="block-title">
+            <strong><span>Goes well with...</span></strong>
+        </div>
+        <?php
+            $counter = 0;
+            foreach($upsells as $_item) {
+                if($counter < 3) { ?>
+                    <div class="product">
+                        <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>" class="product-image">
+                            <img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(150) ?>" width="150" height="150" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" />
+                            <p class="product-name"><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a></p>
                             <span class="price">
                                 <?php
                                 $price = $_item->getFinalPrice();
                                 echo  Mage::helper('core')->currency($price, true, false);
                                 ?>
                             </span>
-                    </a>
-                </div>
-     <?php
+                        </a>
+                    </div>
+         <?php
+                }
             }
-        }
-     ?>
-</div>
+         ?>
+    </div>
+<?php } ?>

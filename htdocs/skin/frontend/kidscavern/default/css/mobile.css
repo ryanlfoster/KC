@@ -314,8 +314,8 @@ screen and (device-width: 360px) and (-webkit-device-pixel-ratio: 3) {
     }
 
     .product-essential .product-shop {
-        width: 90%;
-        padding: 0 5%;
+        width: 100%;
+        margin: 2em 0;
     }
 
     .box-up-sell {
@@ -329,6 +329,41 @@ screen and (device-width: 360px) and (-webkit-device-pixel-ratio: 3) {
 
     .box-up-sell .read-more {
         float: none;
+    }
+
+    ul.tabs li.delivery {
+        width: 100%;
+    }
+
+    ul.tabs li.active {
+        background: #EEEDED;
+    }
+
+    .product-essential .block-related {
+        width: 100%;
+        padding: 0;
+    }
+
+    .product_help {
+        width: 100%;
+        padding: 0;
+        margin: 2em 0;
+    }
+
+    .product-cta-row {
+        width: 100%;
+        margin: 1em 0;
+    }
+
+    .block .block-content li.item {
+        float: left;
+        max-width: 50%;
+    }
+
+    .product-upsells {
+        width: 100%;
+        padding: 0;
+        margin: 2em 0;
     }
 
     .product-view .box-up-sell .products-grid li, .product-view .box-up-sell .products-grid li.first, .product-view .box-up-sell .products-grid li.last {
@@ -623,4 +658,7 @@ screen and (device-width: 360px) and (-webkit-device-pixel-ratio: 3) {
         width: 100%;
     }
 
+    #product_addtocart_form {
+        width: 100%;
+    }
 }

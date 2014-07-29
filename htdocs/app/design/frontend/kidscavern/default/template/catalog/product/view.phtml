@@ -120,7 +120,6 @@
     </form>
 
     <?php echo $this->getChildHtml('related_products') ?>
-    <div class="clearer"></div>
     <?php echo $this->getChildHtml('upsell_products') ?>
     <div class="product_help">
         <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('product_help')->toHtml(); ?>
@@ -130,6 +129,7 @@
         <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('product_free_delivery')->toHtml(); ?>
     </div>
     <div class="newsletter-signup product-cta-row">
+        <img src="/media/media/mail.png" height="20" alt="sign up to the newsletter" />
         <h3>Newsletter sign up</h3>
         <h4>Be the first to hear about our special offers</h4>
         <?php echo $this->getLayout()->createBlock('newsletter/subscribe')->setTemplate('newsletter/subscribe.phtml')->toHtml(); ?>
@@ -203,6 +203,8 @@
             $jq(activeTab).fadeIn();
             return false;
         });
+
+        //$jq('.clearer').remove();
 
         $jq("#size-guide--selector").colorbox({inline:true, width:"50%"});
 
