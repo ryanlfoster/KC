@@ -5505,6 +5505,102 @@ html{ height:auto; }
     display: block;
 }
 
+.product_help span {
+    color: #cc2666;
+}
+
+.product_help span a {
+    display: inline;
+}
+
+.product-free-delivery {
+    width: 28%;
+    margin-right: 2.5%;
+    border: 1px solid #000;
+    float: left;
+    text-align: center;
+    padding: 2em 0;
+    height: 140px;
+}
+
+.product-cta-row a {
+    width: 100px;
+    padding: 0.5em 4em;
+    text-transform: uppercase;
+    background: #cc2666;
+    color: #fff;
+}
+
+.product-cta-row h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #cc2666;
+    margin: 1em 0 0.3em 0;
+    text-transform: uppercase;
+}
+
+.product-cta-row  h4 {
+    font-size: 1.25em;
+    font-weight: normal;
+    color: #cc2666;
+    margin: 0em 0 1.5em 0;
+    text-transform: uppercase;
+}
+
+.newsletter-signup {
+    float: left;
+    width: 38%;
+    border: 1px solid #000;
+    margin-right: 2.5%;
+    height: 140px;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.newsletter-signup .newsletter-field {
+    width: 76%;
+    margin: 0 0 0 6%;
+    float: left;
+    outline: 0;
+    padding: 0.3em 1%;
+    border: 1px solid #000;
+    border-right: 0;
+}
+
+.newsletter-signup .newsletter-btn {
+    float: left;
+    outline: 0;
+    background: #cc2666;
+    padding: 0.35em 0.5em;
+    border: 1px solid #000;
+    border-left: 0;
+    position: relative;
+}
+
+.newsletter-signup .newsletter-btn:after {
+    content:'>';
+    position: absolute;
+    right: 1em;
+    top: 20%;
+    color: #fff;
+}
+
+.newsletter-signup .newsletter-btn span {
+    text-indent: -9999em;
+    color: transparent;
+    display: block;
+    width: 20px;
+}
+
+.product-twitter {
+    width: 28%;
+    border: 1px solid #000;
+    float: left;
+    text-align: center;
+    padding: 2em 0;
+    height: 140px;
+}
+
 .size-guide--selector {
     display: block;
     max-width: 80px;
