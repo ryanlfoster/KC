@@ -5815,7 +5815,7 @@ color: #727272; }
     position: relative;
     overflow: hidden;
     padding: 0;
-    min-height: 400px;
+    min-height: 150px;
 }
 .post-list li:nth-child(3n) {
     margin: 0 0 20px 0;
@@ -5828,6 +5828,7 @@ color: #727272; }
 .post-entry {
     margin-bottom: 0 !important;
     overflow: hidden;
+    min-height: 150px !important;
 }
 
 .post-list .post-entry p, .post-list .post-entry div, .post-list .post-entry h1, .post-list .post-entry ul {
@@ -5837,8 +5838,11 @@ color: #727272; }
 .post-list .post-entry .featured-image {
     display: block;
     width: 100%;
+    min-height: 150px;
     margin: 0;
     border: 0;
+    vertical-align: middle;
+    text-align: center;
 }
 
 .post-list .post-entry .featured-image a {
@@ -5854,10 +5858,11 @@ color: #727272; }
     width: 100%;
     margin: 0;
     padding: 0;
+
 }
 
 .post-list li.item .post-list-item {
-    height: auto;
+    height: 150px !important;
     width: 100%;
 }
 
@@ -5898,6 +5903,8 @@ color: #727272; }
 
 .blog-home .pager ol {
     text-align: right;
+    max-height: 25px;
+    overflow: hidden;
 }
 
 .blog-home .amount {
@@ -5907,6 +5914,7 @@ color: #727272; }
 .blog-home .pager li {
     width: auto;
     min-width: 25px;
+    max-height: 25px;
 }
 
 .blog-home .pager .current {
