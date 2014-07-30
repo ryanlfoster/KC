@@ -5815,7 +5815,7 @@ color: #727272; }
     position: relative;
     overflow: hidden;
     padding: 0;
-    min-height: 150px;
+    min-height: 350px;
 }
 .post-list li:nth-child(3n) {
     margin: 0 0 20px 0;
@@ -5828,7 +5828,7 @@ color: #727272; }
 .post-entry {
     margin-bottom: 0 !important;
     overflow: hidden;
-    min-height: 150px !important;
+    min-height: 350px !important;
 }
 
 .post-list .post-entry p, .post-list .post-entry div, .post-list .post-entry h1, .post-list .post-entry ul {
@@ -5838,7 +5838,7 @@ color: #727272; }
 .post-list .post-entry .featured-image {
     display: block;
     width: 100%;
-    min-height: 150px;
+    min-height: 350px;
     margin: 0;
     border: 0;
     vertical-align: middle;
@@ -5855,14 +5855,14 @@ color: #727272; }
 }
 
 .post-list .post-entry .featured-image img {
-    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
 
 }
 
 .post-list li.item .post-list-item {
-    height: 150px !important;
+    height: 350px !important;
     width: 100%;
 }
 
