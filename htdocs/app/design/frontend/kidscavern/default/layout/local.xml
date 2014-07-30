@@ -162,4 +162,10 @@
         </reference>
 
     </cms_index_index>
+
+    <wordpress_default>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+    </wordpress_default>
 </layout>
