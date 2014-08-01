@@ -1,5 +1,5 @@
 <?php
-
-class JJM_StyleGuide_Helper_Data extends Mage_Core_Helper_Abstract {
-
+class JJM_Styleguide_Helper_Data extends Mage_Core_Helper_Abstract
+{
 }
+	 

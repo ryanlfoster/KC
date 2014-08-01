@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <config>
-    <modules>
-        <JJM_StyleGuide>
-            <active>true</active>
-            <codePool>local</codePool>
-        </JJM_StyleGuide>
-    </modules>
+  <modules>
+    <JJM_Styleguide>
+      <active>true</active>
+      <codePool>local</codePool>
+      <version>0.1.0</version>
+    </JJM_Styleguide>
+  </modules>
 </config>

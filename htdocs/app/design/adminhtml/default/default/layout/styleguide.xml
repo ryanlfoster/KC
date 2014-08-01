@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <styleguide_adminhtml_styleguidebackend_index>
+	<reference name="content">
+	  <block type="styleguide/adminhtml_styleguidebackend" name="styleguidebackend" template="styleguide/styleguidebackend.phtml"/>
+	</reference>
+  </styleguide_adminhtml_styleguidebackend_index>
+  <styleguide_adminhtml_styleguide_index>
+	<reference name="content">
+	  <block type="styleguide/adminhtml_styleguide" name="styleguide" />
+	</reference>
+  </styleguide_adminhtml_styleguide_index>
+</layout>

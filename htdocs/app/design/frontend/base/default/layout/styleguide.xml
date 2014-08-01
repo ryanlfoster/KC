@@ -1,0 +1,12 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">   
+  <styleguide_index_index>   
+    <reference name="root">   
+      <action method="setTemplate"><template>page/1column.phtml</template></action>   
+    </reference>   
+    <reference name="content">   
+      <block type="styleguide/index" name="styleguide_index" template="styleguide/index.phtml"/>   
+    </reference>   
+  </styleguide_index_index>   
+</layout>   
+	
