@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+	<adminhtml_styleicons_entry_edit>
+		<update handle="editor"/>
+		<reference name="content">
+			<block type="styleicons/adminhtml_entry_edit" name="styleicons_entry_edit" template="styleicons/entry/edit.phtml" />
+		</reference>
+	</adminhtml_styleicons_entry_edit>
+
+	<adminhtml_styleicons_entry_index>
+		<reference name="content">
+			<block type="styleicons/adminhtml_entry_index" name="styleicons_entry"/>
+		</reference>
+	</adminhtml_styleicons_entry_index>
+
+
+	<adminhtml_styleicons_competition_edit>
+		<update handle="editor"/>
+		<reference name="content">
+			<block type="styleicons/adminhtml_competition_edit" name="styleicons_competition_edit" template="styleicons/competition/edit.phtml" />
+		</reference>
+	</adminhtml_styleicons_competition_edit>
+
+	<adminhtml_styleicons_competition_index>
+		<reference name="content">
+			<block type="styleicons/adminhtml_competition_index" name="styleicons_competition"/>
+		</reference>
+	</adminhtml_styleicons_competition_index>
+</layout>

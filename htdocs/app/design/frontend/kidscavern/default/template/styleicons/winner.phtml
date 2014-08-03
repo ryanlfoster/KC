@@ -1,0 +1,87 @@
+
+<?php $comp = $this->getCompetition(); ?>
+<?php $entries = $this->getEntries(); ?>
+<?php $size = $entries->getSize(); ?>
+<?php $winner = $this->getWinner(); ?>
+
+<?php echo $this->getChildHtml('messages'); ?>
+<?php echo $this->getChildHtml('breadcrumbs'); ?>
+
+<?php if(!$comp->getId()) : ?>
+	<div class="style-icons--empty">
+		<span>
+			<?php 
+			echo $this->__('Error loading competition.'); 
+			?>
+		</span>
+	</div>
+<?php endif; ?>
+
+<div class="style-icons--top-banner">
+	<h1><?php echo $comp->getName(); ?></h1>
+	<h2><?php echo $this->__('Competition Closed'); ?></h2>
+</div>
+
+<?php if($size) : ?>
+
+	<?php if($winner->getId()) : ?>
+		<div class="style-icons-winner">
+			<div class="style-icon--info-wrap">
+				<div class="style-icon--image-wrap">
+					<img class="style-icon--image" src="<?php echo $winner->getImage(); ?>" title="<?php echo $winner->getName(); ?>" />
+				</div>	
+
+				<div class="style-icon--text-wrap">
+
+				<div class="style-icon--name">
+					<h2>&#9733; Congratulations &#9733;</h2>
+					<span><?php echo $winner->getName(); ?></span>
+				</div>
+				<div class="style-icon--desc">
+					<p><?php echo $winner->getDescription(); ?></p>
+				</div>	
+				</div>
+			</div>
+		</div>
+
+		<div id="winners-bar">
+		</div>
+	<?php else : ?>
+		<div class="style-icons--empty">
+			<span>
+				<?php 
+				echo $this->__('There was no winner for this competition.'); 
+				?>
+			</span>
+		</div>
+	<?php endif; ?>
+
+	<ul class="style-icon-list">
+		<?php  foreach($entries as $entry) : ?>
+			<li class="style-icon">
+				<div class="style-icon--info-wrap">
+					<div class="style-icon--image-wrap">
+						<img class="style-icon--image" src="<?php echo $entry->getImage(); ?>" title="<?php echo $entry->getName(); ?>" />
+					</div>	
+					<div class="style-icon--name">
+						<span><?php echo $entry->getName(); ?></span>
+					</div>
+					<div class="style-icon--desc">
+						<p><?php echo $entry->getDescription(); ?></p>
+					</div>	
+				</div>
+				<div class="style-icon--vote">
+					<span>Closed</span>
+				</div>
+			</li>
+		<?php endforeach; ?>
+	</ul>
+<?php else : ?>
+	<div class="style-icons--empty">
+		<span>
+			<?php 
+			echo $this->__('There were no entries for '.$comp->getName().'.'); 
+			?>
+		</span>
+	</div>
+<?php endif; ?>

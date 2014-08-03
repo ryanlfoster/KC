@@ -1,0 +1,49 @@
+
+<div class="content-header">
+   <h3 class="icon-head head-styleicons-list"><?php echo $this->getHeaderText() ?></h3>
+   <p class="content-buttons form-buttons">
+    <?php echo $this->getBackButtonHtml(); ?>
+    <?php echo $this->getResetButtonHtml(); ?>
+    <?php if($this->getEditMode()): ?>
+        <?php echo $this->getDeleteButtonHtml(); ?>
+    <?php endif ?>
+    <?php echo $this->getSaveButtonHtml(); ?>
+</p>
+</div>
+
+<form action="<?php echo $this->getSaveUrl() ?>"  enctype="multipart/form-data" method="post" id="styleicons_edit_form">
+    <?php echo $this->getBlockHtml('formkey')?>
+    <?php echo $this->getForm() ?>
+</form>
+
+<script type="text/javascript">
+//<![CDATA[
+    var form = new varienForm('styleicons_edit_form');
+    var formControl = {
+
+        unconvertedText: '',
+        typeChange: false,
+        templateName: false,
+        id: 'text',
+
+        init: function () {
+            if ($('convert_button_back')) {
+                $('convert_button_back').hide();
+            }
+        },
+
+        save: function() {
+            form.submit();
+            return false;
+        },
+
+        delete: function() {
+            if(window.confirm("<?php echo Mage::helper('newsletter')->__('Are you sure that you want to delete this icon?') ?>")) {
+                   window.location.href = '<?php echo $this->getDeleteUrl() ?>';
+            }
+        }
+    };
+
+    formControl.init();
+//]]>
+</script>

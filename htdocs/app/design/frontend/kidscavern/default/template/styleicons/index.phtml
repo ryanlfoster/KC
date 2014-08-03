@@ -1,0 +1,54 @@
+
+<?php $comp = $this->getCompetition(); ?>
+<?php $entries = $this->getEntries(); ?>
+<?php $size = $entries->getSize(); ?>
+
+<?php echo $this->getChildHtml('messages'); ?>
+<?php echo $this->getChildHtml('breadcrumbs'); ?>
+
+<?php if(!$comp->getId()) : ?>
+	<div class="style-icons--empty">
+		<span>
+			<?php 
+			echo $this->__('There are currently no active competitions.'); 
+			?>
+		</span>
+	</div>
+<?php else : ?>
+
+	<div class="style-icons--top-banner">
+		<h1><?php echo $comp->getName(); ?></h1>
+		<h2><?php echo $this->__('Choose your winner'); ?></h2>
+	</div>
+
+	<?php if($size) : ?>
+		<ul class="style-icon-list">
+			<?php  foreach($entries as $entry) : ?>
+				<li class="style-icon">
+					<div class="style-icon--info-wrap">
+						<div class="style-icon--image-wrap">
+							<img class="style-icon--image" src="<?php echo $entry->getImage(); ?>" title="<?php echo $entry->getName(); ?>" />
+						</div>	
+						<div class="style-icon--name">
+							<span><?php echo $entry->getName(); ?></span>
+						</div>
+						<div class="style-icon--desc">
+							<p><?php echo $entry->getDescription(); ?></p>
+						</div>	
+					</div>
+				<div class="style-icon--vote">
+					<a href="<?php echo Mage::getUrl('styleicons');?>/vote/id/<?php echo $entry->getId(); ?>">Vote To Win</a>
+				</div>
+				</li>
+			<?php endforeach; ?>
+		</ul>
+	<?php else : ?>
+		<div class="style-icons--empty">
+			<span>
+				<?php 
+				echo $this->__('There are currently no entries for '.$comp->getName()); 
+				?>
+			</span>
+		</div>
+	<?php endif; ?>
+<?php endif; ?>

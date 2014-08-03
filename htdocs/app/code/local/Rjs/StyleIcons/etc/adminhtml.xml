@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<adminhtml>
+	<menu>
+		<styleicons module="styleicons" translate="title">
+			<title>Mini Style Icons</title>
+			<sort_order>89</sort_order>
+			<children>
+				<styleicons_competition>
+					<title>Competitions</title>
+					<sort_order>89</sort_order>
+					<action>adminhtml/styleicons_competition</action>
+				</styleicons_competition>
+				<styleicons_entry>
+					<title>Entries</title>
+					<sort_order>90</sort_order>
+					<action>adminhtml/styleicons_entry</action>
+				</styleicons_entry>
+			</children>
+		</styleicons>
+	</menu>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<styleicons translate="title" module="styleicons">
+						<title>Style Icons</title>                   
+						<children>
+							<styleicons_competition translate="title" module="styleicons">
+								<title>Competitions</title>
+								<action>adminhtml/styleicons/competitions</action>
+							</styleicons_competition>
+							<styleicons_entrie translate="title" module="styleicons">
+								<title>Entries</title>
+								<action>adminhtml/styleicons/entries</action>
+							</styleicons_entrie>
+						</children>
+					</styleicons>
+					<system>
+						<children>
+							<config>
+								<children>
+									<styleicons translate="title">
+										<title>Mini Style Icons</title>
+										<sort_order>100</sort_order>
+									</styleicons>
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</adminhtml>

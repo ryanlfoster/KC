@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<layout>
+
+	<default>
+		<reference name="root">   
+			<action method="setTemplate">
+				<template>page/2columns-left.phtml</template>
+			</action>   
+		</reference>
+		<reference name="head">   
+			<action method="addItem"><type>skin_css</type><name>css/styleicons/styleicons.css</name></action>
+		</reference>
+	</default>
+
+	<styleicons_index_index>
+		<reference name="breadcrumbs">             
+			<action method="addCrumb">
+				<crumbName>Home</crumbName>
+				<crumbInfo>
+					<label>Home</label>
+					<title>Home</title>
+					<link>/home</link>
+				</crumbInfo>
+			</action>               
+
+			<action method="addCrumb">
+				<crumbName>Mini Style Icons</crumbName>
+				<crumbInfo>
+					<label>Mini Style Icons</label>
+					<title>Mini Style Icons</title>
+					<link>/mini-style-icons</link>
+				</crumbInfo>
+			</action>         
+		</reference>
+
+		<reference name="left">
+			<block type="core/template" name="styleicons_sidebar" template="styleicons/sidebar.phtml" />
+		</reference>
+
+		<reference name="content">		
+			<block type="core/template" name="styleicons_index_index" template="styleicons/index.phtml">
+				<block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs"/>
+				<block type="core/messages" name="messages" as="messages"/>
+			</block>
+		</reference>
+	</styleicons_index_index>
+
+	<styleicons_archive_index>
+		<reference name="breadcrumbs">             
+			<action method="addCrumb">
+				<crumbName>Home</crumbName>
+				<crumbInfo>
+					<label>Home</label>
+					<title>Home</title>
+					<link>/home</link>
+				</crumbInfo>
+			</action>               
+
+			<action method="addCrumb">
+				<crumbName>Mini Style Icons</crumbName>
+				<crumbInfo>
+					<label>Mini Style Icons</label>
+					<title>Mini Style Icons</title>
+					<link>/mini-style-icons</link>
+				</crumbInfo>
+			</action>         
+		</reference>
+
+		<reference name="left">
+			<block type="core/template" name="styleicons_sidebar" template="styleicons/sidebar.phtml" />
+		</reference>
+
+		<reference name="content">		
+			<block type="core/template" name="styleicons_index_index" template="styleicons/winner.phtml">
+				<block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs"/>
+				<block type="core/messages" name="messages" as="messages"/>
+			</block>
+		</reference>
+	</styleicons_archive_index>
+</layout>

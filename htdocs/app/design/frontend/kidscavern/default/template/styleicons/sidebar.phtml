@@ -1,0 +1,57 @@
+<style>
+#styleicons_sidebar h2 {
+	text-transform: uppercase;
+	color:#565555;
+	font-size:14px;
+	display: block;
+	width:100%;
+	border-bottom:1px dashed #cc2666;
+	padding-bottom:5px;
+}
+
+#styleicons_sidebar_archive li {
+	list-style:none;
+	position: relative;
+	margin-bottom:5px;
+	padding-left:5px;
+}
+
+#styleicons_sidebar_archive li:before {
+	content: '';
+	background: url('/skin/frontend/kidscavern/default/images/styleicons-archive-li-bg.png') no-repeat center center;
+	width:20px;
+	height:20px;
+	position: absolute;
+	left:-20px;
+	top:-4px;
+}
+
+#styleicons_sidebar_archive li a {
+	color:#565555;
+	font-size:14px;
+}
+</style>
+
+<?php $archived = Mage::helper('styleicons')->getArchived(); ?>
+<?php
+$fb = Mage::getStoreConfig('styleicons/settings/facebook');
+$how = Mage::getStoreConfig('styleicons/settings/how');
+?>
+
+<div id="styleicons_sidebar">
+
+	<div id="styleicons_sidebar_archive">
+	<h2>Archive</h2>
+		<ul>
+			<?php if(count($archived)) : foreach($archived as $competition) : ?>
+				<li><a href="/mini-style-icons/archive//id/<?php echo $competition->getId(); ?>"><?php echo $competition->getName(); ?></a></li>
+			<?php endforeach; endif; ?>
+		</ul>
+	</div>
+
+	<div id="styleicons_sidebar_how">
+	<h2>How To Enter</h2>
+	<p><?php echo $how; ?></p>
+	<a href="<?php echo $fb; ?>"><img src="/skin/frontend/kidscavern/default/images/styleicons-facebook.png" title="Facebook" alt="Facebook" /></a>
+	</div>
+</div>

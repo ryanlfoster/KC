@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <sections>
+        <styleicons translate="label" module="styleicons">
+            <label>Mini Style Icons</label>
+            <tab>kidscavern</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>2000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>Mini Style Icons Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>      
+                    <fields>
+                        <how>
+                            <label>How To Enter</label>
+                            <comment>Enter some text to tell people how to enter a competition</comment>
+                            <frontend_type>text</frontend_type>    
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                    
+                        </how>
+                        <facebook>
+                            <label>Facebook URL</label>
+                            <frontend_type>text</frontend_type>    
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                    
+                        </facebook>
+                    </fields>          
+                </settings>
+            </groups>
+        </styleicons>
+    </sections>
+</config>

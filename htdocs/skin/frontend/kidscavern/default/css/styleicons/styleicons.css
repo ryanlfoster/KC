@@ -1,0 +1,207 @@
+
+.styleicons-index-index .breadcrumbs {
+	display: block !important; 
+	border-bottom:none;
+}
+
+.style-icons--top-banner {
+	background: #cc2666;
+	color:#fff;
+	text-align:center;
+	padding:30px;
+}
+
+.style-icons--top-banner h1, .style-icons--top-banner h2 {
+	padding:0;
+	margin:0;
+	font-size:30px;
+	text-transform: none;
+}
+
+.style-icons--empty {
+	padding: 15px 0;
+	text-align: center;
+	font-size: 14px;
+	background: rgb(219, 242, 255);
+	border: 1px solid rgb(124, 177, 226);
+	width: 100%;
+	margin: 10px 0;
+}
+
+.style-icon-list {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+.style-icon {
+	float:left;
+	width:200px;
+	margin:4% 7% 0 0;
+}
+
+.style-icon:nth-child(3n+3) {
+	margin-right:0;
+}
+
+.style-icon--info-wrap {
+	background: #efefef;
+	border:#d6d6d6;
+	padding:5px;
+}
+
+.style-icon--name {
+	color: #cc2666;
+	display: block;
+	width:100%;
+	text-align: center;
+	text-transform: uppercase;
+	font-size:14px;
+}
+
+.style-icon--vote {
+	background: #cc2666;
+	display: block;
+	width:100%;
+	text-align: center;
+}
+
+.style-icon--vote a, .style-icon--vote span {
+	color:#fff;
+	text-transform: uppercase;
+	text-align:center;
+	padding: 10px 0px;
+	display: block;
+	font-size:14px;
+}
+
+.style-icon--image-wrap {
+	height:250px;
+	width:100%;
+	margin-bottom:10px;
+	background: #555;
+}
+
+.style-icon--image {
+	width:100%;
+	height:100%;
+	overflow: hidden;
+}
+
+.style-icon--desc, .style-icon--name {
+	margin-bottom:10px;
+	text-align: center;
+	width:100%;
+}
+
+.style-icons-winner .style-icon--info-wrap {
+	float:left;
+	width:98.5%;
+	margin: 10px 0 10px 0;
+}
+
+.style-icons-winner .style-icon--text-wrap {
+	width:50%;
+	float:left;
+	padding:20px;
+}	
+
+.style-icons-winner .style-icon--name {
+	text-align: left;
+}	
+
+.style-icons-winner h2{
+	color:#cc2666;
+	font-size:16px;
+	text-transform: uppercase;
+	margin:20px 0;
+}	
+
+.style-icons-winner .style-icon--name {
+	text-align: left;
+	margin:20px 0;
+}
+.style-icons-winner .style-icon--desc {
+	text-align: left;
+	margin:20px 0;
+}
+
+.style-icon--vote {
+	background: #9d9d9d;
+	display: block;
+	width:100%;
+	text-align: center;
+}
+
+.style-icons-winner .style-icon--image {
+	height:auto;
+}
+
+.style-icons-winner .style-icon--image-wrap {
+	width:300px;
+	margin-bottom:0;
+	float:left;
+	overflow:hidden;
+}
+
+#winners-bar {
+	background: url('/skin/frontend/kidscavern/default/images/styleicons-pink-bar-bg.png') repeat-x;
+	width:100%;
+	height:10px;
+	float:left;
+	margin:30px 0 0 0;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width : 480px),
+screen and (device-aspect-ratio: 2/3),
+screen and (device-aspect-ratio: 40/71),
+screen and (device-width: 360px) and (-webkit-device-pixel-ratio: 3) {
+	
+	.main {
+		padding:20px;
+	}
+
+	.style-icon,.style-icon:nth-child(3n+3) {
+		margin:4% 4% 0 0;
+	}
+
+	.style-icon:nth-child(even) {
+		margin-right:0;
+	}
+	
+
+	.style-icons-winner .style-icon--info-wrap {
+		margin:20px auto 0 auto;
+	}
+
+	.style-icons-winner .style-icon--info-wrap, .style-icons-winner .style-icon--image-wrap  {
+		width:240px;
+		float:none;
+	}
+
+	.style-icons-winner .style-icon--text-wrap {
+		width:85%;
+		float:none;
+	}
+
+}
+
+@media only screen and (max-width : 455px) {
+	
+	.styleicons-index-index .main, .styleicons-archive-index .main {
+		padding:20px;
+	}
+
+	.style-icon-list {
+		width:200px;
+		margin:0 auto;
+	}
+
+	.style-icon {
+		margin-left:0;
+		margin-right:0;
+	}
+
+
+}
