@@ -32,25 +32,62 @@
  */
 ?>
 <?php
-    $_helper    = $this->helper('catalog/output');
-    $_category  = $this->getCurrentCategory();
-    $_imgHtml   = '';
-    if ($_imgUrl = $_category->getImageUrl()) {
-        $_imgHtml = '<p class="category-image"><img src="'.$_imgUrl.'" alt="'.$this->htmlEscape($_category->getName()).'" title="'.$this->htmlEscape($_category->getName()).'" /></p>';
-        $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
-    }
+$_helper    = $this->helper('catalog/output');
+$_category  = $this->getCurrentCategory();
+
+
+$_imgHtml   = '';
+if ($_imgUrl = $_category->getImageUrl()) {
+    $_imgHtml = '<p class="category-image"><img src="'.$_imgUrl.'" alt="'.$this->htmlEscape($_category->getName()).'" title="'.$this->htmlEscape($_category->getName()).'" /></p>';
+    $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
+}
 ?>
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
 
-<?php if($_imgUrl): ?>
-    <?php echo $_imgHtml ?>
-<?php endif; ?>
+<?php if($_category->getData('grid_enabled')) : ?>    
+    <ul id="category_grid_images">
+        <li>
+            <a id="category_grid_image_1" class="category_grid_image" href="<?php echo $_category->getData('grid_link_1'); ?>">
+                <img class="desktop" src="/media/catalog/category/<?php echo $_category->getData('grid_image_desktop_1'); ?>" />
+                <img class="mobile" src="/media/catalog/category/<?php echo $_category->getData('grid_image_mobile_1'); ?>" />
+            </a>
+        </li>
+        <li>
+            <a id="category_grid_image_1" class="category_grid_image" href="<?php echo $_category->getData('grid_link_2'); ?>">
+                <img class="desktop" src="/media/catalog/category/<?php echo $_category->getData('grid_image_desktop_2'); ?>" />
+                <img class="mobile" src="/media/catalog/category/<?php echo $_category->getData('grid_image_mobile_2'); ?>" />
+            </a>
+        </li>
+        <li>
+            <a id="category_grid_image_1" class="category_grid_image" href="<?php echo $_category->getData('grid_link_3'); ?>">
+                <img class="desktop" src="/media/catalog/category/<?php echo $_category->getData('grid_image_desktop_3'); ?>" />
+                <img class="mobile" src="/media/catalog/category/<?php echo $_category->getData('grid_image_mobile_3'); ?>" />
+            </a>
+        </li>
+        <li>
+            <a id="category_grid_image_1" class="category_grid_image" href="<?php echo $_category->getData('grid_link_4'); ?>">
+                <img class="desktop" src="/media/catalog/category/<?php echo $_category->getData('grid_image_desktop_4'); ?>" />
+                <img class="mobile" src="/media/catalog/category/<?php echo $_category->getData('grid_image_mobile_4'); ?>" />
+            </a>
+        </li>
+        <li>
+            <a id="category_grid_image_1" class="category_grid_image" href="<?php echo $_category->getData('grid_link_5'); ?>">
+                <img class="desktop" src="/media/catalog/category/<?php echo $_category->getData('grid_image_desktop_5'); ?>" />
+                <img class="mobile" src="/media/catalog/category/<?php echo $_category->getData('grid_image_mobile_5'); ?>" />
+            </a>
+        </li>
+    </ul>
+<?php else : ?>
 
-<div class="col-left">
-    <?php echo $this->getChildHtml('leftnav') ?>
-</div>
+    <?php if($_imgUrl): ?>
+        <?php echo $_imgHtml ?>
+    <?php endif; ?>
 
-<div class="category-container">
+    <div class="col-left">
+        <?php echo $this->getChildHtml('leftnav') ?>
+    </div>
+
+    <div class="category-container">
     <?php /*
     <div class="page-title category-title">
         <?php if($this->IsRssCatalogEnable() && $this->IsTopCategory()): ?>
@@ -81,3 +118,5 @@
         <?php echo $this->getProductListHtml() ?>
     <?php endif; ?>
 </div>
+
+<?php endif; ?>

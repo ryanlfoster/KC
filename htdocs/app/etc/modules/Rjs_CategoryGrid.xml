@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright   Copyright (c) 2010 Rjs
+ */
+-->
+
+<config>
+    <modules>
+        <Rjs_CategoryGrid>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Rjs_CategoryGrid>
+    </modules>
+</config>

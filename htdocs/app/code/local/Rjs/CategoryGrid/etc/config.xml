@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rjs_CategoryGrid>
+            <version>0.1.0</version>
+        </Rjs_CategoryGrid>
+    </modules>
+
+    <frontend>
+        <layout>
+            <updates>
+                <categorygrid>
+                    <file>categorygrid.xml</file>
+                </categorygrid>
+            </updates>
+        </layout>
+    </frontend>
+
+    <global>
+        <resources>
+            <categorygrid_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </categorygrid_read>
+            <categorygrid_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </categorygrid_write>
+            <categorygrid_setup>
+                <setup>
+                    <module>Rjs_CategoryGrid</module>
+                    <class>Rjs_CategoryGrid_Model_Resource_Setup</class>
+                </setup>
+            </categorygrid_setup>
+        </resources>
+    </global>
+
+</config> 
