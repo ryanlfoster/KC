@@ -1,9 +1,13 @@
 <?php
-class JJM_Styleguide_GuideController extends Mage_Core_Controller_Front_Action{
+class JJM_Styleguide_CelebrityController extends Mage_Core_Controller_Front_Action{
     public function IndexAction() {
-
         $this->loadLayout();
         $this->getLayout()->getBlock("head")->setTitle($this->__("Style Guide"));
+        $celeb = $this->getRequest()->getParams();
+        $celeb = $celeb['name'];
+
+        $celeb = Mage::getModel('styleguide/styleguide')->getCollection()->addFieldToFilter('name', $celeb)->getFirstItem();
+
         $breadcrumbs = $this->getLayout()->getBlock("breadcrumbs");
         $breadcrumbs->addCrumb("home", array(
             "label" => $this->__("Home Page"),
@@ -18,6 +22,7 @@ class JJM_Styleguide_GuideController extends Mage_Core_Controller_Front_Action{
 
 
         $this->loadLayout();
+        $this->getLayout()->getBlock('styleguide_celeb_index')->getCeleb($celeb);
         $this->renderLayout();
     }
 }

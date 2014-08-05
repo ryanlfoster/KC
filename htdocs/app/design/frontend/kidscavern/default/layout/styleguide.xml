@@ -46,7 +46,7 @@
         </reference>
     </styleguide_index_index>
 
-    <styleguide_guide_index>
+    <styleguide_celebrity_index>
         <reference name="root">
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
@@ -69,23 +69,14 @@
                     <link>/style-guide</link>
                 </crumbInfo>
             </action>
-
-            <action method="addCrumb">
-                <crumbName>Celebrity Kid</crumbName>
-                <crumbInfo>
-                    <label>Celebrity Kid</label>
-                    <title>Celebrity Kid</title>
-                    <link>/style-guide</link>
-                </crumbInfo>
-            </action>
         </reference>
 
         <reference name="content">
-            <block type="styleguide/index" name="styleguide_index" template="styleguide/index.phtml">
+            <block type="core/template" name="styleguide_celeb_index" template="styleguide/celeb.phtml">
                 <block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs"/>
                 <block type="core/messages" name="messages" as="messages"/>
             </block>
         </reference>
-    </styleguide_guide_index>
+    </styleguide_celebrity_index>
 
 </layout>
