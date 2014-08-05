@@ -22,7 +22,7 @@ class JJM_Styleguide_CelebrityController extends Mage_Core_Controller_Front_Acti
 
 
         $this->loadLayout();
-        $this->getLayout()->getBlock('styleguide_celeb_index')->getCeleb($celeb);
+        $this->getLayout()->getBlock('styleguide_celeb_index')->setCeleb($celeb);
         $this->renderLayout();
     }
 }
