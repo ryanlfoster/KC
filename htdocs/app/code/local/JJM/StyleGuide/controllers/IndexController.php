@@ -16,7 +16,12 @@ class JJM_Styleguide_IndexController extends Mage_Core_Controller_Front_Action{
                 "title" => $this->__("Style Guide")
 		   ));
 
-      $this->renderLayout(); 
-	  
+
+        $this->loadLayout();
+        //$this->getLayout()->getBlock('styleguide_index_index')->setGuides(Mage::getModel('styleguide/styleguide')->getCollection());
+
+       // $this->getLayout()->createBlock('page/html_pager', 'custom.pager')->setGuides(Mage::getModel('styleguide/styleguide')->getCollection());
+
+        $this->renderLayout();
     }
 }

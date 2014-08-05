@@ -1,0 +1,20 @@
+<?php echo $this->getChildHtml('messages'); ?>
+<?php echo $this->getChildHtml('breadcrumbs'); ?>
+
+
+    <div class="style-guides">
+        <?php foreach($this->_entities as $entity) : ?>
+
+            <div class="guide">
+                <a href="#">
+                    <img src="/media/<?php echo $entity->getImage1(); ?>" alt="<?php echo $entity->getName(); ?>" />
+                    <p><?php echo $entity->getName(); ?></p>
+                    <span class="link"><?php echo $this->__('View this style'); ?></span>
+                </a>
+
+            </div>
+
+        <?php endforeach; ?>
+    </div>
+
+<?php echo $this->getChildHtml('pager'); ?>

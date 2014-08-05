@@ -74,6 +74,7 @@ class JJM_Styleguide_Adminhtml_StyleguideController extends Mage_Adminhtml_Contr
 		{
 
 			$post_data=$this->getRequest()->getPost();
+            $post_images = $_FILES;
 
 
 				if ($post_data) {
@@ -84,14 +85,9 @@ class JJM_Styleguide_Adminhtml_StyleguideController extends Mage_Adminhtml_Contr
 				 //save image
 		try{
 
-if((bool)$post_data['image1']['delete']==1) {
 
-	        $post_data['image1']='';
 
-}
-else {
-
-	unset($post_data['image1']);
+//	unset($post_data['image1']);
 
 	if (isset($_FILES)){
 
@@ -116,7 +112,7 @@ else {
 						$post_data['image1']='styleguide/styleguide/'.$filename;
 		}
     }
-}
+
 
         } catch (Exception $e) {
 				Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
@@ -128,14 +124,9 @@ else {
 				 //save image
 		try{
 
-if((bool)$post_data['image2']['delete']==1) {
 
-	        $post_data['image2']='';
 
-}
-else {
-
-	unset($post_data['image2']);
+	//unset($post_data['image2']);
 
 	if (isset($_FILES)){
 
@@ -160,7 +151,6 @@ else {
 						$post_data['image2']='styleguide/styleguide/'.$filename;
 		}
     }
-}
 
         } catch (Exception $e) {
 				Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
@@ -172,14 +162,8 @@ else {
 				 //save image
 		try{
 
-if((bool)$post_data['image3']['delete']==1) {
 
-	        $post_data['image3']='';
-
-}
-else {
-
-	unset($post_data['image3']);
+	//unset($post_data['image3']);
 
 	if (isset($_FILES)){
 
@@ -204,7 +188,7 @@ else {
 						$post_data['image3']='styleguide/styleguide/'.$filename;
 		}
     }
-}
+
 
         } catch (Exception $e) {
 				Mage::getSingleton('adminhtml/session')->addError($e->getMessage());

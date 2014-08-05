@@ -16,7 +16,7 @@ class JJM_Styleguide_Block_Adminhtml_Styleguide_Edit_Tab_Form extends Mage_Admin
 						"name" => "name",
 						));
 					
-						$fieldset->addField("content", "text", array(
+						$fieldset->addField("content", "textarea", array(
 						"label" => Mage::helper("styleguide")->__("Content"),					
 						"class" => "required-entry",
 						"required" => true,
