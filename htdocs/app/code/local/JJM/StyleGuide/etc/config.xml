@@ -35,18 +35,24 @@
 	  </styleguide>
 	</blocks>
 	<models>
-	  <styleguide>
-		<class>JJM_Styleguide_Model</class>
-		<resourceModel>styleguide_mysql4</resourceModel>
-	  </styleguide>
-	  <styleguide_mysql4>
-		<class>JJM_Styleguide_Model_Mysql4</class>
-		<entities>		  
-			  <styleguide>
-				<table>styleguides</table>
-			  </styleguide>
-		</entities>
-	  </styleguide_mysql4>
+        <styleguide>
+            <class>JJM_Styleguide_Model</class>
+            <resourceModel>styleguide_mysql4</resourceModel>
+        </styleguide>
+        <styleguide_mysql4>
+            <class>JJM_Styleguide_Model_Mysql4</class>
+        <entities>
+              <styleguide>
+                <table>styleguides</table>
+              </styleguide>
+        </entities>
+        </styleguide_mysql4>
+        <catalog>
+            <rewrite>
+                <product>JJM_Styleguide_Model_Catalog_Product</product>
+                <product_link>JJM_Styleguide_Model_Catalog_Product_Link</product_link>
+            </rewrite>
+        </catalog>
 	</models>
 	<resources>
 	  <styleguide_setup>
@@ -86,11 +92,6 @@
 		<title>Styleguide</title>
 		<sort_order>100</sort_order>
 		<children>
-		  <styleguidebackend module="styleguide">
-			<title>Manage Style Guide</title>
-			<sort_order>0</sort_order>
-			<action>styleguide/adminhtml_styleguidebackend</action>
-		  </styleguidebackend>
 		  <styleguide module="styleguide">
 		    <title>Manage Styleguide</title>
 			<sort_order>0</sort_order>
@@ -110,9 +111,6 @@
 			  <title>Styleguide</title>
 			  <sort_order>1000</sort_order>
 			  <children>
-		  <styleguidebackend translate="title">
-			<title>Manage Style Guide</title>
-		  </styleguidebackend>
 		  <styleguide translate="title">
 			<title>Manage Styleguide</title>
 			<sort_order>0</sort_order>
@@ -130,5 +128,23 @@
 		</styleguide>
 	  </updates>
 	</layout>
+    <events>
+      <catalog_product_prepare_save>
+          <observers>
+              <styleguide_catalog_product_prepare_save>
+                  <class>jjm_styleguide/observer</class>
+                  <method>catalogProductPrepareSave</method>
+              </styleguide_catalog_product_prepare_save>
+          </observers>
+      </catalog_product_prepare_save>
+      <catalog_model_product_duplicate>
+          <observers>
+              <styleguide_catalog_product_prepare_save>
+                  <class>jjm_styleguide/observer</class>
+                  <method>catalogModelProductDuplicate</method>
+              </styleguide_catalog_product_prepare_save>
+          </observers>
+      </catalog_model_product_duplicate>
+    </events>
   </adminhtml>
 </config> 
