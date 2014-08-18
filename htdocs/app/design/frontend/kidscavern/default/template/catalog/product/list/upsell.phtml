@@ -38,6 +38,7 @@
         <?php
             $counter = 0;
             foreach($upsells as $_item) {
+                $_item = Mage::getModel('catalog/product')->load($_item->getId());
                 if($counter < 3) { ?>
                     <div class="product">
                         <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>" class="product-image">
