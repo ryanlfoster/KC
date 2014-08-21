@@ -226,3 +226,16 @@ $numColumns = sizeof($this->getColumns());
     </script>
 <?php endif; ?>
 <?php endif ?>
+
+<script>
+    form = document.getElementById('styleguide_tabs_related_section_content');
+
+    checkboxes = form.getElementsByClassName('checkbox');
+    console.log(checkboxes);
+
+    for(var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].name = 'pids[]';
+    }
+
+
+</script>

@@ -42,9 +42,12 @@
         <styleguide_mysql4>
             <class>JJM_Styleguide_Model_Mysql4</class>
         <entities>
-              <styleguide>
+            <styleguide>
                 <table>styleguides</table>
-              </styleguide>
+            </styleguide>
+            <products>
+                <table>styleguide_products</table>
+            </products>
         </entities>
         </styleguide_mysql4>
         <catalog>

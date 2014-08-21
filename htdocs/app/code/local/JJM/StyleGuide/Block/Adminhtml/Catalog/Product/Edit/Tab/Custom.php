@@ -20,12 +20,11 @@ class JJM_Styleguide_Block_Adminhtml_Catalog_Product_Edit_Tab_Custom extends Mag
         $this->setId('custom_product_grid');
         $this->setDefaultSort('entity_id');
         $this->setUseAjax(true);
-        if ($this->_getProduct()->getId()) {
-            $this->setDefaultFilter(array('in_products' => 1));
-        }
-        if ($this->isReadonly()) {
+        $this->setTemplate('styleguide/products_grid.phtml');
+//
+//        if ($this->isReadonly()) {
             $this->setFilterVisibility(false);
-        }
+//        }
     }
 
     /**
@@ -33,9 +32,9 @@ class JJM_Styleguide_Block_Adminhtml_Catalog_Product_Edit_Tab_Custom extends Mag
      *
      * @return Mage_Catalog_Model_Product
      */
-    protected function _getProduct()
+    protected function _getStyleguide()
     {
-        return Mage::registry('current_product');
+        return $this->getRequest()->getParam('edit');
     }
 
     /**
@@ -74,7 +73,7 @@ class JJM_Styleguide_Block_Adminhtml_Catalog_Product_Edit_Tab_Custom extends Mag
     {
         $collection = Mage::getModel('catalog/product_link')->useCustomLinks()
             ->getProductCollection()
-            ->setProduct($this->_getProduct())
+//            ->setProduct($this->_getProduct())
             ->addAttributeToSelect('*');
 
         if ($this->isReadonly()) {
@@ -96,7 +95,8 @@ class JJM_Styleguide_Block_Adminhtml_Catalog_Product_Edit_Tab_Custom extends Mag
      */
     public function isReadonly()
     {
-        return $this->_getProduct()->getCustomReadonly();
+        return false;
+//        return $this->_getProduct()->getCustomReadonly();
     }
 
     /**
@@ -106,7 +106,7 @@ class JJM_Styleguide_Block_Adminhtml_Catalog_Product_Edit_Tab_Custom extends Mag
      */
     protected function _prepareColumns()
     {
-        if (!$this->isReadonly()) {
+//        if (!$this->isReadonly()) {
             $this->addColumn('in_products', array(
                 'header_css_class'  => 'a-center',
                 'type'              => 'checkbox',
@@ -115,7 +115,7 @@ class JJM_Styleguide_Block_Adminhtml_Catalog_Product_Edit_Tab_Custom extends Mag
                 'align'             => 'center',
                 'index'             => 'entity_id'
             ));
-        }
+//        }
 
         $this->addColumn('entity_id', array(
             'header'    => Mage::helper('catalog')->__('ID'),
@@ -179,18 +179,7 @@ class JJM_Styleguide_Block_Adminhtml_Catalog_Product_Edit_Tab_Custom extends Mag
             'index'         => 'price'
         ));
 
-        $this->addColumn('position', array(
-            'header'            => Mage::helper('catalog')->__('Position'),
-            'name'              => 'position',
-            'type'              => 'number',
-            'validate_class'    => 'validate-number',
-            'index'             => 'position',
-            'width'             => 60,
-            'editable'          => !$this->_getProduct()->getCustomReadonly(),
-            'edit_only'         => !$this->_getProduct()->getId()
-        ));
-
-        return parent::_prepareColumns();
+        //return parent::_prepareColumns();
     }
 
     /**
@@ -213,6 +202,7 @@ class JJM_Styleguide_Block_Adminhtml_Catalog_Product_Edit_Tab_Custom extends Mag
     protected function _getSelectedProducts()
     {
         $products = $this->getProductsCustom();
+
         if (!is_array($products)) {
             $products = array_keys($this->getSelectedCustomProducts());
         }
@@ -227,9 +217,12 @@ class JJM_Styleguide_Block_Adminhtml_Catalog_Product_Edit_Tab_Custom extends Mag
     public function getSelectedCustomProducts()
     {
         $products = array();
-        foreach (Mage::registry('current_product')->getCustomProducts() as $product) {
+        $custom = Mage::registry('styleguide_data')->getCustomProducts();
+
+        foreach ($custom as $product) {
             $products[$product->getId()] = array('position' => $product->getPosition());
         }
+
         return $products;
     }
 

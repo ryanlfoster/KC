@@ -23,6 +23,7 @@ class JJM_Styleguide_Adminhtml_StyleguideController extends Mage_Adminhtml_Contr
 				
 				$id = $this->getRequest()->getParam("id");
 				$model = Mage::getModel("styleguide/styleguide")->load($id);
+
 				if ($model->getId()) {
 					Mage::register("styleguide_data", $model);
 					$this->loadLayout();
@@ -70,10 +71,11 @@ class JJM_Styleguide_Adminhtml_StyleguideController extends Mage_Adminhtml_Contr
 		$this->renderLayout();
 
 		}
+
 		public function saveAction()
 		{
 
-			$post_data=$this->getRequest()->getPost();
+			$post_data=$this->getRequest()->getParams();
             $post_images = $_FILES;
 
 
@@ -202,6 +204,16 @@ class JJM_Styleguide_Adminhtml_StyleguideController extends Mage_Adminhtml_Contr
 						->addData($post_data)
 						->setId($this->getRequest()->getParam("id"))
 						->save();
+
+                        $current = Mage::getModel('styleguide/products')->getCollection()->addFieldToFilter('styleguide_id',$model->getId());
+                        foreach($current as $obj) {
+                            $obj->delete();
+                        }
+
+
+                        foreach($post_data['pids'] as $product_id) {
+                            Mage::getModel('styleguide/products')->setStyleguideId($model->getId())->setProductId($product_id)->save();
+                        }
 
 						Mage::getSingleton("adminhtml/session")->addSuccess(Mage::helper("adminhtml")->__("Styleguide was successfully saved"));
 						Mage::getSingleton("adminhtml/session")->setStyleguideData(false);
