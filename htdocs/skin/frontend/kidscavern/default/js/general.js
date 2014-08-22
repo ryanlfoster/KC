@@ -96,7 +96,7 @@ function resizeSettings() {
         //homeBlocks.reloadSlider();
         $jq('.nav-container').css('width',windowWidth);
     } else {
-        homeBlocks.destroySlider();
+        if(homeBlocks[0]) { homeBlocks.destroySlider() };
     }
 
     if(layeredNavStatus === 'block') {

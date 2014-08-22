@@ -178,7 +178,7 @@ Product view
             <action method="addItem"><type>js</type><name>calendar/calendar.js</name><!--<params/><if/><condition>can_load_calendar_js</condition>--></action>
             <action method="addItem"><type>js</type><name>calendar/calendar-setup.js</name><!--<params/><if/><condition>can_load_calendar_js</condition>--></action>
 
-            <action method="addItem"><type>skin_js</type><name>js/bxSlider.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/libs/jquery.bxslider.min.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/zoom.js</name></action>
 			
             <action method="addCss"><stylesheet>css/zoom.css</stylesheet></action>
