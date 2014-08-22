@@ -1,6 +1,49 @@
 <?php
 
-    $celeb = $this->getCeleb();
-    var_dump($celeb);
+    $_celeb = $this->getCeleb();
+    $products = Mage::getModel('styleguide/products')->getCollection()->addFieldToFilter('styleguide_id',$_celeb->getId());
+
+    $_products = array();
+    foreach($products as $product) {
+        try {
+            $_products[] = Mage::getModel('catalog/product')->load($product->getProductId());
+
+        } catch(Exception $e) {
+    //                var_dump($e->getMessage());
+        }
+    }
 
 ?>
+
+<div class="styleguide-celeb">
+    <h1><?php echo $_celeb->getName(); ?></h1>
+
+    <div class="styleguide-slider">
+        <img src="/media/<?php echo $_celeb->getImage1(); ?>" alt="<?php echo $_celeb->getName(); ?> style" />
+    </div>
+
+    <div class="content">
+        <?php echo $_celeb->getContent(); ?>
+    </div>
+
+    <div class="styleguide-products">
+        <h4>Get this style</h4>
+
+        <?php $counter = 0;
+         foreach($_products as $p) {
+             if($counter <= 3) { ?>
+                 <div class="product">
+                     <img src="<?php echo Mage::helper('catalog/image')->init($p, 'image')->resize(200,200); ?>" alt="<?php echo $p->getName(); ?>" width="200px" height="200px" />
+                    <h2><?php echo $p->getName(); ?></h2>
+                     <?php var_dump($p->getSpecialPrice()); ?><?php>
+                 </div>
+             <?php }
+             $counter++;
+         } ?>
+
+
+
+
+
+    </div>
+</div>
