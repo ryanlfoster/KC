@@ -6138,3 +6138,43 @@ color: #727272; }
     padding: 0 0 0 2%;
     border-right: 0;
 }
+
+.styleguide-products .price {
+    display: block;
+    margin: 0.5em 0;
+}
+
+.styleguide-products .price.previous {
+    color: #999999;
+    font-size: 14px;
+}
+
+.styleguide-products .price.special {
+    color: #6dcadb;
+    font-size: 14px;
+}
+
+.styleguide-products .price.current {
+    font-size: 16px;
+    color: #cc2666;
+}
+
+.styleguide-products .strike {
+    text-decoration: line-through;
+}
+
+.styleguide-products .status {
+    padding-left: 20px;
+}
+
+.styleguide-products .no-stock {
+    color: #cc2666;
+    font-size: 14px;
+    background: url(../images/no-stock.jpg) no-repeat top left;
+}
+
+.styleguide-products .link {
+    font-size: 14px;
+    color: #666666;
+    background: url(../images/in-stock.jpg) no-repeat top left;
+}

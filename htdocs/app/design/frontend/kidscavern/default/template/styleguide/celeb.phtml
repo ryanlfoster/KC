@@ -38,8 +38,20 @@
              if($counter <= 3) { ?>
                  <div class="product">
                      <img src="<?php echo Mage::helper('catalog/image')->init($p, 'image')->resize(200,200); ?>" alt="<?php echo $p->getName(); ?>" width="200px" height="200px" />
-                    <h2><?php echo $p->getName(); ?></h2>
-                     <?php var_dump($p->getSpecialPrice()); ?><?php>
+                     <h2><?php echo $p->getName(); ?></h2>
+                     <?php if($p->getSpecialPrice()) {
+                         echo "<p class='previous price'>Was: <span class='strike'>" . Mage::helper('core')->currency($p->getPrice(), true, false). "</span></p>";
+                         echo "<p class='special price'>Now: " . Mage::helper('core')->currency($p->getSpecialPrice(), true, false) . "</p>";
+                     } else {
+                         echo "<p class='current price'>Price: " . Mage::helper('core')->currency($p->getPrice(), true, false) . "</p>";
+                     }
+                  ?>
+                    <?php if($p->getIsInStock()) { ?>
+                       <a href="<?php echo $p->getProductUrl(); ?>" class="link status">View Details</a>
+                    <?php } else { ?>
+                        <p class="no-stock status">Sold Out</p>
+                    <?php } ?>
+
                  </div>
              <?php }
              $counter++;

@@ -15,14 +15,17 @@ class JJM_Styleguide_Block_Adminhtml_Styleguide_Edit_Tab_Form extends Mage_Admin
 						"required" => true,
 						"name" => "name",
 						));
-					
-						$fieldset->addField("content", "textarea", array(
-						"label" => Mage::helper("styleguide")->__("Content"),					
+
+						$fieldset->addField("content", "editor", array(
+						"label" => Mage::helper("styleguide")->__("Content"),
 						"class" => "required-entry",
 						"required" => true,
 						"name" => "content",
+                        'style'     => 'height:15em',
+                        'config'    => Mage::getSingleton('cms/wysiwyg_config')->getConfig(),
+                        'wysiwyg'   => true,
 						));
-									
+
 						$fieldset->addField('image1', 'image', array(
 						'label' => Mage::helper('styleguide')->__('Image'),
 						'name' => 'image1',

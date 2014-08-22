@@ -41,4 +41,11 @@ class JJM_Styleguide_Block_Adminhtml_Styleguide_Edit extends Mage_Adminhtml_Bloc
 
 				}
 		}
+
+    protected function _prepareLayout() {
+        parent::_prepareLayout();
+        if (Mage::getSingleton('cms/wysiwyg_config')->isEnabled()) {
+            $this->getLayout()->getBlock('head')->setCanLoadTinyMce(true);
+        }
+    }
 }
