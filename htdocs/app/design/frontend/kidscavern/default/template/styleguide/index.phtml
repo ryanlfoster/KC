@@ -18,3 +18,13 @@
     </div>
 
 <?php echo $this->getChildHtml('pager'); ?>
+
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('a').on('click', function(e) {
+            e.preventDefault();
+            console.log(e.currentTarget.href);
+            window.location.href = e.currentTarget.href;
+        })
+    })
+</script>

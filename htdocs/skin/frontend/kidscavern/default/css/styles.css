@@ -6178,3 +6178,18 @@ color: #727272; }
     color: #666666;
     background: url(../images/in-stock.jpg) no-repeat top left;
 }
+
+.styleguide-index-index .limiter, .styleguide-index-index .amount {
+    display: none;
+}
+
+.styleguide-index-index .pages li.current {
+    background: #c3c3c3;
+}
+
+.styleguide-index-index .pager {
+    display: block;
+    float: none;
+    padding-top: 4em;
+    background: url(../images/styleguide-divider.png) no-repeat top center;
+}

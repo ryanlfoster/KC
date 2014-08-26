@@ -11,17 +11,17 @@
         <use>standard</use>
           <args>
             <module>JJM_Styleguide</module>
-            <frontName>styleguide</frontName>
+            <frontName>styleguides</frontName>
           </args>
       </styleguide>
     </routers>
-		<layout>
-		  <updates>
-			<styleguide>
-			  <file>styleguide.xml</file>
-			</styleguide>
-		  </updates>
-		</layout>
+    <layout>
+      <updates>
+        <styleguide>
+          <file>styleguide.xml</file>
+        </styleguide>
+      </updates>
+    </layout>
   </frontend>
   <global>
     <helpers>

@@ -16,7 +16,7 @@ class JJM_Styleguide_Block_Index extends Mage_Core_Block_Template {
         // We set our limit (here an integer store in configuration).
         // /!\ The limit must be set before the collection
         $pager
-            ->setLimit(7)
+            ->setLimit(8)
             ->setCollection($this->_entities);
 
         // Add our Pager block to our current list block
