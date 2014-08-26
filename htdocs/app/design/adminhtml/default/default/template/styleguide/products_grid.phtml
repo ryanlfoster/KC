@@ -38,15 +38,15 @@ $numColumns = sizeof($this->getColumns());
 ?>
 <?php if($this->getCollection()): ?>
     <?php if($this->canDisplayContainer()): ?>
-    <?php if($this->getGridHeader()): ?>
-        <div class="content-header">
-            <table cellspacing="0">
-                <tr>
-                    <td style="width:50%;"><h2><?php echo $this->getGridHeader(); ?></h2></td>
-                </tr>
-            </table>
-        </div>
-    <?php endif ?>
+        <?php if($this->getGridHeader()): ?>
+            <div class="content-header">
+                <table cellspacing="0">
+                    <tr>
+                        <td style="width:50%;"><h2><?php echo $this->getGridHeader(); ?></h2></td>
+                    </tr>
+                </table>
+            </div>
+        <?php endif ?>
 
     <div id="<?php echo $this->getId() ?>">
         <?php else: ?>

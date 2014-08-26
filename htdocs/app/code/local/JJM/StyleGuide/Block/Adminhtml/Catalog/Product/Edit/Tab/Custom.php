@@ -17,14 +17,8 @@ class JJM_Styleguide_Block_Adminhtml_Catalog_Product_Edit_Tab_Custom extends Mag
     public function __construct()
     {
         parent::__construct();
-        $this->setId('custom_product_grid');
-        $this->setDefaultSort('entity_id');
-        $this->setUseAjax(true);
         $this->setTemplate('styleguide/products_grid.phtml');
-//
-//        if ($this->isReadonly()) {
-            $this->setFilterVisibility(false);
-//        }
+
     }
 
     /**
@@ -191,7 +185,7 @@ class JJM_Styleguide_Block_Adminhtml_Catalog_Product_Edit_Tab_Custom extends Mag
     {
         return $this->getData('grid_url')
             ? $this->getData('grid_url')
-            : $this->getUrl('*/*/customGrid', array('_current' => true));
+            : $this->getUrl('*/*/*', array('_current' => true));
     }
 
     /**

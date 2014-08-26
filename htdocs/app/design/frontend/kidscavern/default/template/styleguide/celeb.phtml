@@ -49,7 +49,7 @@
                     <?php if($p->getIsInStock()) { ?>
                        <a href="<?php echo $p->getProductUrl(); ?>" class="link status">View Details</a>
                     <?php } else { ?>
-                        <p class="no-stock status">Sold Out</p>
+                       <a href="<?php echo $p->getProductUrl(); ?>" class="no-stock status">Sold Out</a>
                     <?php } ?>
 
                  </div>

@@ -72,168 +72,92 @@ class JJM_Styleguide_Adminhtml_StyleguideController extends Mage_Adminhtml_Contr
 
 		}
 
-		public function saveAction()
-		{
+		public function saveAction() {
 
-			$post_data=$this->getRequest()->getParams();
+			$post_data = $this->getRequest()->getParams();
             $post_images = $_FILES;
 
 
-				if ($post_data) {
+			if ($post_data) {
 
-					try {
+				try {
 
 						
-				 //save image
-		try{
+				    //save image
+		            try {
 
 
+                        if (isset($_FILES)) {
 
-//	unset($post_data['image1']);
+                            foreach($_FILES as $id => $file) {
 
-	if (isset($_FILES)){
+                                unset($post_data[$id]);
 
-		if ($_FILES['image1']['name']) {
+                                if ($file['name']) {
+                                    if($this->getRequest()->getParam("id")){
+                                        $model = Mage::getModel("styleguide/styleguide")->load($this->getRequest()->getParam("id"));
+                                        if($model->getData($id)){
+                                                $io = new Varien_Io_File();
+                                                $io->rm(Mage::getBaseDir('media').DS.implode(DS,explode('/',$model->getData($id))));
+                                        }
+                                    }
 
-			if($this->getRequest()->getParam("id")){
-				$model = Mage::getModel("styleguide/styleguide")->load($this->getRequest()->getParam("id"));
-				if($model->getData('image1')){
-						$io = new Varien_Io_File();
-						$io->rm(Mage::getBaseDir('media').DS.implode(DS,explode('/',$model->getData('image1'))));	
-				}
-			}
-						$path = Mage::getBaseDir('media') . DS . 'styleguide' . DS .'styleguide'.DS;
-						$uploader = new Varien_File_Uploader('image1');
-						$uploader->setAllowedExtensions(array('jpg','png','gif'));
-						$uploader->setAllowRenameFiles(false);
-						$uploader->setFilesDispersion(false);
-						$destFile = $path.$_FILES['image1']['name'];
-						$filename = $uploader->getNewFileName($destFile);
-						$uploader->save($path, $filename);
-
-						$post_data['image1']='styleguide/styleguide/'.$filename;
-		}
-    }
-
-
-        } catch (Exception $e) {
-				Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
-				$this->_redirect('*/*/edit', array('id' => $this->getRequest()->getParam('id')));
-				return;
-        }
-//save image
-
-				 //save image
-		try{
-
-
-
-	//unset($post_data['image2']);
-
-	if (isset($_FILES)){
-
-		if ($_FILES['image2']['name']) {
-
-			if($this->getRequest()->getParam("id")){
-				$model = Mage::getModel("styleguide/styleguide")->load($this->getRequest()->getParam("id"));
-				if($model->getData('image2')){
-						$io = new Varien_Io_File();
-						$io->rm(Mage::getBaseDir('media').DS.implode(DS,explode('/',$model->getData('image2'))));	
-				}
-			}
-						$path = Mage::getBaseDir('media') . DS . 'styleguide' . DS .'styleguide'.DS;
-						$uploader = new Varien_File_Uploader('image2');
-						$uploader->setAllowedExtensions(array('jpg','png','gif'));
-						$uploader->setAllowRenameFiles(false);
-						$uploader->setFilesDispersion(false);
-						$destFile = $path.$_FILES['image2']['name'];
-						$filename = $uploader->getNewFileName($destFile);
-						$uploader->save($path, $filename);
-
-						$post_data['image2']='styleguide/styleguide/'.$filename;
-		}
-    }
-
-        } catch (Exception $e) {
-				Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
-				$this->_redirect('*/*/edit', array('id' => $this->getRequest()->getParam('id')));
-				return;
-        }
-//save image
-
-				 //save image
-		try{
-
-
-	//unset($post_data['image3']);
-
-	if (isset($_FILES)){
-
-		if ($_FILES['image3']['name']) {
-
-			if($this->getRequest()->getParam("id")){
-				$model = Mage::getModel("styleguide/styleguide")->load($this->getRequest()->getParam("id"));
-				if($model->getData('image3')){
-						$io = new Varien_Io_File();
-						$io->rm(Mage::getBaseDir('media').DS.implode(DS,explode('/',$model->getData('image3'))));	
-				}
-			}
-						$path = Mage::getBaseDir('media') . DS . 'styleguide' . DS .'styleguide'.DS;
-						$uploader = new Varien_File_Uploader('image3');
-						$uploader->setAllowedExtensions(array('jpg','png','gif'));
-						$uploader->setAllowRenameFiles(false);
-						$uploader->setFilesDispersion(false);
-						$destFile = $path.$_FILES['image3']['name'];
-						$filename = $uploader->getNewFileName($destFile);
-						$uploader->save($path, $filename);
-
-						$post_data['image3']='styleguide/styleguide/'.$filename;
-		}
-    }
-
-
-        } catch (Exception $e) {
-				Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
-				$this->_redirect('*/*/edit', array('id' => $this->getRequest()->getParam('id')));
-				return;
-        }
-//save image
-
-
-						$model = Mage::getModel("styleguide/styleguide")
-						->addData($post_data)
-						->setId($this->getRequest()->getParam("id"))
-						->save();
-
-                        $current = Mage::getModel('styleguide/products')->getCollection()->addFieldToFilter('styleguide_id',$model->getId());
-                        foreach($current as $obj) {
-                            $obj->delete();
+                                    $path = Mage::getBaseDir('media') . DS . 'styleguide' . DS .'styleguide'.DS;
+                                    $uploader = new Varien_File_Uploader($id);
+                                    $uploader->setAllowedExtensions(array('jpg','png','gif'));
+                                    $uploader->setAllowRenameFiles(false);
+                                    $uploader->setFilesDispersion(false);
+                                    $destFile = $path.$file['name'];
+                                    $filename = $uploader->getNewFileName($destFile);
+                                    $uploader->save($path, $filename);
+                                    $post_data[$id]='styleguide/styleguide/'.$filename;
+                                }
+                            }
                         }
 
+                    } catch (Exception $e) {
+                            Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
+                            $this->_redirect('*/*/edit', array('id' => $this->getRequest()->getParam('id')));
+                            return;
+                    }
+                    //save image
 
+
+                    $model = Mage::getModel("styleguide/styleguide")
+                    ->addData($post_data)
+                    ->setId($this->getRequest()->getParam("id"))
+                    ->save();
+
+                    $current = Mage::getModel('styleguide/products')->getCollection()->addFieldToFilter('styleguide_id',$model->getId());
+                    foreach($current as $obj) {
+                        $obj->delete();
+                    }
+
+                    if(array_key_exists('pids',$post_data)) {
                         foreach($post_data['pids'] as $product_id) {
                             Mage::getModel('styleguide/products')->setStyleguideId($model->getId())->setProductId($product_id)->save();
                         }
+                    }
 
-						Mage::getSingleton("adminhtml/session")->addSuccess(Mage::helper("adminhtml")->__("Styleguide was successfully saved"));
-						Mage::getSingleton("adminhtml/session")->setStyleguideData(false);
+                    Mage::getSingleton("adminhtml/session")->addSuccess(Mage::helper("adminhtml")->__("Styleguide was successfully saved"));
+                    Mage::getSingleton("adminhtml/session")->setStyleguideData(false);
 
-						if ($this->getRequest()->getParam("back")) {
-							$this->_redirect("*/*/edit", array("id" => $model->getId()));
-							return;
-						}
-						$this->_redirect("*/*/");
-						return;
-					} 
-					catch (Exception $e) {
-						Mage::getSingleton("adminhtml/session")->addError($e->getMessage());
-						Mage::getSingleton("adminhtml/session")->setStyleguideData($this->getRequest()->getPost());
-						$this->_redirect("*/*/edit", array("id" => $this->getRequest()->getParam("id")));
-					return;
-					}
+                    if ($this->getRequest()->getParam("back")) {
+                        $this->_redirect("*/*/edit", array("id" => $model->getId()));
+                        return;
+                    }
+                    $this->_redirect("*/*/");
+                    return;
+                } catch (Exception $e) {
+                    Mage::getSingleton("adminhtml/session")->addError($e->getMessage());
+                    Mage::getSingleton("adminhtml/session")->setStyleguideData($this->getRequest()->getPost());
+                    $this->_redirect("*/*/edit", array("id" => $this->getRequest()->getParam("id")));
+                    return;
+                }
 
-				}
-				$this->_redirect("*/*/");
+			}
+
+			$this->_redirect("*/*/");
 		}
 
 

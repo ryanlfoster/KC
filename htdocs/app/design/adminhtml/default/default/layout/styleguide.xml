@@ -11,16 +11,6 @@
 	</reference>
   </styleguide_adminhtml_styleguide_index>
 
-    <!-- Related Products -->
-    <adminhtml_catalog_product_edit>
-        <reference name="product_tabs">
-            <action method="addTab">
-                <name>Related Products</name>
-                <block>styleguide/adminhtml_catalog_product_edit_tab</block>
-            </action>
-        </reference>
-    </adminhtml_catalog_product_edit>
-
 
     <adminhtml_catalog_product_custom>
         <block type="core/text_list" name="root" output="toHtml">

@@ -30,12 +30,12 @@ class JJM_Styleguide_Block_Adminhtml_Styleguide_Edit_Tab_Form extends Mage_Admin
 						'label' => Mage::helper('styleguide')->__('Image'),
 						'name' => 'image1',
 						'note' => '(*.jpg, *.png, *.gif)',
-						));				
+						));
 						$fieldset->addField('image2', 'image', array(
 						'label' => Mage::helper('styleguide')->__('Image'),
 						'name' => 'image2',
 						'note' => '(*.jpg, *.png, *.gif)',
-						));				
+						));
 						$fieldset->addField('image3', 'image', array(
 						'label' => Mage::helper('styleguide')->__('Image'),
 						'name' => 'image3',
