@@ -19,9 +19,9 @@ try {
 
 
 $sql = "CREATE TABLE `styleguide_products` (
-  `id` int(11) int not null auto_increment,
-  `styleguide_id` int(11) NOT NULL,
-  `product_id` int(10) unsigned NOT NULL,
+  `id` int(11) not null auto_increment,
+  `styleguide_id` int(11) not null,
+  `product_id` int(10) unsigned not null,
   PRIMARY KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
 
