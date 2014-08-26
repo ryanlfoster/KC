@@ -11,7 +11,12 @@ create table styleguides(styleguide_id int not null auto_increment, name varchar
 
 SQLTEXT;
 
-$installer->run($sql);
+try {
+    $installer->run($sql);
+} catch (Exception $e) {
+    Mage::log('Styleguide base table install fail: '.$e);
+}
+
 
 $sql = "CREATE TABLE `styleguide_products` (
   `id` int(11) int not null auto_increment,
@@ -20,7 +25,12 @@ $sql = "CREATE TABLE `styleguide_products` (
   PRIMARY KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
 
-$installer->run($sql);
+try {
+    $installer->run($sql);
+} catch (Exception $e) {
+    Mage::log('Styleguide products table install fail: '.$e);
+}
+
 
 ///**
 // * Install product link types

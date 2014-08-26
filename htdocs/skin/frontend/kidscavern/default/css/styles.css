@@ -753,7 +753,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 1px;
 }
 
-.product-upsells {
+.block-related {
     clear: both;
     width: 642px;
     float: left;
@@ -762,12 +762,12 @@ h1, h2, h3, h4, h5, h6 {
     margin: 3em 25px 3em 0;
 }
 
-.product-upsells .block-title span {
+.block-related .block-title span {
     font-size: 1.2em;
     margin: 0 0 0.2em 0;
 }
 
-.product-upsells .product {
+.block-related .product {
     float: left;
     width: 200px;
     margin: 1em 5px 1em 5px;
@@ -776,7 +776,7 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 100%;
 }
 
-.product-upsells .price {
+.block-related .price {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -2840,11 +2840,11 @@ ul.tabs li.active a, ul.tabs li.active a:hover {
     float:none;
 }
 /* Block: Related */
-.block-related .block-title strong {
+.product-upsells .block-title strong {
     background-image:url(../images/i_block-related.gif);
     background-position:0 1px;
 }
-.block-related input.checkbox {
+.product-upsells input.checkbox {
     float:left;
 }
 /* Block: Compare Products */
@@ -5460,27 +5460,36 @@ html{ height:auto; }
     margin: 21px 0 0;
 }
 
-.product-essential .block-related {
+.product-essential .product-upsells {
     float: left;
     width: 228px;
     padding: 5px;
     clear: none;
     border: 1px solid #000;
+    text-align: center;
 }
 
-.product-essential .block-related ol {
+.product-essential .product-upsells .product-name {
+    margin-bottom: 0.2em;
+}
+
+..product-essential .product-upsells .product {
+    margin: 1em 0;
+}
+
+.product-essential .product-upsells ol {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.product-essential .block-related li {
+.product-essential .product-upsells li {
     text-align: center;
     margin: 1em 0;
     font-size: 0.9em;
 }
 
-.product-essential .block-related li p {
+.product-essential .product-upsells li p {
     padding: 0 25%;
     margin: 0.5em 0;
 }
