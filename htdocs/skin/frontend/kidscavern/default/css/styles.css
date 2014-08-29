@@ -1432,7 +1432,7 @@ input.input-text:focus, select:focus, textarea:focus {
 
 .products-grid li {
     float: left;
-    width: 217px;
+    width: 216px;
     padding: 0 8px 0 14px;
     border-right: 1px solid #cccccc;
     position: relative;
@@ -2669,8 +2669,10 @@ ul.tabs li.active a, ul.tabs li.active a:hover {
     font-size:1.1em;
     font-weight: normal;
 }
-.block-layered-nav a {
+.block-layered-nav a, .block-layered-nav a span.price {
     color: #666666;
+    font-weight: normal;
+    font-size: 1em;
 }
 .block .btn-remove, .block .btn-edit {
     float: right;
@@ -5974,6 +5976,10 @@ color: #727272; }
 
 .category-image {
     margin-bottom: 1.8em;
+}
+
+.category-image img {
+    max-width: 100%;
 }
 
 .category-products {

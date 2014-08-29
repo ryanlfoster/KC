@@ -12,8 +12,8 @@
             <action method="removeLinkByUrl"><url helper="customer/getAccountUrl"/></action>
             <action method="addLink" translate="label title" module="customer"><label>My Account</label><url helper="customer/getAccountUrl"/><title>My Account</title><prepare/><urlParams/><position>20</position></action>
             <action method="addLink" translate="label title" module="kidscavern"><label>Help</label><url helper="kidscavern/getHelpUrl"/><title>Help</title><prepare/><urlParams/><position>50</position></action>
-            <action method="addLink" translate="label title" module="kidscavern"><label>Styleguide</label><url>styleguide</url>><title>Styleguide</title><prepare/><urlParams/><position>70</position></action>
-            <action method="addLink" translate="label title" module="kidscavern"><label>Mini Style Icons</label><url>mini-style-icons</url><title>Mini Style Icons</title><prepare/><urlParams/><position>60</position></action>
+            <action method="addLink" translate="label title" module="kidscavern"><label>Styleguide</label><url>/styleguides</url>><title>Styleguide</title><prepare/><urlParams/><position>70</position></action>
+            <action method="addLink" translate="label title" module="kidscavern"><label>Mini Style Icons</label><url>/mini-style-icons</url><title>Mini Style Icons</title><prepare/><urlParams/><position>60</position></action>
             <action method="addLink" translate="label title" module="kidscavern"><label>Contact</label><url helper="kidscavern/getContactsUrl"/><title>Contact</title><prepare/><urlParams/><position>80</position></action>
         </reference>
 
