@@ -2725,7 +2725,7 @@ ul.tabs li.active a, ul.tabs li.active a:hover {
 }*/
 
 .block-content dl dd ul li a {
-  position: relative;    padding: 0 0 0 24px; background: url("../images/cavern/sprite.png") no-repeat scroll -90px -179px transparent; display:inline-block; *display:inline; zoom:1; height:19px; line-height:19px;
+    position: relative;    padding: 0 0 0 24px; background: url("../images/cavern/sprite.png") no-repeat scroll -90px -179px transparent; display:inline-block; *display:inline; zoom:1; height:19px; line-height:19px;
 }
 
 .block-content .currently ul li span,
@@ -3113,7 +3113,7 @@ ul.tabs li.active a, ul.tabs li.active a:hover {
     margin-left: 25px;
 }
 .cart .page-title{
-	display:inline-block; *display:inline; zoom:1; padding-left:29px;
+    display:inline-block; *display:inline; zoom:1; padding-left:29px;
     background: url("../images/cavern/sprite.png") no-repeat 3px -134px;
 
 }
@@ -3904,11 +3904,11 @@ tr.summary-details-excluded {
 
 /********** < Navigation */
 .nav-container {
-	position: relative;
+    position: relative;
     float: left;
     width: 940px;
-	margin: 10px 0 0 0;
-	z-index: 98;
+    margin: 10px 0 0 0;
+    z-index: 98;
 }
 #nav {
     width:918px;
@@ -4002,11 +4002,11 @@ tr.summary-details-excluded {
     top:5px;
 }
 #nav ul li a {
-	background: #cc2666 url('../images/navArrow.png') no-repeat 9px -35px; margin:0 9px;
+    background: #cc2666 url('../images/navArrow.png') no-repeat 9px -35px; margin:0 9px;
 }
 
 #nav ul li a:hover {
-   background: #fff url('../images/navArrow.png') no-repeat 9px 7px;
+    background: #fff url('../images/navArrow.png') no-repeat 9px 7px;
 }
 #nav ul li a {
     color:#ffffff;
@@ -4045,7 +4045,7 @@ tr.summary-details-excluded {
     margin:0;
     font-size:1em;
     font-weight:normal;
-/*    min-height: 48px;*/
+    /*    min-height: 48px;*/
     margin-bottom: 20px;
 }
 /* Product Tags */
@@ -5651,13 +5651,13 @@ body,
 .block-progress dt,
 .opc .step-title .number{
 
-color: #727272 }
+    color: #727272 }
 
 
 .breadcrumbs{
 
-margin: 9px 0px 5px 0px;
-padding: 0 0 2px 0;}
+    margin: 9px 0px 5px 0px;
+    padding: 0 0 2px 0;}
 
 
 
@@ -5667,7 +5667,7 @@ padding: 0 0 2px 0;}
 .page-sitemap .page-title,
 .checkout-onepage-success .page-title{
 
-margin: 25px 0 10px 0;}
+    margin: 25px 0 10px 0;}
 
 a.underline {
     text-decoration: underline;
@@ -5676,9 +5676,9 @@ a.underline {
 
 .page-title h1{
 
-text-transform: uppercase;
-color: #727272;
-line-height: 24px; margin:10px 0}
+    text-transform: uppercase;
+    color: #727272;
+    line-height: 24px; margin:10px 0}
 
 
 ul li{line-height:1;}
@@ -5686,7 +5686,7 @@ ul li{line-height:1;}
 
 h1{
 
-font-size: 18px;}
+    font-size: 18px;}
 
 ---------------------
 
@@ -5784,13 +5784,13 @@ button.button {
 
 .discount-form label{
 
-color: #727272;}
+    color: #727272;}
 
 
 
 .cart .totals td{
 
-color: #727272; }
+    color: #727272; }
 
 .brands-container {
     float: left;
@@ -5990,7 +5990,7 @@ color: #727272; }
  * Category Grid
  */
 
- #category_grid_images {
+#category_grid_images {
     list-style:none;
     margin:0;
     padding:0;
@@ -6052,7 +6052,7 @@ color: #727272; }
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (max-width : 480px), screen and (device-aspect-ratio: 2/3), screen and (device-aspect-ratio: 40/71), screen and (device-width: 360px) and (-webkit-device-pixel-ratio: 3) { 
+@media only screen and (max-width : 480px), screen and (device-aspect-ratio: 2/3), screen and (device-aspect-ratio: 40/71), screen and (device-width: 360px) and (-webkit-device-pixel-ratio: 3) {
     #category_grid_images li {
         width:100% !important;
         margin:0 0 1% 0;
