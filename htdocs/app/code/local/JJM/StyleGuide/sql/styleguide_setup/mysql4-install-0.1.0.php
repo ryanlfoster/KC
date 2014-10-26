@@ -6,30 +6,24 @@
 $installer = $this;
 $installer->startSetup();
 $sql=<<<SQLTEXT
-create table styleguides(styleguide_id int not null auto_increment, name varchar(100) not null UNIQUE, content text not null, image1 varchar(100) not null, image2 varchar(100), image3 varchar(100), primary key(styleguide_id));
+create table styleguides(styleguide_id int not null auto_increment, name varchar(100) not null UNIQUE, item_content text not null, image1 varchar(100) not null, image2 varchar(100), image3 varchar(100), primary key(styleguide_id));
 
 
 SQLTEXT;
 
-try {
+
     $installer->run($sql);
-} catch (Exception $e) {
-    Mage::log('Styleguide base table install fail: '.$e);
-}
+
 
 
 $sql = "CREATE TABLE `styleguide_products` (
   `id` int(11) not null auto_increment,
   `styleguide_id` int(11) not null,
-  `product_id` int(10) unsigned not null,
-  PRIMARY KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
+  `product_id` int(10) not null,
+  PRIMARY KEY `id` (`id`))";
 
-try {
+
     $installer->run($sql);
-} catch (Exception $e) {
-    Mage::log('Styleguide products table install fail: '.$e);
-}
 
 
 ///**

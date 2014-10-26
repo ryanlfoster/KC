@@ -27,7 +27,7 @@
 				<li class="style-icon">
 					<div class="style-icon--info-wrap">
 						<div class="style-icon--image-wrap">
-							<img class="style-icon--image" src="<?php echo $entry->getImage(); ?>" title="<?php echo $entry->getName(); ?>" />
+							<img class="style-icon--image" src="/<?php echo ltrim($entry->getImage(),'/'); ?>" title="<?php echo $entry->getName(); ?>" />
 						</div>	
 						<div class="style-icon--name">
 							<span><?php echo $entry->getName(); ?></span>

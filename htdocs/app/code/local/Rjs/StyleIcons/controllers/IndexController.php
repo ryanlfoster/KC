@@ -9,6 +9,7 @@ class Rjs_StyleIcons_IndexController extends Mage_Core_Controller_Front_Action {
 
 		$this->loadLayout();  
 		$this->getLayout()->getBlock('styleicons_index_index')->setCompetition($comp)->setEntries($entries);
+		$this->_initLayoutMessages('customer/session');
 		$this->renderLayout();
 	}
 
@@ -29,11 +30,12 @@ class Rjs_StyleIcons_IndexController extends Mage_Core_Controller_Front_Action {
 
 						try {
 							$vote->save();
+							Mage::getSingleton('customer/session')->addSuccess('You vote for '.$entry->getName().' has been recorded');
 						} catch (Exception $e) {
 							Mage::getSingleton('customer/session')->addError('There was an error with your request');
 						}
 					} else {
-						Mage::getSingleton('customer/session')->addError('You have already voted for '.$entry->getName);
+						Mage::getSingleton('customer/session')->addError('Sorry, you have already voted');
 					}
 				} else {
 					Mage::getSingleton('customer/session')->addError('This competition has already closed.');
@@ -43,6 +45,6 @@ class Rjs_StyleIcons_IndexController extends Mage_Core_Controller_Front_Action {
 			}
 		}
 
-		$this->_redirect('*/*');
+		$this->_redirect('*');
 	}
 }

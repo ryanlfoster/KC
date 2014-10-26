@@ -921,10 +921,11 @@ h1, h2, h3, h4, h5, h6 {
     float:right;
     width:219px;
 }
-.col2-left2-layout .col-main {;
+.col2-left2-layout .col-main {
     padding: 0;
     float: left;
 }
+
 .col2-left-layout .col-main {
     width: 695px;
     padding: 0;
@@ -6207,4 +6208,10 @@ button.button {
     float: none;
     padding-top: 4em;
     background: url(../images/styleguide-divider.png) no-repeat top center;
+}
+
+@media only screen and (min-width : 480px) {
+
+.brands-index-brand .col2-left2-layout .col-main {float:right; width:695px;}
+
 }

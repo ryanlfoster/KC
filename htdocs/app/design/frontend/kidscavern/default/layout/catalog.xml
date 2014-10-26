@@ -106,7 +106,7 @@ Category layered navigation layout
                 <block type="page/html_breadcrumbs" name="breadcrumbs" template="page/html/breadcrumbs.phtml"/>
                 
                 <block type="catalog/product_list" name="product_list" template="catalog/product/list.phtml">
-                     <action method="addReviewSummaryTemplate"><type>default</type><template>review/helper/su.phtml</template></action>
+                    <!-- <action method="addReviewSummaryTemplate"><type>default</type><template>review/helper/su.phtml</template></action> -->
                     <block type="catalog/product_list_toolbar" name="product_list_toolbar" template="catalog/product/list/toolbar.phtml">
                         <block type="page/html_pager" name="product_list_toolbar_pager"/>
                         <!-- The following code shows how to set your own pager increments -->
@@ -168,7 +168,7 @@ Product view
         <label>Catalog Product View (Any)</label>
         <!-- Mage_Catalog -->
         <reference name="root">
-            <action method="setTemplate"><template>page/1column.phtml</template></action>
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
         </reference>
         <reference name="head">
             <action method="addJs"><script>varien/product.js</script></action>
@@ -178,7 +178,7 @@ Product view
             <action method="addItem"><type>js</type><name>calendar/calendar.js</name><!--<params/><if/><condition>can_load_calendar_js</condition>--></action>
             <action method="addItem"><type>js</type><name>calendar/calendar-setup.js</name><!--<params/><if/><condition>can_load_calendar_js</condition>--></action>
 
-            <action method="addItem"><type>skin_js</type><name>js/libs/jquery.bxslider.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/bxSlider.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/zoom.js</name></action>
 			
             <action method="addCss"><stylesheet>css/zoom.css</stylesheet></action>
@@ -189,19 +189,17 @@ Product view
         <reference name="content">
             <block type="catalog/product_view" name="product.info" template="catalog/product/view.phtml">
                 <block type="catalog/product_price" name="currency-converter" template="catalog/product/currency_converter.phtml" />
-
+                <!--
                 <action method="addReviewSummaryTemplate"><type>default</type><template>review/helper/summary.phtml</template></action>
                 <action method="addReviewSummaryTemplate"><type>short</type><template>review/helper/summary_short.phtml</template></action>
                 <action method="addReviewSummaryTemplate"><type>...</type><template>...</template></action>
-
+                -->
                 <block type="catalog/product_view_media" name="product.info.media" as="media" template="catalog/product/view/media.phtml"/>
                 <block type="core/text_list" name="alert.urls" as="alert_urls" translate="label">
                     <label>Alert Urls</label>
                 </block>
 
                 <action method="setTierPriceTemplate"><template>catalog/product/view/tierprices.phtml</template></action>
-
-                <block type="catalog/product_list_related" name="catalog.product.related" as="related_products" template="catalog/product/list/related.phtml"/>
                 
                 <block type="catalog/product_list_upsell" name="product.info.upsell" as="upsell_products" template="catalog/product/list/upsell.phtml">
                     <action method="setColumnCount"><columns>3</columns></action>

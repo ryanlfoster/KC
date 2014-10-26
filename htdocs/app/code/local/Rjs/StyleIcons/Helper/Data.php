@@ -13,12 +13,12 @@ class Rjs_StyleIcons_Helper_Data extends Mage_Core_Helper_Abstract
 
 		$start = str_replace('-','',$comp->getStartDate());
 		$end   = str_replace('-','',$comp->getEndDate());
-		
+
 		if($comp->getId()) {
 			if($_now >= $end) {
 
 				$winner = $this->pickWinner($comp->getId());
-				
+
 				if($winner) {
 					Mage::getModel('styleicons/winner')
 					->setCompetition($comp->getId())
@@ -47,29 +47,17 @@ class Rjs_StyleIcons_Helper_Data extends Mage_Core_Helper_Abstract
 
 		$resource = Mage::getSingleton('core/resource');
 		$readConnection = $resource->getConnection('core_read');
-		$tableName = $resource->getTableName('styleicons/vote');
 		
-		$entries = Mage::getModel('styleicons/entry')
-		->getCollection()
-		->addFieldToSelect('id')
-		->addFieldToFilter('competition',$comp_id)
-		->toArray();
-
-		$ids = array();
-
-		foreach($entries as $entry) {
-			$ids[] = $entry[0]['id'];
+		if($comp_id) {
+			$query = 'SELECT entry,COUNT(*) as votes FROM '.$resource->getTableName('styleicons/vote').' 
+			WHERE entry IN (SELECT `id` FROM '.$resource->getTableName('styleicons/entry').' WHERE `competition` = '.$comp_id.')
+			GROUP BY entry 
+			ORDER BY votes DESC
+			LIMIT 1;';
 		}
 
-		$ids = implode(',',array_filter($ids));
-		
-		$query = 'SELECT entry,COUNT(*) as votes FROM '.$tableName.' 
-		WHERE entry IN ('.$ids.')
-		GROUP BY entry 
-		ORDER BY votes DESC
-		LIMIT 1;';
-
 		$result = $readConnection->fetchRow($query);
+
 		if($result['votes'] > 0) {
 			return $result['entry'];
 		} else {

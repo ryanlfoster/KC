@@ -102,6 +102,9 @@ class Fishpig_Wordpress_Helper_Database extends Fishpig_Wordpress_Helper_Abstrac
 	 */	
 	public function getReadAdapter()
 	{
+//		Debugging
+//		return Mage::getSingleton('wordpress/blog')->getDb();
+
 		if ($this->isConnected()) {
 			if ($this->isSameDatabase()) {
 				return Mage::getSingleton('core/resource')->getConnection('core_read');
@@ -120,6 +123,9 @@ class Fishpig_Wordpress_Helper_Database extends Fishpig_Wordpress_Helper_Abstrac
 	 */
 	public function getWriteAdapter()
 	{
+//		Debugging
+//		return Mage::getSingleton('wordpress/blog')->getDb();
+
 		if ($this->isConnected()) {
 			if ($this->isSameDatabase()) {
 				return Mage::getSingleton('core/resource')->getConnection('core_write');

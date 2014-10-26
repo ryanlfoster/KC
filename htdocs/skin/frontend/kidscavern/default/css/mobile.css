@@ -680,6 +680,26 @@ screen and (device-width: 360px) and (-webkit-device-pixel-ratio: 3) {
         position: absolute;
         right: 15px;
         top: 123px;
+		display: none;
     }
+	
+	
+.style-guides {margin: 0;}
+.style-guides .guide {width: auto; margin: 0; height: auto; margin-bottom: 20px; float: left;}
+
+
+.styleguide-celeb h1, .styleguide-products h4, .breadcrumbs {padding:2%}
+
+.styleguide-products .product {
+width: auto;
+padding: 0 2% 0 2%;
+float: left;
+border-right: 0;
+border-bottom: 1px solid #ccc;
+padding-bottom: 20px;
+margin-bottom: 20px;
+text-align: center;
+}
+
 
 }

@@ -91,15 +91,20 @@ abstract class Fishpig_Wordpress_Controller_Abstract extends Mage_Core_Controlle
 		if (!$this->isEnabledForStore()) {
 			return false;
 		}
-
-		$helper = Mage::helper('wordpress/database');
 		
-		if (!$helper->isConnected() || !$helper->isQueryable()) {
-			return false;
+		if (false) {
+			Mage::getSingleton('wordpress/blog');
 		}
-		
-		if ($helper->isSameDatabase()) {
-			$helper->getReadAdapter()->query('SET NAMES UTF8');
+		else {
+			$helper = Mage::helper('wordpress/database');
+			
+			if (!$helper->isConnected() || !$helper->isQueryable()) {
+				return false;
+			}
+			
+			if ($helper->isSameDatabase()) {
+				$helper->getReadAdapter()->query('SET NAMES UTF8');
+			}
 		}
 
 		if (($object = $this->getEntityObject()) === false) {
@@ -137,7 +142,7 @@ abstract class Fishpig_Wordpress_Controller_Abstract extends Mage_Core_Controlle
 		}
 
 		$rootTemplates = array_reverse($this->_rootTemplates);
-		
+
 		foreach($rootTemplates as $rootTemplate) {
 			if ($template = Mage::getStoreConfig('wordpress/template/' . $rootTemplate)) {
 				$this->getLayout()->helper('page/layout')->applyTemplate($template);
@@ -330,7 +335,8 @@ abstract class Fishpig_Wordpress_Controller_Abstract extends Mage_Core_Controlle
 	 */
 	public function isEnabledForStore()
 	{
-		return !Mage::getStoreConfigFlag('advanced/modules_disable_output/Fishpig_Wordpress');
+		return (!Mage::getStoreConfigFlag('advanced/modules_disable_output/Fishpig_Wordpress')
+			&& Mage::getStoreConfigFlag('wordpress/module/enabled'));
 	}
 	
 	/**

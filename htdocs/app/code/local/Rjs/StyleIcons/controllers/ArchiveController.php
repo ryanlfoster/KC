@@ -13,9 +13,9 @@ class Rjs_StyleIcons_ArchiveController extends Mage_Core_Controller_Front_Action
 				->addFieldToFilter('competition',$comp->getId());
 				$winner = Mage::getModel('styleicons/winner')
 				->getCollection()
-				->addFieldToFilter('competition',$comp->getId())->getFirstItem();
-				$winner = Mage::getModel('styleicons/entry')->load($winner->getId());
-
+				->addFieldToFilter('competition',$comp->getId())
+				->getFirstItem();
+				$winner = Mage::getModel('styleicons/entry')->load($winner->getEntry());
 				$this->getLayout()->getBlock('styleicons_index_index')->setCompetition($comp)->setEntries($entries);
 				$this->getLayout()->getBlock('styleicons_index_index')->setCompetition($comp)->setWinner($winner);
 				$this->renderLayout(); 

@@ -223,6 +223,10 @@ class Fishpig_Wordpress_Addon_WordPressSEO_Helper_Data extends Fishpig_Wordpress
 	public function processRouteWordPressPageView($page)	
 	{
 		$this->_applyPostPageLogic($page, 'page');
+				
+		if ((Mage::helper('wordpress')->isAddonInstalled('Root') && Mage::getStoreConfig('wordpress/integration/at_root'))) {
+			$this->getAction()->removeCrumb('blog');
+		}
 
 		return $this;
 	}

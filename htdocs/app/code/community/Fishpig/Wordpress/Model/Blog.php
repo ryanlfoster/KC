@@ -19,6 +19,8 @@ class Fishpig_Wordpress_Model_Blog extends Varien_Object
 	
 	protected $_mappedTableNames;
 	
+	protected $_ready = null;
+	
 	/**
 	 * Connect to WP and integrate with Magento
 	 *
@@ -26,9 +28,13 @@ class Fishpig_Wordpress_Model_Blog extends Varien_Object
 	 */
 	public function run()
 	{
-		$this->_parseWpConfig();
-		$this->_connectWithDatabase();
-		$this->_initEnvironment();
+		if (is_null($this->_ready)) {
+			$this->_ready = true;
+
+			$this->_parseWpConfig();
+			$this->_connectWithDatabase();
+			$this->_initEnvironment();
+		}
 		
 		return $this;
 	}
@@ -48,7 +54,6 @@ class Fishpig_Wordpress_Model_Blog extends Varien_Object
 		}
 		
 		$wpConfig = file_get_contents($wpConfigFilename);
-
 
 		$wpConfig = preg_replace("/\n\/\/.*\n/Us", " ", $wpConfig);
 		$wpConfig = preg_replace('/\n(\/[*]+.*[*]+\/)/Us', '', $wpConfig);
@@ -99,6 +104,13 @@ class Fishpig_Wordpress_Model_Blog extends Varien_Object
 	 */
 	protected function _connectWithDatabase()
 	{
+		if (!is_null($this->_db)) {
+			return $this;
+		}
+		
+		// Set DB to false in case anything goes wrong
+		$this->_db = false;
+		
 		$dbConfig = array(
 			'model' => 'mysql4', 
 			'active' => '1', 
@@ -112,15 +124,17 @@ class Fishpig_Wordpress_Model_Blog extends Varien_Object
 		
 		$magentoConfig = (array)Mage::getConfig()->getNode('global/resources/default_setup/connection');
 		
-		$isSameDatabase = $dbConfig['host'] === $magentoConfig['host']
+		$this->setIsDatabaseShared(
+			$dbConfig['host'] === $magentoConfig['host']
 			&& $dbConfig['username'] === $magentoConfig['username']
-			&& $dbConfig['password'] === $magentoConfig['password'];
+			&& $dbConfig['password'] === $magentoConfig['password']
+		);
 
 		$this->_beforeDatabaseConnect();
 
 		$resource = Mage::getSingleton('core/resource');
 		
-		if ($isSameDatabase) {
+		if ($this->getIsDatabaseShared()) {
 			$this->_db = $resource->getConnection('core_read');
 		}
 		else {
@@ -130,7 +144,19 @@ class Fishpig_Wordpress_Model_Blog extends Varien_Object
 				throw new Exception('Unable to connect to WordPress database.');
 			}
 
-			$this->_db = $connection;
+			$select = $connection->select()
+				->from(Mage::getSingleton('core/resource')->getTableName('wordpress/post'), 'ID')
+				->limit(1);
+
+echo $select;exit;
+			try {
+				$connection->fetchOne($select);
+
+				$this->_db = $connection;
+			}
+			catch (Exception $e) {
+				Mage::logException($e);				
+			}
 		}
 
 		return $this;	
@@ -147,12 +173,31 @@ class Fishpig_Wordpress_Model_Blog extends Varien_Object
 	{
 		$home = $this->getHome();
 		$siteurl = $this->getSiteurl();
+		
+		// Hack to ensure integrated theme
+		$home = str_replace('/wp', '/blog', $home);
+		
 		$magento = rtrim(str_replace('/' . basename($_SERVER['SCRIPT_FILENAME']), '', Mage::getBaseUrl()), '/');
 		$slug = false;
-		
+				
+		// Calculate blog route (aka. slug)
 		if (strpos($home, $magento) === 0) {
 			$slug = substr($home, strlen($magento)+1);
 		}
+		
+		// Check for theme integration
+		$themeIntegrated = $slug && !is_dir(Mage::getBaseDir() . DS . $slug);
+		
+		// Check for root
+		$isAtRoot = $magento === $home && $home !== $siteurl;
+		
+		// Enable theme integration if at root
+		$themeIntegrated = $themeIntegrated || $isAtRoot;
+	
+		$this->setIsThemeIntegrated($themeIntegrated)	;
+		$this->setIsAtRoot($isAtRoot);
+		$this->setSiteurl($siteurl);
+		$this->setHome($home);
 		
 		return $this;	
 	}
@@ -161,7 +206,9 @@ class Fishpig_Wordpress_Model_Blog extends Varien_Object
 	{
 		Mage::dispatchEvent('wordpress_database_before_connect', array('blog' => $this));
 		
-		$entities = (array)Mage::app()->getConfig()->getNode()->wordpress->database->before_connect->tables;
+		$entities = (array)Mage::app()->getConfig()
+			->getNode()
+				->wordpress->database->before_connect->tables;
 
 		foreach($entities as $entity => $table) {
 			$this->setMappedTableName((string)$table->table, $this->getTablePrefix() . $table->table);
@@ -208,6 +255,8 @@ class Fishpig_Wordpress_Model_Blog extends Varien_Object
 	 */
 	public function getDb()
 	{
+		$this->run();
+
 		return $this->_db;
 	}
 
@@ -235,7 +284,7 @@ class Fishpig_Wordpress_Model_Blog extends Varien_Object
 	{
 		return $this->getWpConfigValue('table_prefix');
 	}
-	
+
     public function setMappedTableName($tableName, $mappedName)
     {
         $this->_mappedTableNames[$tableName] = $mappedName;

@@ -9,18 +9,22 @@
 <?php $post = $this->getPost() ?>
 <div class="post-list-item">
 	<h2><a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><?php echo $this->escapeHtml($post->getPostTitle()) ?></a></h2>
+	<?php echo $this->getBeforePostContentHtml() ?>
 	<div class="post-entry entry<?php if ($post->getFeaturedImage): ?> post-entry-with-image<?php endif; ?>">
 		<?php if ($post->isViewableForVisitor()): ?>
-            <div class="featured-image left">
-                <?php if ($featuredImage = $post->getFeaturedImage()) { ?>
-                    <a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><img src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></a>
-                <?php } else { ?>
-                    <a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><img style="width:50px;height:50px;" src="<?php echo Mage::getModel('catalog/product')->getSmallImageUrl(50,50) ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></a>
-                <?php } ?>
-            </div>
-
+			<?php if ($featuredImage = $post->getFeaturedImage()): ?>
+				<div class="featured-image left">
+					<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><img src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></a>
+				</div>
+			<?php endif; ?>
+			<?php if ($this->displayExcerptInFeed() || $post->hasMoreTag()): ?>
+				<?php echo $post->getPostExcerpt() ?>
+			<?php else: ?>
+				<?php echo $post->getPostContent() ?>
+			<?php endif; ?>
 		<?php else: ?>
 			<?php echo $this->getPasswordProtectHtml($post) ?>
 		<?php endif; ?>
 	</div>
+	<?php echo $this->getAfterPostContentHtml() ?>
 </div>

@@ -25,6 +25,7 @@
             <div class="product-actions">
                 <div class="product-name">
                     <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+                     <span style="padding-top:5px; display: block;">SKU: <?php echo $_product->getSku() ?></span>
                 </div>
 
                 <?php

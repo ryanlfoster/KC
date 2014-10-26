@@ -4,9 +4,9 @@ class JJM_Styleguide_CelebrityController extends Mage_Core_Controller_Front_Acti
         $this->loadLayout();
         $this->getLayout()->getBlock("head")->setTitle($this->__("Style Guide"));
         $celeb = $this->getRequest()->getParams();
-        $celeb = $celeb['name'];
+        $celeb = $celeb['id'];
 
-        $celeb = Mage::getModel('styleguide/styleguide')->getCollection()->addFieldToFilter('name', $celeb)->getFirstItem();
+        $celeb = Mage::getModel('styleguide/styleguide')->getCollection()->addFieldToFilter('styleguide_id', $celeb)->getFirstItem();
 
         $breadcrumbs = $this->getLayout()->getBlock("breadcrumbs");
         $breadcrumbs->addCrumb("home", array(

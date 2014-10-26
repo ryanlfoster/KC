@@ -16,11 +16,11 @@ class JJM_Styleguide_Block_Adminhtml_Styleguide_Edit_Tab_Form extends Mage_Admin
 						"name" => "name",
 						));
 
-						$fieldset->addField("content", "editor", array(
+						$fieldset->addField("item_content", "editor", array(
 						"label" => Mage::helper("styleguide")->__("Content"),
 						"class" => "required-entry",
 						"required" => true,
-						"name" => "content",
+						"name" => "item_content",
                         'style'     => 'height:15em',
                         'config'    => Mage::getSingleton('cms/wysiwyg_config')->getConfig(),
                         'wysiwyg'   => true,

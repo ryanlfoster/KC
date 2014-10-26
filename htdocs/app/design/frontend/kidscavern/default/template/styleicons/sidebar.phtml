@@ -1,3 +1,6 @@
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "acc570e2-5c51-4a0d-9e27-09182c5602d4", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
 <style>
 #styleicons_sidebar h2 {
 	text-transform: uppercase;
@@ -42,16 +45,26 @@ $how = Mage::getStoreConfig('styleicons/settings/how');
 
 	<div id="styleicons_sidebar_archive">
 	<h2>Archive</h2>
+		<?php if(count($archived)) : ?>
 		<ul>
-			<?php if(count($archived)) : foreach($archived as $competition) : ?>
+			<?php foreach($archived as $competition) : ?>
 				<li><a href="/mini-style-icons/archive//id/<?php echo $competition->getId(); ?>"><?php echo $competition->getName(); ?></a></li>
-			<?php endforeach; endif; ?>
+			<?php endforeach; ?>
 		</ul>
+	<?php else : ?>
+		<p>No Archives</p>
+	<?php endif; ?>
 	</div>
 
 	<div id="styleicons_sidebar_how">
 	<h2>How To Enter</h2>
 	<p><?php echo $how; ?></p>
-	<a href="<?php echo $fb; ?>"><img src="/skin/frontend/kidscavern/default/images/styleicons-facebook.png" title="Facebook" alt="Facebook" /></a>
+	</div>
+
+	<div id="styleicons_sidebar_how">
+	<h2>Share This Page</h2>
+	<p>Please share this page with friends and family</p>
+	<span class='st_facebook_hcount' displayText='Facebook'></span>
+<span class='st_twitter_hcount' displayText='Tweet'></span>
 	</div>
 </div>

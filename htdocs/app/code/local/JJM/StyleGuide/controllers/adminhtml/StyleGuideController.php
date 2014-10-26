@@ -108,7 +108,8 @@ class JJM_Styleguide_Adminhtml_StyleguideController extends Mage_Adminhtml_Contr
                                     $uploader->setAllowRenameFiles(false);
                                     $uploader->setFilesDispersion(false);
                                     $destFile = $path.$file['name'];
-                                    $filename = $uploader->getNewFileName($destFile);
+                                    $filename = str_replace('&','', $uploader->getNewFileName($destFile));
+                                    //var_dump($filename);die;
                                     $uploader->save($path, $filename);
                                     $post_data[$id]='styleguide/styleguide/'.$filename;
                                 }

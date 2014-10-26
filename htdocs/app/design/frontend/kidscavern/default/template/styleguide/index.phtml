@@ -6,7 +6,7 @@
         <?php foreach($this->_entities as $entity) : ?>
 
             <div class="guide">
-                <a href="/styleguides/celebrity?name=<?php echo $entity->getName(); ?>">
+                <a href="/styleguides/celebrity?name=<?php echo $entity->getName(); ?>&id=<?php echo $entity->getId(); ?>">
                     <img src="/media/<?php echo $entity->getImage1(); ?>" alt="<?php echo $entity->getName(); ?>" />
                     <p><?php echo $entity->getName(); ?></p>
                     <div class="button"><?php echo $this->__('View this style'); ?></div>

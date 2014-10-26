@@ -60,7 +60,7 @@ class Fishpig_Wordpress_PageController extends Fishpig_Wordpress_Controller_Abst
 		}
 
 		if ($this->getRequest()->getParam('is_home')) {
-			array_unshift($this->_rootTemplates, 'home');
+			$this->_rootTemplates[] = 'homepage';
 
 			$page->setCanonicalUrl(
 				Mage::helper('wordpress')->getUrl()
@@ -112,7 +112,7 @@ class Fishpig_Wordpress_PageController extends Fishpig_Wordpress_Controller_Abst
 	protected function _setPageViewTemplate()
 	{
 		$page = $this->_initPage();
-		
+
 		$this->_rootTemplates[] = 'page';
 				
 		$keys = array('onecolumn', '1column', 'full-width');

@@ -5,6 +5,19 @@
 # URL:  http://fishpig.co.uk/magento/wordpress-integration/
 ##
 
+30/07/2014 - 3.1.1.9
+- Fix for XML sitemap
+
+18/07/2014 - 3.1.1.8
+- Use homepage template option when WP Page set as blog homepage
+- Remove 'Blog' breadcrumb for Pages when using Root
+
+12/07/2014 - 3.1.1.7
+- Fixed pager links when refreshing Bolt cache
+
+10/07/2014 - 3.1.1.6
+- Improved disabling per store/website
+
 01/07/2014 - 3.1.1.5
 - Use homepage template for custom page set as homepage
 
