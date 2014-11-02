@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <sections>
+        <JJM_Sitepopup translate="label" module="JJM_Sitepopup">
+            <label>Site Popup</label>
+            <tab>kidscavern</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>2000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>Site Popup Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <popupurl>
+                            <label>Popup URL</label>
+                            <comment>Enter the URL popup will link to</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </popupurl>
+                        <popupimage>
+                            <label>Popup Image</label>
+                            <comment>Upload image to be displayed in popup</comment>
+                            <frontend_type>image</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </popupimage>
+                    </fields>
+                </settings>
+            </groups>
+        </JJM_Sitepopup>
+    </sections>
+</config>
