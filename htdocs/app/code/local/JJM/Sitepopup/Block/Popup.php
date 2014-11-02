@@ -10,6 +10,13 @@
  */
 class JJM_Sitepopup_Block_Popup extends Mage_Core_Block_Template
 {
+    /*
+     * Checks if module is enabled in admin
+     * @return int
+     */
+    public function isEnabled() {
+        return Mage::getStoreConfig('JJM_Sitepopup/settings/popupenabled');
+    }
 
     /*
      * get popup url from admin
@@ -29,13 +36,24 @@ class JJM_Sitepopup_Block_Popup extends Mage_Core_Block_Template
 
     /*
      * Called from front end. Checks if popup is to be displayed
+     * if not disabled
      * if no cookie return true & create cookie
      * if cookie is dates return true & update cookie
      * @return Bool
      */
     public function isDisplayed() {
+
+        if($this->isEnabled() == 0) {
+            if($this->hasCookie()) {
+                $this->deleteCookie();
+            }
+
+            return false;
+        }
+
         if(!$this->hasCookie()) {
             $this->createPopupCookie();
+
             return true;
         }
 
@@ -43,6 +61,7 @@ class JJM_Sitepopup_Block_Popup extends Mage_Core_Block_Template
         $cookie = $this->getCookie();
         if(!$this->isCookieCurrent($cookie)) {
             $this->updateCookie();
+
             return true;
         }
 
@@ -56,6 +75,7 @@ class JJM_Sitepopup_Block_Popup extends Mage_Core_Block_Template
     public function hasCookie() {
         $cookie = $this->getCookie();
         if($cookie) {
+
             return true;
         }
 
@@ -69,6 +89,7 @@ class JJM_Sitepopup_Block_Popup extends Mage_Core_Block_Template
     public function isCookieCurrent($cookie) {
         $expectedValue = $this->createCookieData();
         if($expectedValue === $cookie) {
+
             return true;
         }
 
@@ -105,8 +126,12 @@ class JJM_Sitepopup_Block_Popup extends Mage_Core_Block_Template
      * Update cookie values. Deletes old cookie & creates new one
      */
     public function updateCookie() {
-        Mage::getModel('core/cookie')->delete('popupData');
+        $this->deleteCookie();
         $this->createPopupCookie();
+    }
+
+    public function deleteCookie() {
+        Mage::getModel('core/cookie')->delete('popupData');
     }
 
 }

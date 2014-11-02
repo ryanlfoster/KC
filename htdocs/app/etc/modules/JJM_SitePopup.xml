@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <JJM_SitePopup>
+        <JJM_Sitepopup>
             <active>true</active>
             <codePool>local</codePool>
             <depends></depends>
-        </JJM_SitePopup>
+        </JJM_Sitepopup>
     </modules>
 </config>
