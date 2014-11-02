@@ -1,6 +1,16 @@
 <?php
-    $isDisplayed = $this->isDisplayed();
-    $url = $this->getPopupUrl();
-    $img = '/media/' . $this->getPopupImage();
 
-?>
+    $isDisplayed = $this->isDisplayed();
+    if($isDisplayed) {
+        $url = $this->getPopupUrl();
+        $img = '/media/' . $this->getPopupImage(); ?>
+
+        <div id="site-popup" class="site-popup">
+
+            <a href="<?php echo $url; ?>">
+                <img src="<?php echo $img; ?>" />
+            </a>
+        </div>
+
+    <?php } ?>
+

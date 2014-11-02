@@ -27,6 +27,12 @@ class JJM_Sitepopup_Block_Popup extends Mage_Core_Block_Template
         return Mage::getStoreConfig('JJM_Sitepopup/settings/popupimage');
     }
 
+    /*
+     * Called from front end. Checks if popup is to be displayed
+     * if no cookie return true & create cookie
+     * if cookie is dates return true & update cookie
+     * @return Bool
+     */
     public function isDisplayed() {
         if(!$this->hasCookie()) {
             $this->createPopupCookie();
@@ -49,7 +55,6 @@ class JJM_Sitepopup_Block_Popup extends Mage_Core_Block_Template
      */
     public function hasCookie() {
         $cookie = $this->getCookie();
-
         if($cookie) {
             return true;
         }
@@ -93,7 +98,7 @@ class JJM_Sitepopup_Block_Popup extends Mage_Core_Block_Template
      * @return STRING $data;
      */
     public function createCookieData() {
-        return $this->getPopupUrl().$this->getPopupImage();
+        return urlencode($this->getPopupUrl()).$this->getPopupImage();
     }
 
     /*

@@ -4,8 +4,10 @@
 
     <default>
         <reference name="head">
-            <action method="addItem"><type>skin_css</type><name>css/magnific-popup.css</name></action>
-            <action method="addItem"><type>skin_js</type><name>jquery/libs/magnific-popup.min.js</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/colorbox/colorbox-popup.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/jjm/sitepopup/popup.css</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/jquery/libs/jquery.colorbox-min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/jjm/sitepopup/popup.js</name></action>
         </reference>
 
         <reference name="content">
