@@ -682,24 +682,71 @@ screen and (device-width: 360px) and (-webkit-device-pixel-ratio: 3) {
         top: 123px;
 		display: none;
     }
-	
-	
-.style-guides {margin: 0;}
-.style-guides .guide {width: auto; margin: 0; height: auto; margin-bottom: 20px; float: left;}
 
+    .block-subscribe {
+        margin: 1em;
+    }
 
-.styleguide-celeb h1, .styleguide-products h4, .breadcrumbs {padding:2%}
+    .block-subscribe .form-subscribe-content {
+        width: 100%;
+        text-align: center;
+    }
 
-.styleguide-products .product {
-width: auto;
-padding: 0 2% 0 2%;
-float: left;
-border-right: 0;
-border-bottom: 1px solid #ccc;
-padding-bottom: 20px;
-margin-bottom: 20px;
-text-align: center;
-}
+    .block-subscribe .input-box {
+        width: 57%;
+    }
+
+    .block-subscribe .actions {
+        width: 43%;
+    }
+
+    .site-popup .block-subscribe {
+        padding: 0.4em;
+    }
+
+    .site-popup .block-subscribe .input-box {
+        width: 100%;
+    }
+
+    .site-popup .block-subscribe .input-text {
+        width: 80%;
+    }
+
+    .site-popup .block-subscribe .actions {
+        width: 100%;
+    }
+
+    .site-popup .block-subscribe .actions button {
+        float: none;
+        margin: 0.5em auto;
+    }
+
+    .style-guides {
+        margin: 0;
+    }
+
+    .style-guides .guide {
+        width: auto;
+        margin: 0 0 20px 0;
+        height: auto;
+        float: left;
+    }
+
+    .styleguide-celeb h1,
+    .styleguide-products h4,
+    .breadcrumbs {
+        padding:2%
+    }
+
+    .styleguide-products .product {
+        width: auto;
+        padding: 0 2% 20px 2%;
+        float: left;
+        border-right: 0;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px;
+        text-align: center;
+    }
 
 
 }

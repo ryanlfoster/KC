@@ -17,6 +17,10 @@
             <action method="addLink" translate="label title" module="kidscavern"><label>Contact</label><url helper="kidscavern/getContactsUrl"/><title>Contact</title><prepare/><urlParams/><position>80</position></action>
         </reference>
 
+        <reference name="content">
+            <block type="newsletter/subscribe" name="content.newsletter" before="-" template="newsletter/subscribe.phtml"/>
+        </reference>
+
         <reference name="before_body_end">
             <block name="google_adwords_tracking" template="tracking/tracking.phtml" type="core/template" />
         </reference>

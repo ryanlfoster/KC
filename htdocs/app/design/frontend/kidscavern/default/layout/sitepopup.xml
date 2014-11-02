@@ -11,7 +11,9 @@
         </reference>
 
         <reference name="content">
-            <block type="JJM_Sitepopup/popup" name="site.popup" before="-" template="sitepopup/popup.phtml" />
+            <block type="JJM_Sitepopup/popup" name="site.popup" before="-" template="sitepopup/popup.phtml" >
+                <block type="newsletter/subscribe" name="popup.newsletter" before="-" template="newsletter/subscribe.phtml"/>
+            </block>
         </reference>
     </default>
 

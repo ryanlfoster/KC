@@ -5012,6 +5012,57 @@ tr.summary-details-excluded {
 .dashboard .box-reviews .ratings {
     margin:7px 0 0;
 }
+
+/* Block: Newsletter */
+
+.block-subscribe {
+    border: 0;
+    padding: 1em 1.5em;
+    background: #f0efed;
+    clear: both;
+}
+
+.block-subscribe .form-subscribe-content {
+    color: #8e857e;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 2.5em;
+    width: 45%;
+    margin-right: 2.5%
+}
+
+.block-subscribe .input-box {
+    width: 36%;
+}
+
+.block-subscribe .input-text {
+    padding: 0 1.25em;
+    line-height: 27px;
+    width: 100%;
+    outline: 0;
+}
+
+.block-subscribe .actions {
+    width: 16%;
+    padding: 0 !important;
+}
+
+.block-subscribe .actions button {
+    float: none;
+    outline: 0;
+    background: url(../images/newsletter-btn.png) no-repeat;
+    width: 130px;
+    height: 30px;
+}
+
+.block-subscribe .actions button span {
+    background: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+
 /* Block: Tags */
 
 .dashboard .box-tags .number {
