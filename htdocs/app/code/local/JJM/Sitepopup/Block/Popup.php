@@ -3,10 +3,10 @@
 /**
  * Class JJM_Sitepopup_Block_Popup
  *
- * @category Cti
- * @package Trustpilot
- * @author Jamie Murphy - CTI Digital <j.murphy@ctidigital.com>
- * @copyright Copyright (c) 2014 CTI Digital (http://www.ctidigital.com)
+ * @category JJM
+ * @package Sitepopup
+ * @author Jamie Murphy  <jay.murphy15@gmail.com>
+ * @copyright Copyright (c) 2014 Jamie Murphy
  */
 class JJM_Sitepopup_Block_Popup extends Mage_Core_Block_Template
 {
