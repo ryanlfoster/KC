@@ -17,8 +17,8 @@
             <action method="addLink" translate="label title" module="kidscavern"><label>Contact</label><url helper="kidscavern/getContactsUrl"/><title>Contact</title><prepare/><urlParams/><position>80</position></action>
         </reference>
 
-        <reference name="content">
-            <block type="newsletter/subscribe" name="content.newsletter" before="-" template="newsletter/subscribe.phtml"/>
+        <reference name="footer">
+            <block type="newsletter/subscribe" name="default.content.newsletter" before="-" template="newsletter/subscribe2.phtml"/>
         </reference>
 
         <reference name="before_body_end">
@@ -168,6 +168,11 @@
     <cms_index_index>
         <reference name="content">
             <block type="core/template" before="breadcrumbs" name="banners" template="banners/newHomepage.phtml" />
+            <block type="newsletter/subscribe" name="homepage.content.newsletter" after="banners" template="newsletter/subscribe2.phtml"/>
+        </reference>
+
+        <reference name="footer">
+            <remove name="default.content.newsletter" />
         </reference>
 
     </cms_index_index>
