@@ -8,6 +8,8 @@ jQuery(document).ready(function($) {
             inline:true,
             href:"#site-popup",
             maxWidth: '80%',
+            overlayClose: false,
+            escKey: false,
             scalePhotos: true,
             onClosed: function() {
                 popup.css('display','none')

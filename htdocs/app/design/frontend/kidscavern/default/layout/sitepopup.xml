@@ -12,7 +12,7 @@
 
         <reference name="content">
             <block type="JJM_Sitepopup/popup" name="site.popup" before="-" template="sitepopup/popup.phtml" >
-                <block type="newsletter/subscribe" name="popup.newsletter" before="-" template="newsletter/subscribe.phtml"/>
+                <block type="newsletter/subscribe" name="popup.newsletter" before="-" template="newsletter/subscribe2.phtml"/>
             </block>
         </reference>
     </default>

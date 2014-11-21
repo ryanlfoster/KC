@@ -7,9 +7,13 @@
 
         <div id="site-popup" class="site-popup">
 
-            <a href="<?php echo $url; ?>">
+            <?php if(strlen($url) > 0) { ?>
+                <a href="<?php echo $url; ?>">
+                    <img src="<?php echo $img; ?>" />
+                </a>
+            <?php } else { ?>
                 <img src="<?php echo $img; ?>" />
-            </a>
+            <?php } ?>
 
             <?php echo $this->getChildHtml('popup.newsletter'); ?>
         </div>

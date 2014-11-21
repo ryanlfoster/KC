@@ -51,7 +51,7 @@ class JJM_Sitepopup_Block_Popup extends Mage_Core_Block_Template
             return false;
         }
 
-        if(!$this->hasCookie()) {
+        if($this->hasCookie()) {
             $this->createPopupCookie();
 
             return true;
