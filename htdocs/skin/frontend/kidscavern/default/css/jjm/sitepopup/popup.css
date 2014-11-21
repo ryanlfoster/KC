@@ -2,10 +2,40 @@
     padding: 0.5em 1em;
 }
 
+.site-popup a {
+    width: 600px;
+}
+
 .site-popup img {
-    width: 100%;
+    width: 600px;
 }
 
 .site-popup .block-subscribe {
     margin-top: 1.5em;
+}
+
+.site-popup .block-subscribe .form-subscribe-content {
+    width: 100%;
+    float: none;
+}
+
+.site-popup label {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: center;
+    display: block;
+}
+
+.site-popup .block-subscribe .input-box {
+    width: 75%;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width : 480px),
+screen and (device-aspect-ratio: 2/3),
+screen and (device-aspect-ratio: 40/71),
+screen and (device-width: 360px) and (-webkit-device-pixel-ratio: 3) {
+    .site-popup img {
+        width: 100%;
+    }
 }

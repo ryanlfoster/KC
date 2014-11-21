@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
             open: true,
             inline:true,
             href:"#site-popup",
-            maxWidth: '80%',
+            maxWidth: '665px',
             overlayClose: false,
             escKey: false,
             scalePhotos: true,
@@ -49,5 +49,11 @@ function resizeColorBox()
 }
 
 // Resize Colorbox when resizing window or changing mobile device orientation
-jQuery(window).resize(resizeColorBox);
+jQuery(window).resize(function() {
+    var windowWidth = jQuery(window).width();
+
+    if(windowWidth < 480) {
+        resizeColorBox();
+    }
+});
 window.addEventListener("orientationchange", resizeColorBox, false);
